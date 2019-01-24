@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Notes on Chaos by Gleick</title>
+<meta name="Description" content="scribbles, rants about anything">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb">
+
+<table width="640">
+<tr><td>
+
+<h3>Chaos - Making of a New Science. James Gleick</h3>
+<h4>Notes from the book</h4>
+<div style="text-align:justify;">
+<p>
+<b>Chapter 1: The Butterfly Effect</b><br>
+The notion that a butterfly stirring the air today in Peking can transform storm 
+systems next month in New York - non-linear systems that are highly sensitive to 
+initial conditions. Similar behavior exhibited by pendulums - eqn: 
+<i>d<sup>2</sup>&Oslash;/dt<sup>2</sup> + (k/m)d&Oslash;/dt + (g/l)sin(&Oslash;) = (1/ml<sup>2</sup>)T</i>
+- period of a pendulum not independant of its amplitude of oscillation because of the non-linearity introduced by sin(&Oslash;). 
+The behavior depends on intial angle &Oslash;.
+</p>
+
+<p>
+Nonlinearity - the act of playing the game has a way of changing the rules - how friction on a moving body 
+depends on speed and how speed in turn depends on friction. Example of a highly non-linear governing eqn: 
+The Navier-Stokes eqn in fluid dynamics. Systems that never really reach a steady state - the Lorenzian 
+waterwheel whose spin can reverse many times, never settling down to a steady state 
+and never repeating itself in a predictable pattern. A small perturbance input may not blow up 
+the system but the states may keep changing in unique ways within bounds - the Lorenzian Attracter. 
+The behavior is chaotic, but there is still some strange sense of order and pattern - Refer the paper 
+"Deterministic Nonperiodic Flow", Journal of Atmospheric Sciences 20 (1963), pp. 130-41.
+</p>
+<p>
+As an aside, 'order in chaos' is something that Michael Crichton talks about in the 'Jurassic Park'. Life exists 
+at the edge of chaos....a slight disturbance either way (in the form of behavioral changes, disturbance in the 
+delicate balance of the eco-system) can wipe out a species.
+</p>
+
+<p>
+<b>Chapter 2: Revolution</b><br>
+Thomas S Kuhn's argument (1962) - Science progresses not by accretion of knowledge (each discovery adding to the 
+last) or by emergence of new theories when experimental facts require them. Science progresses due to unorthodox 
+works that revolutionize the way an object of study is looked at. Revolutions occur when fundamental assumptions 
+keeping current theories alive are questioned. By adopting the current state-of-the-art (in terminology, mathematical 
+technique) as the truth, a scientist can take the next step resulting in incremental progress but may not create a 
+revolution, since unconsciously he had given up much freedom to question the foundation of his science. A revolution 
+often has interdesciplinary character - central discoveries often coming from people straying outside the normal 
+bounds of their specialties. Shallow ideas can be assimilated; ideas that require people to re-organize their picture 
+of the world provoke hostility. Revolutions do not come peacemeal - one account of nature replaces another.  
+</p>
+
+<p>
+For centuries search for regularity in experiment has been fundamental. Small non-linearities were easy to disregard. 
+If a chemist finds two substances in a constant proportion of 2.001 one day, 2.003 the next day and 1.998 the day after, 
+he would be a fool not to look for a theory that would explain a perfect two-to-one ratio.
+</p>
+
+<p>
+Non-linear systems usually unsolvable and the occurance of non-linearity in a system is not an exception - something that 
+a serious researcher must accept. A damped driven system (playground swing) can remain within bounded states, but 
+may never settle down to a steady state and never exactly repeat a pattern of states that came before. Disorderly behavior 
+of simple systems act as 'creative' process. The microscopic pieces (fundamental physics and mechanisms) could be perfectly 
+clear, but the macroscopic behavior (state of the system in the long term) could remain a mystery. 
+The 'linear system theory' way of looking at things locally - isolating the mechanisms and then adding them together - was 
+beginning to break down. An unexpected result from an experiment on a system modelled as a linear system may not be an 
+experimental error - a deterministic system can produce much more than just periodic behavior. A complex system can give 
+rise to turbulance and coherence at the same time.
+</p>
+
+<p>
+Topology - branch of methematics studying the properties that remain unchanged when shapes are deformed by twisting or stretching 
+or squeezing. Stability in the sense of Smale (Stephen Smale, UCBK) - A system can behave erratically, but the erratic behavior 
+cannot be 'stable'. Chaos and instability are not the same. Add noise to a complex system, stir it up, interfere with it's motion, 
+and then when everything is settled down, the transients dying away, the system could return to the same peculiar pattern of 
+irregularity as before - a robust system locally unpredictable but globally stable.
+</p>
+
+<p>
+Primary reference - The Structure of Scientific Revolutions by Thomas S. Kuhn, ISBN: 0226458083
+</p>
+
+<p>
+<b>Chapter 3: Life's Ups and Downs</b><br>
+
+Ecology - the relation of plants and living creatures to each other and to their environment, or the study of this 
+[Oxford Advanced Learner's dictionary]. - mathematical treatment of populations as dynamical systems, with realization that 
+mathematical models are only thin approximations of reality. Physicists and pure mathematicians used to consider irregular behavior 
+from simple regular equations interesting oddities; to an ecologist that often conveyed something deep about the system under study.  
+</p>
+
+<p>
+A simple population growth equation - the logistic nonlinear equation: <code><b>x<sub>next</sub> = rx(1-x)</b></code>, <code>r</code> 
+represents rate of growth, <code>(1-x)</code> keeps the growth rate within bounds since as <code>x</code> increases, <code>(1-x)</code> 
+decreases. This eqn. is similar to those for physical systems where the term <code>r</code> represents amount of heating, or friction, 
+i.e. the amount of non-linearity. For lower values of <code>r</code>, the output stabilizes to some low value, for higher values 
+they stabilize to a higher value; for very high values, the output gets chaotic with no sight of equilibrium.
+</p>
+
+<p>
+Landmark paper: James Yorke, "Period Three Implies Chaos", American Mathematical Monthly 82 (1975), pp. 985-92. - Bifurcation diagrams - 
+little spikes of order within chaos. Modelling of biological systems using simple chaotic models. - Unpredictability of system behavior 
+(a diseased population) in the presence of sudden perturbation (program of inoculation): naive intuition suggests that the system will 
+change smoothly in the desired direction. But in reality huge oscillations can occur in its path to equilibrium - example: sharp short-term 
+rise in rubella during an anti-rubella inoculation program in Britain.
+</p>
+
+<p>
+Simple nonlinear systems do not necessarily have simple dynamical behavior - Robert M. May, "Simple Mathematical Models with very Complicated 
+Dynamics", Nature, 1976, p. 459.
+</p>
+
+<p>
+<b>Chapter 4: A Geometry of Nature</b><br>
+The standard model for random variation, the bell-shaped gaussian distribution does not define all randomness in nature. 
+Complexity in nature may neither be random nor accidental. Traditional shapes of geometry, lines and planes, are a powerful 
+abstraction to reality inspired by a powerful philosophy of platonic harmony. But in nature clouds aren't circles and 
+mountains aren't cones. The need for a new kind of geometry that mirrors a universe rough, not rounded, scabrous, not smooth.
+</p>
+
+<p>
+The discovery that a numerical result of measurement should depend on the relation of object to the observer (relativity) - 
+The measurement of length of the coastline depends on the length of the ruler. Measurement depends on (distance)scale of 
+observation. Estimation of the length of the coastline as provided by a satellite would be a smaller guess than that 
+from an observer trying to walk its coves and beaches, who will make a smaller guess in turn than a snail negotiating every 
+pebble.
+</p>
+  
+<p>
+Fractality (degree of roughness/irregularity) as a dimension of measurement. If the fractal dimension of a surface is 
+constant, its degree of roughness is the same at all levels of magnification. Benoit Mandelbrot and his analysis of 
+telephone line transmission errors as <a href="http://mathworld.wolfram.com/CantorSet.html">cantor sets</a> arranged 
+in time. The <a href="http://mathworld.wolfram.com/KochSnowflake.html">Koch curve</a>, an infinitely long line 
+surrounding a finite area. Other interesting 'natural' shapes - Peano curve and 
+<a href="http://mathworld.wolfram.com/SierpinskiSieve.html">Sierpinski carpets</a> whose complexity if extended without 
+limit will have infinite surface area but zero volumne. The trusses of the Eiffel tower is a good approximation of the 
+Sierpinski sieve - a structure with less weight without compromising structural strength.
+</p>
+
+<p>
+Applications of fractal geometry - nonlinear dynamics, study of surfaces in contact (tire and road, machine parts). 
+Nature of branching of blood vessels from aorta to capillaries (large surface area in finite volume), bronchial branching, 
+urinary collection system are all fractal in design. Fractals help create photorealistic images of landscapes in 
+computer graphics. A geometrical shape has a scale and a characteristic size. To Mandelbrot, art that satisfies 
+lacks scale, in the sense that it contains important elements in all scales like an intricate sculpture. 
+The reason why we find beautiful the silhoutte of a storm-bent leafless tree against an evening sky in winter, 
+as opposed to the silhoutte of a building.
+</p>
+
+<p>
+Primary reference - The Fractal Geometry of Nature, New York: Freeman, 1977
+</p>
+
+<p>
+<b>Chapter 5: Strange Attractors</b><br>
+
+</p>
+
+</div>
+</td></tr>
+</table>
+</body>
+</html>

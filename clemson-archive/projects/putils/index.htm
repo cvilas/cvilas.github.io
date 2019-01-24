@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vilas kumar Chitrakaran - POSIX Utilities Package</title>
+<meta name="Description" content="POSIX Utilities Package">
+<meta name="Keywords" content="POSIX, C++ classes, UNIX">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb">
+<table width="640">
+<tr><td>
+
+<hr align="left" width="640" color=#8687bf>
+<div align="center"><h2>POSIX Utilities Package</h2></div>
+<hr align="left" width="640" color=#8687bf>
+
+<img src="images/putils.jpg" border=0 width=200 height=133 alt="putils" align="right">
+<ul>
+	<li><b>Posted:</b> Dec 23, 2004, <b>Last updated:</b> Apr 02 2005
+	<li><b>Summary:</b> A collection of basic C++ utility classes for inter-process message passing, shared memory,
+	synchronization and thread management. This library is for UNIX systems.
+</ul>
+
+<h3>Introduction</h3>
+<div style="text-align:justify;">
+<p>
+In implementing experiments in the lab during the course of my research, I found that 
+I was using certain programming methods and data structures again and again. This is a collection 
+of some of those essentials built into a single set of re-usable C++ classes. In developing this 
+library, I have restricted myself to using features defined in the POSIX standard (PASC 1003.1, 1003.4), 
+and hence the name of the library. I work both with Linux and QNX operating systems. Hence my priorities 
+in developing these utilities were portability and performance, in that order. This library currently 
+provides the following functionality.<br> 
+<ul>
+ <li><code>Barrier</code>: The pthread barrier synchronization object.
+ <li><code>ErrnoException</code>: A mechanism for basic run-time exception handling.
+ <li><code>MessageQueue</code>: Inter-process messaging mechanism.
+ <li><code>RecursiveMutex</code>: A wrapper for pthread mutex, with the added functionality that it is recursive.
+ <li><code>RWLock</code>: The pthread reader-writer lock.
+ <li><code>ShMem</code>: Shared memory objects.
+ <li><code>StatusReport</code>: An object for storing status messages containing a integer code, a message and a timestamp.
+ <li><code>Thread</code>: A mechanism to execute code in a separate thread.
+ <li><code>TCPClient</code> and <code>TCPServer</code>: A TCP/IP based client-server pair.
+ <li><code>UDPClient</code> and <code>UDPServer</code>: A UDP based client-server pair.
+</ul>
+</p>
+
+
+<h3>Documentation</h3>
+<div style="text-align:justify;">
+<p>
+<ul>
+	<li><a href="docs/html/annotated.htm">HTML Documentation</a>.
+	<li><a href="docs/putils_2_0.pdf">PDF Documentation</a>.
+</ul>
+</p>
+
+<h3>Installation</h3>
+<p>
+ <ul>
+ <li>Download sources from here: <a href="putils.tgz">putils.tgz</a>.
+ <li>Unzip and untar the archive, build the library as follows:
+ <br><code>
+ tar zxvf putils.tgz<br>
+ cd putils<br>
+ make
+ </code>
+ <li>Install the library. Login as root and
+ <br><code>
+ make install
+ </code>
+ <li>Try the example programs in the examples directory. Just run <code>make</code> in the example directory
+	to create the executables. If any example fails to run, please let me know.
+ </ul>
+</p>
+</div>
+
+<h3>Applications</h3>
+<div style="text-align:justify;">
+<p>
+ Programming for compter vision and robotics can be pretty complicated due to the need for simultaneous 
+ interaction between many different hardware and software components with real-time constraints. 
+ If used properly, these classes can take some of the pain away.
+</p>
+
+<h3>References</h3>
+<div style="text-align:justify;">
+<ul>
+<li>Bill Gallmeister, "POSIX.4 Programmers Guide," O'Reilly, ISBN: 1565920740, 1994.
+<li>Ryan Teixeira, "Designing a Thread Class in C++," Online: <br><code>http://www.geocities.com/SiliconValley/Heights/6038/dthreads.html</code>.
+</ul>
+<p><i>Suggestions or comments? <a href="mailto:cvilas@ces.clemson.edu">Please email cvilas(@)ces.clemson.edu</a>.</i></p>
+</div>
+<hr align="left" width="640" color=#8687bf>
+
+</td></tr>
+</table>
+</body>
+</html>

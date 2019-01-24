@@ -1,0 +1,503 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\comment begin body}
+{\info 
+{\title Status Class Reference Manual}
+{\author Generated by Doxygen}
+{\creatim \yr2001\mo7\dy19\hr12\min58\sec1}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt TITLE}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt CREATEDATE}}\par
+\pard\plain 
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Status Class Compound Index\par \pard\plain 
+{\tc \v Compound Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Status Class Compound List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b Status}  (Allows to stack error codes and status messages)\tab {\field\fldedit {\*\fldinst PAGEREF class_Status \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par
+}\sect \sbkpage \pgnrestart
+\sect \sectd \sbknone \pgndec
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Status Class Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Status  Class Reference\par \pard\plain 
+{\tc\tcl2 \v Status}
+{\xe \v Status}
+{\bkmkstart class_Status}
+{\bkmkend }
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Allows to stack error codes and status messages. 
+\par
+{\f2 #include <Status.hpp>}\par
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Methods\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Status} (int maxNumErrors = 10)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ~Status} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setStatusOk} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isStatusOk} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+strstream& {\b setStatusError} (int code = e_error)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isStatusError} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char* {\b getMessageText} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char* {\b popMessage} (int *code)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getStatusErrorCode} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getOverflow} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getErrorCount} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Allows to stack error codes and status messages.\par
+\par
+The Status class provides for the ability to set and retrieve error messages. Errors are stored on an error stack. The first error in is the last one out. Errors consist of an optional error code and an optional message. If no error code is specified, the default (e_error, or -1) is used. If no message is specified, only the code will be used.\par
+For program related errors, please use the format: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid    ProgramName: [ClassName::MethodName()] [OptionalErrorCode] Message Text\par
+}
+For example: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid    qmotor: [MainWindow::readConfiguration()] Error opening configuration file\par
+}
+When getting the status messages ({\b getMessageText}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Status_a6 \\*MERGEFORMAT}{\fldrslt pagenum}}})), the debug version and the release version of the Status class behave differently: The debug version gets the whole message while the release version removes everything between the brackets []. The above message in the release  version would be cut down to: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid    qmotor: Error opening configuration file\par
+}
+{\b Example Program:}\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid //========================================================================\line
+// Project: QRTS Utility Classes\line
+// ----------------------------------------------------------------------\line
+// Package: Status\line
+// Authors: Nick Costescu, Markus Loffler\line
+// ----------------------------------------------------------------------\line
+// File: Status.t.cpp\line
+// Example program for the Status class.\line
+//========================================================================\line
+\line
+#include "Status.hpp"\line
+\line
+#include <iostream.h>\line
+#include <fstream.h>\line
+#include <string.h>\line
+#include <stdio.h>\line
+#include <errno.h>\line
+\line
+\line
+\line
+//========================================================================\line
+// loadNumbers\line
+//========================================================================\line
+\line
+void loadNumbers(const char *filename, double *buffer, int numNumbers,\line
+                 Status &status)\line
+\{\line
+  ifstream file(filename);\line
+  if (!file)\line
+  \{\line
+    status.setStatusError()\line
+      << "Status.t: [loadNumbers()] Can't open the file " << filename\line
+      << " - " << strerror(errno) << endl;\line
+    return;\line
+  \}\line
+  \line
+  for (int i = 0; i < numNumbers; i++)\line
+  \{\line
+    file >> buffer[i];\line
+    if (!file)\line
+    \{\line
+      status.setStatusError()\line
+        << "Status.t: [loadNumbers()] Error reading number " << i << endl;\line
+      return;\line
+    \}\line
+  \}\line
+\}\line
+\line
+\line
+//========================================================================\line
+// loadAndCheckNumbers\line
+//========================================================================\line
+\line
+void loadAndCheckNumbers(const char *filename, double *buffer, int numNumbers,\line
+                         Status &status)\line
+\{\line
+  loadNumbers(filename, buffer, numNumbers, status);\line
+  if (status.isStatusError())\line
+  \{\line
+    status.setStatusError()\line
+      << "Status.t: [loadAndCheckNumbers()] "\line
+      << "Error loading the numbers." << endl;\line
+    return;\line
+  \}\line
+  \line
+  for (int i = 0; i < 10; i++)\line
+  \{\line
+    if (buffer[i] > 100)\line
+    \{\line
+      status.setStatusError()\line
+        << "Status.t: [loadAndCheckNumbers()] "\line
+        << "Number too big (" << buffer[i] << ")" << endl;\line
+      return;\line
+    \}\line
+  \}\line
+\}\line
+\line
+\line
+//========================================================================\line
+// main\line
+//========================================================================\line
+\line
+int main (int argc, char *argv[])\line
+\{\line
+  Status status;\line
+\line
+  if (argc != 2)\line
+  \{\line
+    cout << "usage: Status.t <filename>" << endl;\line
+    return -1;\line
+  \}\line
+  \line
+  double buffer[10];\line
+  loadAndCheckNumbers(argv[1], buffer, 10, status);\line
+  \line
+  if (status.isStatusError())\line
+  \{\line
+    cout << "An error occured while loading and checking the numbers: " << endl\line
+         << status.getMessageText();\line
+    return -1;\line
+  \}\line
+  \line
+  cout << "Numbers successfully loaded and checked: " << endl;\line
+  for (int i = 0; i < 10; i++)\line
+    cout << buffer[i] << endl;\line
+  cout << endl;\line
+\line
+  return 0;\line
+\}\line
+\line
+\par
+}
+ \par
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Status\:Status}
+{\xe \v Status\:Status}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Status (int {\i maxNumErrors} = 10)}
+}\par
+{\bkmkstart class_Status_a0}
+{\bkmkend class_Status_a0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+The constructor sets the status to Ok and defines the maximum number of stacked errors (default is 10) {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i maxNumErrors}}   The maximum number of stacked errors. \par
+}
+\par
+}}
+{\xe \v ~Status\:Status}
+{\xe \v Status\:~Status}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+~Status ()}
+}\par
+{\bkmkstart class_Status_a1}
+{\bkmkend class_Status_a1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+The destructor cleans up memory. \par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v setStatusOk\:Status}
+{\xe \v Status\:setStatusOk}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setStatusOk ()}
+}\par
+{\bkmkstart class_Status_a2}
+{\bkmkend class_Status_a2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Set the status to OK and clears all message texts, also zeros the overflow count and the error count. \par
+}
+{\xe \v isStatusOk\:Status}
+{\xe \v Status\:isStatusOk}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isStatusOk ()}
+}\par
+{\bkmkstart class_Status_a3}
+{\bkmkend class_Status_a3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Return non-zero if the status is ok. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: Status is OK, 0: Status is not OK. \par
+}}
+{\xe \v setStatusError\:Status}
+{\xe \v Status\:setStatusError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+strstream & setStatusError (int {\i code} = e_error)}
+}\par
+{\bkmkstart class_Status_a4}
+{\bkmkend class_Status_a4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the status to error and returns a stream pointer that allows to add an error message (by using the << operator). {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i code}}   Error code\par
+\par
+}
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid        Status status;\line
+       status.setStatusError()\line
+         << "[MyClass:readFile()] Error reading file - "\line
+         << strerror(errno) << endl;\par
+}
+ \par
+}
+{\xe \v isStatusError\:Status}
+{\xe \v Status\:isStatusError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isStatusError ()}
+}\par
+{\bkmkstart class_Status_a5}
+{\bkmkend class_Status_a5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Return non-zero if there was a fatal error. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: Status is ERROR, 0: Status is not ERROR. \par
+}}
+{\xe \v getMessageText\:Status}
+{\xe \v Status\:getMessageText}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char * getMessageText (void)}
+}\par
+{\bkmkstart class_Status_a6}
+{\bkmkend class_Status_a6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Creates a buffer with all of the error messages, in reverse order (because this is a stack based system). Each error message text is prefixed by the corresponding error code automatically. Be careful what you do with this pointer, it belongs to the Status class and may be deleted at any time (so either make a copy of the string or use it immediately and don't use it again.)\par
+In the release version of this library, parts between brackets ([...]) are cut out (including the brackets and all following spaces). Use brackets for messages that should only appear in the debug version. If you still want to use brackets in the release version, use the quote character "\\" in front of the brackets, e.g.  {
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid        d_status.setStatusError() << "Error - can't find element a[\\\\10\\\\]";\par
+}
+{\b Example:} {
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid        if (status.isStatusError ())\line
+       \{\line
+         cout << status.getErrorCount() << " errors have occurred" << endl;\line
+         cout << status.getOverflow () << " errors were lost" << endl;\line
+      \line
+         // Prints out all the errors\line
+         cout << status.getMessageText () << endl; \line
+      \}\par
+}
+ \par
+}
+{\xe \v popMessage\:Status}
+{\xe \v Status\:popMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char * popMessage (int * {\i code})}
+}\par
+{\bkmkstart class_Status_a7}
+{\bkmkend class_Status_a7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Return the most recent error code & message. You must free the memory this function returns as the message. Pops the error off the error stack (next time you pop, you'll get another msg). Most users will just use {\b getMessageText}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Status_a6 \\*MERGEFORMAT}{\fldrslt pagenum}}}) to get all msg text at once, but you can use this method to pop errors off the stack one by one. Note that the msgs are deleted from the stack when they're popped, but they're not deleted by {\b getMessageText}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Status_a6 \\*MERGEFORMAT}{\fldrslt pagenum}}}). \par
+}
+{\xe \v getStatusErrorCode\:Status}
+{\xe \v Status\:getStatusErrorCode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getStatusErrorCode ()}
+}\par
+{\bkmkstart class_Status_a8}
+{\bkmkend class_Status_a8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Returns the error code of the status on top of the error stack. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The error code of the status on top of the error stack. \par
+}}
+{\xe \v getOverflow\:Status}
+{\xe \v Status\:getOverflow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getOverflow (void)}
+}\par
+{\bkmkstart class_Status_a9}
+{\bkmkend class_Status_a9}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Returns the number of messages that were lost because the message buffer was full. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of overflow messages. \par
+}}
+{\xe \v getErrorCount\:Status}
+{\xe \v Status\:getErrorCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getErrorCount (void)}
+}\par
+{\bkmkstart class_Status_a10}
+{\bkmkend class_Status_a10}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Returns the number of error messages on the stack. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of messages on the stack. \par
+}}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+{\b Status.hpp}\par
+}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

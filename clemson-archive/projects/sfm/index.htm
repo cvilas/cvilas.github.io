@@ -1,0 +1,290 @@
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Euclidean Position Estimation</title>
+<meta name="Description" content="vision based euclidean position estimation">
+<meta name="Keywords" content="homography, motion and structure from motion, euclidean reconstruction">
+<meta name="Author" content="vilas chitrakaran">
+<script language="JavaScript" type="text/JavaScript">
+</script>
+
+<style type="text/css">
+<!--
+A {text-decoration: none}
+A:hover {text-decoration: underline}
+-->
+</style>
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" link="#000000" vlink="#000000">
+<div align="left">
+<table width=100% align=center border=0 cellpadding=0 cellspacing=0>
+ <tr><td>
+  <hr align="left" color="#8687bf">
+  <!-- HEADING -->
+  <table width=100% bgcolor=#8687bf align=center border=0 cellpadding=0 cellspacing=0>
+   <tr><td>
+   <center>
+   <font color=#ffffff face="Arial, Helvetica, 'Sans Serif'" size=+2>
+   <strong>Euclidean Position Estimation of Features on an Object Using a Single Camera: A Lyapunov-Based Approach</strong>
+   </font>
+   <br>
+   <font color=#ffffff face="Arial, Helvetica, 'Sans Serif'" size=-1>
+   Vilas K. Chitrakaran, Darren M. Dawson, Jian Chen and Warren E. Dixon
+   </font>
+   </center>
+   </td>
+   </tr>
+  </table>
+  <hr align="left" color="#8687bf">
+  <!-- /HEADING -->
+  <!-- *** BEGIN PAGE CONTENTS *** -->
+  <table width=100% align=center bgcolor=#ffffff border=0 cols=1 cellpadding=0 cellspacing=0>
+    <tr><td>
+	<br>
+	<font face="Arial, Helvetica, 'Sans Serif'" size=-1>
+	  <table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	   <font color="#ffffff" size=+1><b>Introduction</b></font>
+	  </td></tr></table>
+	<div style="text-align:justify;">
+	<p>
+	<i><b>Keywords</b></i>: Homography, euclidean reconstruction, structure from motion, lyapunov based estimator.<br>
+	<i><b>Publications</b></i>: <a href="docs/sfm.pdf"><u>Full paper</u></a>
+	</p>
+	<p>
+	In this work, we present a nonlinear estimation strategy to identify the 3D coordinates of features on 
+	a moving object in the field of view of a fixed camera, and the dual case of a static object in the field of view of 
+	a moving camera. This is similar to the classic Structure from Motion (SFM) problem in computer vision. While most of the 
+	paper addresses the fixed camera case, it is shown that the development can be recast for the 
+	camera-in-hand problem where we not only identify the 3D coordinates of the static feature points, but also 
+	estimate the egomotion of the camera. The development in the moving camera case hence addresses the 
+	Simultaneous Localization and Mapping (SLAM) problem.
+	</p>
+	
+	<p>
+	<b><i>Assumptions :</b></i> 
+	<ul>
+	<li> The object velocity, acceleration and jerk are bounded.
+	<li> A persistent excitation condition on the velocity of the object is satisfied.
+	<li> A reference image of visual markers of interest is available. 
+	<li> For the fixed camera case, a single geometric length on the object is known.
+	</ul>
+	</p>
+	<p>
+	This work has been accepted for the American Control Conference 2005. The reader is referred to the <a href="docs/sfm.pdf"><u>full paper</u></a> for complete details. This webpage provides 
+	a summary of simulation and experimental results.
+	</p>
+
+	<table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Simulations</b></font>
+	</td></tr></table>
+	
+	<p>
+	<b><i>Fixed camera system :</b></i> The adaptive estimation algorithm was built on top of an existing simulator that was developed to
+	verify the performance of the veclocity estimator described in detail in a 
+	<a href="../identify/index.htm"><u>previous work</u></a> <a href="#footnote2">[2]</a>. We selected a 
+	planar object with four feature points initially 2 meters away along the axis 
+	of the camera as the body undergoing motion. The velocity of the object along 
+	each of the six degrees of freedom was set to <i>0.2 * sin (t)</i>. The object's reference orientation 
+	relative to the camera were selected as <i>diag(1,-1,-1)</i>. As an example, Figure 1 depicts the 
+	convergence of estimates for the second feature point on the object.
+	</p>
+	<center>
+	<img src="images/fc_estimates.png" width="600" height="450" border="0" alt="Estimation" align="center">
+	<br><b><font size=-1>Figure 1: Estimated paramters for the second feature point on the moving object (fixed camera case).</font></b>
+	</center>
+	
+	<br>
+	
+	<p>
+	<b><i>Camera-in-hand system :</b></i> In this second simulation, we selected 
+	a non-planar stationary object with 12 feature points. Since not all feature 
+	points lie on a plane, we implemented the Virtual Parallax algorithm 
+	<a href="#footnote3">[3]</a> to compute the Homography matrices. The 
+	camera-in-hand system directly estimates the inverse of depth (1/z<sup>*</sup>) for all 
+	feature points relative to the camera at its reference position. Figure 2 
+	shows the convergence of the inverse depth estimates, and Figure 3 shows 
+	the estimation errors. 
+	</p>
+	
+	<center>
+	<img src="images/mc_estimates.png" width="600" height="450" border="0" alt="Estimation - moving camera" align="center">
+	<br><b><font size=-1>Figure 2: Estimated inverse depth paramters for all feature points on the stationary object (moving camera case)</font></b>
+	</center>
+	<br>
+	
+	<center>
+	<img src="images/mc_estimate_errors.png" width="600" height="450" border="0" alt="Estimation errors - moving camera" align="center">
+	<br><b><font size=-1>Figure 3: Estimation errors reduce to zero with time (moving camera case)</font></b>
+	</center>
+	<br>
+	
+	<center>
+	<img src="images/mc_velocity.png" width="600" height="450" border="0" alt="velocity estimation - moving camera" align="center">
+	<br><b><font size=-1>Figure 4: Velocity estimation results (moving camera case). This is for simulated translation in X and Z axes.</font></b>
+	</center>
+	<br>	
+	
+	<table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Experiments</b></font>
+	</td></tr></table>
+	
+	<p>
+	<img src="images/sfm_blocks.png" width="125" height="300" border="0" alt="SFM blocks" align="left">
+	A practical system for estimating structure from motion consists of atleast four 
+	sub-components: hardware for image acquisition, implementation of an algorithm to extract and track 
+	feature points between frames, the implementation of the SFM algorithm itself, and a method to represent 
+	the output data (3D models, depth maps, etc.).     
+	</p>
+	<p>
+	<i><b>Experimental testbed: </b></i>Our experimental system consists of two major sub-systems - the eye-in-hand sub-system and the 
+	image processing/structure estimation sub-system. As shown in Figure 5, the eye-in-hand system is composed of a calibrated monochrome 
+	CCD camera mounted on the end-effector of a Puma 560 industrial robotic manipulator. The manipulator is programmed using 
+	the <a href="../rp/index.htm"><u>Robotic Platform control system</u></a> to move in a slow, smooth, and periodic trajectory in a 
+	static scene consisting of a few simple objects on a flat surface.
+	</p>
+	<p>
+	<b><i>Image acquisition :</b></i> The image processing PC is equipped with a <a href="http://www.imagenation.com/pxcfamily.html">
+	<u>Imagenation PXC200AF framegrabber board</u></a> capable of acquiring real time (30 Hz) image sequence over the PCI bus. A 20Hz digital 
+	signal from the robot control system triggers the framegrabber to acquire images. The same signal is also used to record the actual robot
+	end-effector velocity (=camera velocity), which we use as the ground truth to validate the performance of the estimator. Due to the way 
+	the estimator is designed, accurate estimation of camera velocity is crucial for the accurate estimation of scene structure.
+	</p>
+
+	<p>
+	<i><b>Feature tracking :</b></i> Due to the large number of images that must 
+	be processed, an automatic feature detector and tracker is necessary. We utilized 
+	Dr. Birchfield's <a href="http://www.ces.clemson.edu/~stb/klt/"><u>Kanade-Lucas-Tomasi tracker library</u></a> <a href="#footnote4">[4]</a> 
+	for detection and tracking of feature points from one frame to next. The computational complexity of feature tracking 
+	and SFM algorithms make it unfeasible to acquire and process images at 
+	the frame rate of the camera. Hence the image sequence from the moving camera is stored as image files 
+	(or video, if acquired from a video camera) to be processed offline later. We used the libavformat and libavcodec 
+	libraries from the <a href="http://ffmpeg.sourceforge.net/index.php"><u>ffmpeg project</u></a> <a href="#footnote5">[5]</a> to extract individual frames if the input is a video file. The output from the feature point tracking stage 
+	is a data file containing the image space trajectories of all feature points in the scene that 
+	were successfully tracked through the entire video sequence. This data serves as the input to the structure from motion algorithm.
+	</p>
+
+	<p>
+	<i><b>Structure Estimator:</b></i> The nonlinear estimator runs at a frequency of 1000Hz. A linear interpolator, 
+	followed by 2nd order low pass filtering is used to interpolate 20Hz image data to 1000Hz required as input to the estimator.
+	</p>
+
+	<center>
+	<table><tr>
+	<td valign="top">
+	<center>
+	<img src="images/setup1.jpg" width="500" height="375" border="0" alt="eye-in-hand" align="center">
+	<br><b><font size=-1>Figure 5: Experimental setup.</font></b></center>
+	</td>
+	<td valign="top">
+	<center>
+	<img src="images/setup2.jpg" width="267" height="400" border="0" alt="eye-in-hand" align="center">
+	<br><b><font size=-1>Figure 6: The camera mounted on the<br> robot end-effector.</font></b></center>
+	</td>
+	</tr></table>
+	</center>
+	
+	<br>
+	<p>
+	<b><i>Experimental results :</b></i> The doll-house shown in Figure 7 was our experimental scene. Figure 8 shows feature points 
+	that were tracked in the input video sequence in order to estimate the scene structure.  Figure 9 shows a 
+	partial wireframe reconstruction of this scene, displayed using an OpenGL based viewer. 
+	</p>
+	
+	<center>
+	<table><tr>
+	<td valign="top">
+	<center>
+	<a href="images/input.mpg">
+	<img src="images/input.jpg" width="320" height="240" border="0" alt="input" align="center">
+	</a>
+	<br><b><font size=-1>Figure 7: Input video sequence (click for video).</font></b></center>
+	</td>
+	<td valign="top">
+	<center>
+	<a href="images/tracking.mpg">
+	<img src="images/tracking.jpg" width="320" height="240" border="0" alt="tracking" align="center">
+	</a>
+	<br><b><font size=-1>Figure 8: Feature points tracking (click for video).</font></b></center>
+	</td>
+	</tr>
+	<tr>
+	<td valign = "top">
+	<center>
+	<a href="images/output.jpg">
+	<img src="images/output_small.jpg" width="320" height="240" border="0" alt="model" align="center">
+	</a>
+	<br><b><font size=-1>Figure 9: 3D scene generated from estimator output<br>(click for larger image).</font></b></center>
+	</td>
+	<td>
+	</td>
+	</tr></table>
+	</center>
+
+	<p>
+	Table 1 compares the estimated distances with the ground truth, and clearly demonstrates the good performance of the 
+	estimator. The time evolution of depth estimates are shown in Figure 10.  
+	</p>
+	
+	<center>
+	<table border="1">
+	 <tr><td width="100">Object</td><td width="150">Actual (cm)</td><td width="150">Estimated (cm)</td></tr>
+	 <tr><td>Length I</td><td>23.6</td><td>23.0</td></tr>
+	 <tr><td>Length II</td><td>39.7</td><td>39.7</td></tr>
+	 <tr><td>Length III</td><td>1.0</td><td>1.04</td></tr>
+	 <tr><td>Length IV</td><td>13.0</td><td>13.2</td></tr>
+	 <tr><td>Length V</td><td>100.0</td><td>99.0</td></tr>
+	 <tr><td>Length VI</td><td>19.8</td><td>19.6</td></tr>
+	 <tr><td>Length VII</td><td>30.3</td><td>30.0</td></tr>
+	</table>
+	<br><b><font size=-1>Table 1: Estimated dimensions from the scene.</font></b>
+	</center>
+	<br>
+
+	<center>
+	<img src="images/mc_estimates_exp.png" width="600" height="450" border="0" alt="Estimation - moving camera" align="center">
+	<br><b><font size=-1>Figure 10: Estimated depth paramters.</font></b>
+	</center>
+	<br>
+	
+	<center>
+	<img src="images/mc_velocity_exp.png" width="600" height="450" border="0" alt="velocity estimation - moving camera" align="center">
+	<br><b><font size=-1>Figure 11: 6 DOF Velocity estimates (blue). (red - measured actual camera velocity).<br> 
+	Camera motion was mostly along the X axis.</font></b>
+	</center>
+	<br>	
+
+	<hr align="left" color="#000000" width=400>
+	<p>
+	<a name="footnote1">[1]</a> V. K. Chitrakaran, D. M. Dawson, J. Chen, and W. E. Dixon, "Euclidean 
+	  Position Estimation of Features on a Moving Object Using a Single Camera: 
+	  A Lyapunov-Based Approach," <i>Proc. of the 2005 American Control Conference</i>, 
+	  pp. 4601-4606, June 2005. 
+	<br>
+	<a name="footnote2">[2]</a> V. K. Chitrakaran, D. M. Dawson, W. E. Dixon, and J. Chen, "Identification 
+	  of a Moving Object's Velocity with a Fixed Camera," <i>Automatica</i>, Vol. 41, No. 3, pp. 553 - 562, March 2005.
+	 <br>
+	 <a name="footnote3">[3]</a> E. Malis, and F. Chaumette, "2 ½ D Visual Servoing with Respect to Unknown Objects 
+	 Through a New Estimation Scheme of Camera Displacement," <i>Int. Journal of Computer Vision</i>, Vol. 37, No. 1, pp 79-97, 2000.
+	 <br>
+	 <a name="footnote4">[4]</a> http://www.ces.clemson.edu/~stb/klt/
+	 <br>
+	 <a name="footnote5">[5]</a> http://ffmpeg.sourceforge.net/index.php
+	 <br>
+	</p>
+
+	</div>
+	</font>
+    <br>
+	</td></tr>
+  </table> 
+  <!-- *** \END OF PAGE CONTENTS *** -->
+
+ <hr align="left" color="#8687bf">
+ </td></tr>
+</table>
+
+</div>
+</body>
+</html>
+

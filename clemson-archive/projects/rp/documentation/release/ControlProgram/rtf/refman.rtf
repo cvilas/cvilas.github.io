@@ -1,0 +1,1535 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\comment begin body}
+{\info 
+{\title ControlProgram Class Reference Manual}
+{\author Generated by Doxygen}
+{\creatim \yr2001\mo7\dy26\hr18\min57\sec11}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt TITLE}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt CREATEDATE}}\par
+\pard\plain 
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ControlProgram Class Hierarchical Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ControlProgram Class Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+ControlProgram\tab {\field\fldedit {\*\fldinst PAGEREF class_ControlProgram \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ControlProgram Class Compound Index\par \pard\plain 
+{\tc \v Compound Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ControlProgram Class Compound List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b ControlProgram}  (The {\f2 ControlProgram} class library is the base class for all QMotor control programs)\tab {\field\fldedit {\*\fldinst PAGEREF class_ControlProgram \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par
+}\sect \sbkpage \pgnrestart
+\sect \sectd \sbknone \pgndec
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ControlProgram Class Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ControlProgram  Class Reference\par \pard\plain 
+{\tc\tcl2 \v ControlProgram}
+{\xe \v ControlProgram}
+{\bkmkstart class_ControlProgram}
+{\bkmkend }
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid The {\f2 ControlProgram} class library is the base class for all QMotor control programs. 
+\par
+{\f2 #include <ControlProgram.hpp>}\par
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Methods\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ControlProgram} (int argc = 0, char *argv[] = 0, const char *timerServerName = "qrts/ts0", int priority = 27)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b ~ControlProgram} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b run} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b mainLoop} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b enableSupervisorMode} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b disableSupervisorMode} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isSupervisorModeEnabled} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b enableSignalHandling} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b disableSignalHandling} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isSignalHandlingEnabled} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b registerLogVariable} (double *address, const char *name, const char *description = "", int numRows = 1, int numColums = 1)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b registerLogVariable} (int *address, const char *name, const char *description = "", int numRows = 1, int numColums = 1)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b registerControlParameter} (double *address, const char *name, const char *description = "", int numRows = 1, int numColums = 1)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b registerControlParameter} (int *address, const char *name, const char *description = "", int numRows = 1, int numColums = 1)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b clearAllLogVariables} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b clearAllControlParameters} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setNoLogMode} (const char *variableName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTimedLogMode} (const char *variableName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setEventTriggeredLogMode} (const char *variableName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getLogVariableHandle} (const char *variableName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b startLogging} (int logVariableHandle)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b stopLogging} (int logVariableHandle)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLogDuration} (const char *variableName, double logDuration)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLogFrequency} (const char *variableName, double logFrequency)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLogStartTime} (const char *variableName, double logStartTime)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setConfigurationFileName} (const char *configurationFileName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isControlRunning} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isControlShuttingDown} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b wasShutdownAborted} () const\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b d_controlFrequency}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b d_controlPeriod}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b d_controlDuration}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b d_runForever}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b d_elapsedTime}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b d_elapsedTicks}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Config {\b d_config}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+CmdLineArgs {\b d_cmdLine}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b d_standAloneMode}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ostream {\b d_messageStream}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ostream {\b d_debugStream}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char* {\b d_applicationName}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Methods\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b enterControl} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b readConfiguration} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b startControl} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b control} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b startControlProgramShutdown} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b stopControl} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b exitControl} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b handleMessage} (pid_t pid, char *message)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b shutdownComplete} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid The {\f2 ControlProgram} class library is the base class for all QMotor control programs.\par
+\par
+To implement a specific control application, the user derives a class ( e.g., "MyControlProgram", "MotorPIDControl", etc.) from the  ControlProgram class. In the derived class, the user needs to implement  functionality specific to the control application (listed below as  "virtual functions").\par
+The user can utilize functions from the ControlProgram base class to  manipulate execution of the control algorithm, set data logging options,  and specify control parameters. To create an executable control program,  the user must instantiate an object of the class that is derived from  ControlProgram in main() and call the method {\b run}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a2 \\*MERGEFORMAT}{\fldrslt pagenum}}}). Note: The createqcp utility can be used to automatically create a  skeleton control program.\par
+{\b Timing}\par
+The ControlProgram class will try to connect to a timer server every  time the control is started. The timer server name (i.e., the name the  timer server is registered under in the QNX namespace, not the name of  the executable file) can be specified in the configuration file. The  timer server has to be started prior to start of the control. The timer  server is started at a fixed frequency. The frequency of the control  program must be an integer divisor of the frequency of the timer server.\par
+{\b Signal} {\b Handling}\par
+If the CTRL-C signal is sent while the control program is executing, the  signal handler will set a flag which will abort the control at the next  control cycle rather than immediately aborting the control (i.e., the  control won't be aborted in the middle of the cycle). Once CTRL-C is  pressed, the signal handler is de-installed which restores CTRL-C's  original function. Hence, the next time CTRL-C is pressed (in case  the control progran still hangs), the program is terminated unconditionally.\par
+{\b Math} {\b Errors}\par
+QNX 4: If a math error occurs, control execution terminates immediately. \line
+ QNX 6/RTP: If a math error occurs, control execution terminates  at the end of the control cycle.\par
+{\b Example Program:}\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid // ========================================================================\line
+//  QMotor - A PC Based Real-Time Graphical Control Environment\line
+//  (c) 2000 QRTS\line
+//  ---------------------------------------------------------------\line
+//  Control Program : PDControl.cpp\line
+//  Description     : A simple PD control example\line
+//  Author          : Markus Loffler\line
+//  Start Date      : Tue Feb 22 10:30:57 est 2000\line
+// ========================================================================\line
+\line
+// ----- QRTS libraries -----\line
+#include "ControlProgram.hpp"\line
+#include "IOBoardClient.hpp"\line
+#include "ButterworthFilter.hpp"\line
+\line
+// ----- C standard libraries -----\line
+#include <math.h>\line
+\line
+\line
+//============================================================================\line
+// Class definition of the PDControl class\line
+//============================================================================\line
+\line
+class PDControl : public ControlProgram\line
+\{\line
+  protected:\line
+\line
+    // ----- Log Variables -----\line
+    double q;         // Current Position\line
+    double qd;        // Desired Position\line
+    double error;     // Current Position Error\line
+    double errorDot;  // Derivative of Current Position Error\line
+    double torque;    // Output Torque\line
+    \line
+    // ----- Control Parameters -----\line
+    double kp;        // Proportional Control Gain\line
+    double kd;        // Derivative Control Gain\line
+    double amplitude; // Amplitude of Desired Sine Trajectory\line
+    double frequency; // Frequency of Desired Sine Trajectory\line
+           \line
+    // ----- Other Variables -----\line
+    double errorPrevious; // Error of last control cycle\line
+    ButterworthFilter<double> filter;  // Filter for backwards difference\line
+    \line
+           \line
+    // ----- Clients -----\line
+    IOBoardClient *iobc;\line
+      // I/O board client, used to access the I/O board through the server,\line
+      // e.g. read A/D channels, read encoders, write D/A channels, etc.\line
+\line
+  public:\line
+\line
+    PDControl(int argc, char *argv[]) : ControlProgram (argc, argv)\{\};\line
+      // Constructor. Usually no need to make changes here\line
+\line
+    ~PDControl () \{\};\line
+      // Destructor. Usually no need to make changes here\line
+      \line
+      \line
+    // ----- User Functions -----\line
+    // This functions need to be implemented by the user in order to implement\line
+    // his control application. The user does not need to implement all of them,\line
+    // but usually at least enterControl(), startControl(), control() and\line
+    // exitControl() are implemented.\line
+    \line
+    virtual int enterControl();\line
+    virtual int startControl();\line
+    virtual int control();\line
+    virtual int stopControl();\line
+    virtual int exitControl();\line
+\};\line
+\line
+\line
+//============================================================================\line
+// PDControl::enterControl\line
+// --------------------------------------------------------------------------\line
+// This function is called when the control program is loaded. In standalone\line
+// mode, this happens immediately. When using the GUI, it happens when the\line
+// user loads the control program.\line
+//============================================================================\line
+\line
+int PDControl::enterControl()\line
+\{\line
+  registerLogVariable(&q, "q", "Current Position");\line
+  registerLogVariable(&qd, "qd", "Desired Position");\line
+  registerLogVariable(&error, "error", "Position Error");\line
+  registerLogVariable(&errorDot, "errorDot", "Position Error Derivative");\line
+  registerLogVariable(&torque, "torque", "Control Torque");\line
+\line
+  registerControlParameter(&kp, "kp", "Proportional Gain");\line
+  registerControlParameter(&kp, "kd", "Derivative Gain");\line
+  registerControlParameter(&amplitude, "amplitude",\line
+                           "Amplitude of Desired Sine Trajectory");\line
+  registerControlParameter(&frequency, "frequency",\line
+                           "Frequency of Desired Sine Trajectory");\line
+\line
+  // Set all control parameters initially to zero\line
+  clearAllControlParameters();\line
+  \line
+  // Start message\line
+  d_messageStream\line
+    << endl << "----- " << d_applicationName << " -----" << endl\line
+    << "This is an example of a PD control algorithm." << endl << endl;\line
+  \line
+  return 0;\line
+\}\line
+\line
+\line
+//============================================================================\line
+// PDControl::startControl\line
+// --------------------------------------------------------------------------\line
+// Called each time a control run is started. If running from the GUI, this\line
+// will be called each time the START button is pushed. \line
+//============================================================================\line
+\line
+int PDControl::startControl()\line
+\{\line
+  clearAllLogVariables();\line
+  \line
+  // ----- Initialize your clients here -----\line
+  char *ioboardServerName = "qrts/iobs0";\line
+  iobc = new IOBoardClient(ioboardServerName);\line
+\line
+  if (iobc->isStatusError())  \line
+  \{                             \line
+    d_status.setStatusError()\line
+      << d_applicationName << ": [PDControl::startControl()] "\line
+      << "Error connecting to IO board server " << ioboardServerName << endl;\line
+    delete iobc;\line
+    iobc = 0;\line
+    return -1;\line
+  \}\line
+\line
+  filter.setCutOffFrequency(100);\line
+  filter.setSamplingTime(d_controlPeriod);\line
+  filter.setDampingRatio(1.0);\line
+  filter.setAutoInit();\line
+  \line
+  return 0;\line
+\}\line
+\line
+\line
+//============================================================================\line
+// PDControl::control\line
+//----------------------------------------------------------------------------\line
+// Called each control cycle. Do your input, control computations, and output\line
+// here. If you return 0, the control will continue to execute. If you return\line
+// nonzero, the control will abort. You may want to abort if some error\line
+// condition occurs (excessive velocity,  etc.)\line
+//============================================================================\line
+\line
+int PDControl::control()\line
+\{\line
+  // Calculate error\line
+  qd = sin(frequency * d_elapsedTime) * amplitude;\line
+  q = iobc->getAdcValue(0);\line
+  error = q - qd;\line
+  \line
+  // Calculate derivative of error (backwards difference)\line
+  errorDot =\line
+    filter.filter((error - errorPrevious) / d_controlPeriod);\line
+  errorPrevious = error;\line
+  \line
+  // Calculate PD control\line
+  torque = kp * error + kd * errorDot;\line
+  \line
+  iobc->setDacValue(0, torque);\line
+\line
+  return 0;\line
+\}\line
+\line
+\line
+//============================================================================\line
+// PDControl::stopControl()\line
+//----------------------------------------------------------------------------\line
+// Called each time a control run ends. If running from the GUI, this\line
+// will be called each time the STOP button is pushed, or when a timed run\line
+// ends, or when the control aborts itself.\line
+//============================================================================\line
+\line
+int PDControl::stopControl()\line
+\{\line
+  // Zero out the DAC\line
+  iobc->setDacValue(0, 0);\line
+\line
+  // Disconnect from IO board server\line
+  delete iobc;\line
+\line
+  return 0;\line
+\}\line
+\line
+\line
+//============================================================================\line
+// PDControl::exitControl\line
+// --------------------------------------------------------------------------\line
+// This function is called when the control is unloaded. In standalone\line
+// mode, this happens after one control run has completed. When using\line
+// the GUI, it happens when the user loads a new control program or\line
+// exits the GUI.\line
+//============================================================================\line
+\line
+int PDControl::exitControl()\line
+\{\line
+  return 0;\line
+\}\line
+\line
+\line
+//============================================================================\line
+// main()\line
+//----------------------------------------------------------------------------\line
+// The main function instantiates the object and goes into the mainloop\line
+//============================================================================\line
+\line
+main (int argc, char *argv[])\line
+\{\line
+  PDControl cp (argc, argv);\line
+  cp.run();\line
+\}\line
+\line
+\par
+}
+ \par
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v ControlProgram\:ControlProgram}
+{\xe \v ControlProgram\:ControlProgram}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+ControlProgram (int {\i argc} = 0, char * {\i argv}[] = 0, const char * {\i timerServerName} = "qrts/ts0", int {\i priority} = 27)}
+}\par
+{\bkmkstart class_ControlProgram_a0}
+{\bkmkend class_ControlProgram_a0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Constructor. Initializes the class. In the constructor of the derived  class, use the same parameters and pass them to the base class  constructor.\par
+The base class processes the following command line parameters: { \par
+\pard\plain \s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid 
+{\f2 -config <filename>}: Specify a configuration filename. Default filename is the name of the control program plus the extension ".cfg". \par
+\pard\plain \s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid 
+{\f2 -savelogs}: If this option is specified, the data of the logged variables is saved.  to log files \par
+\pard\plain \s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid 
+{\f2 -debugmessages}: If this switch is specified, messages sent to d_debugStream are output  to the terminal. \par
+\pard\plain \s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid 
+{\f2 -supervisor}: Used internally by the QMotor GUI. Do not use this parameter. \par
+\pard\plain \s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid 
+{\f2 -outputfd}: Used internally by the QMotor GUI. Do not use this parameter. \par
+}{{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i argc}}   Number of parameters.(See main() ). \par
+{\b {\i argv}}   Array of pointers to the command line parameters (See main()). \par
+{\b {\i timerServerName}}   The name of the timer server. This parameter is present for backwards compability. Rather than using it in new control programs, use the setting "timerServerName" in the configuration file. \par
+{\b {\i priority}}   Priority of the control program. for backwards compability. Rather than using it in new control programs, use the setting "priority" in the configuration file. \par
+}
+\par
+}}
+{\xe \v ~ControlProgram\:ControlProgram}
+{\xe \v ControlProgram\:~ControlProgram}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+~ControlProgram (){\f2  [virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_a1}
+{\bkmkend class_ControlProgram_a1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Destructor. Cleans up. \par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v run\:ControlProgram}
+{\xe \v ControlProgram\:run}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void run ()}
+}\par
+{\bkmkstart class_ControlProgram_a2}
+{\bkmkend class_ControlProgram_a2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+If there is no supervisor, runs the control once and then exits, otherwise waits for commands from the supervisor. \par
+}
+{\xe \v mainLoop\:ControlProgram}
+{\xe \v ControlProgram\:mainLoop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void mainLoop ()}
+}\par
+{\bkmkstart class_ControlProgram_a3}
+{\bkmkend class_ControlProgram_a3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Same as {\b run}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a2 \\*MERGEFORMAT}{\fldrslt pagenum}}}), for compability reasons. \par
+}
+{\xe \v enableSupervisorMode\:ControlProgram}
+{\xe \v ControlProgram\:enableSupervisorMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void enableSupervisorMode ()}
+}\par
+{\bkmkstart class_ControlProgram_a4}
+{\bkmkend class_ControlProgram_a4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Enables the supervisor mode, i.e., the control program can be loaded from the QMotor GUI. This is the default. \par
+}
+{\xe \v disableSupervisorMode\:ControlProgram}
+{\xe \v ControlProgram\:disableSupervisorMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void disableSupervisorMode ()}
+}\par
+{\bkmkstart class_ControlProgram_a5}
+{\bkmkend class_ControlProgram_a5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Disables the supervisor mode, i.e., it is not possible to use this control program from the QMotor GUI. This function must be used when a program spawns multiple threads that instantiate multiple ControlProgram objects. The supervisor mode must be disabled for all threads except the one that will be used for tuning from the GUI. \par
+}
+{\xe \v isSupervisorModeEnabled\:ControlProgram}
+{\xe \v ControlProgram\:isSupervisorModeEnabled}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isSupervisorModeEnabled ()}
+}\par
+{\bkmkstart class_ControlProgram_a6}
+{\bkmkend class_ControlProgram_a6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Determines if the supervisor mode is enabled. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: The supervisor mode is enabled, 0: The supervisor mode is not enabled. \par
+}}
+{\xe \v enableSignalHandling\:ControlProgram}
+{\xe \v ControlProgram\:enableSignalHandling}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void enableSignalHandling ()}
+}\par
+{\bkmkstart class_ControlProgram_a7}
+{\bkmkend class_ControlProgram_a7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Enables the handling of signals, e.g. SIGINT as created by CTRL-C will cause that the control loop stops and that the {\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) function is called. Signal handling is enabled by default. \par
+}
+{\xe \v disableSignalHandling\:ControlProgram}
+{\xe \v ControlProgram\:disableSignalHandling}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void disableSignalHandling ()}
+}\par
+{\bkmkstart class_ControlProgram_a8}
+{\bkmkend class_ControlProgram_a8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Disables the handling of signals. \par
+}
+{\xe \v isSignalHandlingEnabled\:ControlProgram}
+{\xe \v ControlProgram\:isSignalHandlingEnabled}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isSignalHandlingEnabled ()}
+}\par
+{\bkmkstart class_ControlProgram_a9}
+{\bkmkend class_ControlProgram_a9}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Determines if signal handling by QMotor is enabled. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: Signal handling is enabled, 0: Signal handling is not enabled. \par
+}}
+{\xe \v enterControl\:ControlProgram}
+{\xe \v ControlProgram\:enterControl}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int enterControl (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b0}
+{\bkmkend class_ControlProgram_b0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is called when the control program is loaded. In  standalone mode, this happens immediately. When using the GUI, it  happens when the user loads the control program. Use this function in  your derived class to register control parameters/log variables and to  initialize control parameters. After this function has completed, the  base class ControlProgram will try to load a configuration file and  eventually overwrite the initialized values. To indicate an error in  enterControl and to prevent the loading of the control, set the d_status data member to error or return a non-zero value ({\b exitControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b6 \\*MERGEFORMAT}{\fldrslt pagenum}}}) won't be  called in this case).\par
+{\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Loading the control was successful,  Non-Zero: Error occurred in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}).\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      int MyControlProgram::enterControl()\line
+     \{\line
+         d_runForever = 0;\line
+         d_controlFrequency = 1000;\line
+         d_controlDuration = 10;\line
+       registerControlParameter(&kp, "kp", "Proportional Gain");\line
+         registerLogVariable(&voltage, "voltage", "Output voltage");\line
+         return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v readConfiguration\:ControlProgram}
+{\xe \v ControlProgram\:readConfiguration}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int readConfiguration (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b1}
+{\bkmkend class_ControlProgram_b1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is called right after {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) and every time a new  configuration is loaded in the GUI. Use this function to read custom  settings from the configuration file.\par
+To indicate an error in {\b readConfiguration}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b1 \\*MERGEFORMAT}{\fldrslt pagenum}}}) and to prevent the loading of  the control, set the d_status data member to error or return a non-zero  value ({\b exitControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b6 \\*MERGEFORMAT}{\fldrslt pagenum}}}) won't be called in this case). {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Reading the configuration was successful,  Non-Zero: Error reading the configuration\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      int MyControlProgram:: readConfiguration ()\line
+     \{\line
+       d_config.setCurrentSectionName("MyControlSettings");\line
+       d_inputFile = d_config.getStringEntry("inputFile", "default.inp");\line
+       return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v startControl\:ControlProgram}
+{\xe \v ControlProgram\:startControl}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int startControl (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b2}
+{\bkmkend class_ControlProgram_b2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is called when the control is started. In standalone mode,  this happens immediately after {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) has been called. When  using the GUI, it happens when the user hits the "Start" button. Use  this function in your derived class to connect to servers (e.g., an I/O  board server) and to initialize log variables. Do not change control  parameters in this function otherwise control parameters set in the GUI  will be overwritten. To indicate an error in {\b startControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b2 \\*MERGEFORMAT}{\fldrslt pagenum}}}) and to prevent  control execution, set the d_status data member to error and return a  non-zero value.\par
+{\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Continue control execution,  Non-Zero: terminate control execution ({\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) won't be called)\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      void MyControlProgram::startControl()\line
+     \{\line
+       d_safetyStopFlag = 0;\line
+       d_iobc = new IOBoardClient("qrts/iobs0");\line
+       if (d_iobc->isStatusError())\line
+       \{\line
+         d_status->setStatusError()\line
+           << "Cannot connect to IO board server" << endl;\line
+         return -1;\line
+       \}\line
+       return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v control\:ControlProgram}
+{\xe \v ControlProgram\:control}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int control (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b3}
+{\bkmkend class_ControlProgram_b3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is called every control cycle at a frequency specified by  the data member d_controlFrequency. Use this function to implement your  control algorithm. To indicate an error in startControl and to prevent  further control execution, set the d_status data member to error and  return a non-zero value. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Continue control execution,  Non-Zero: terminate control execution ({\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) will still be called)\par
+\par
+}{\b Example : }\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      int MyControlProgram::control()\line
+     \{\line
+       q = iobc->getAdcValue(0);\line
+       qd =  iobc->getAdcValue(1);\line
+       error = qd - q;\line
+       outputVoltage = kp * error;\line
+       if (outputVoltage > 5.0)\line
+       \{\line
+         d_status.setStatusError()\line
+           << "Control voltage exceeds limits" << endl;\line
+         return -1;\line
+       \}\line
+    \line
+       iobc->setDacValue(0, outputVoltage);\line
+       return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v startControlProgramShutdown\:ControlProgram}
+{\xe \v ControlProgram\:startControlProgramShutdown}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int startControlProgramShutdown (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b4}
+{\bkmkend class_ControlProgram_b4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Called when the control is stopped (right before {\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}})). Return 1 to continue the control in a shutdown mode, return 0 if no shutdown is required (which is the default). If 0 is returned by this function, {\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called right after it, otherwise {\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called whenever {\b shutdownComplete}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b8 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called.\par
+{\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: No Shutdown mode, stop control now. \line
+  1: Initiate Shutdown mode. \par
+}}
+{\xe \v stopControl\:ControlProgram}
+{\xe \v ControlProgram\:stopControl}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int stopControl (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b5}
+{\bkmkend class_ControlProgram_b5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is called when the control routine has finished. This  happens when the control duration has reached, the user hits CTRL-C, the  control aborts itself by setting the status to error, or the user hits  the "Stop" button in the GUI. Use this function in your derived class to  zero out DAC value and to disconnect from the servers (e.g., an I/O  board server). To indicate an error in stopControl, set the d_status data member to error and return a non-zero value.\par
+{\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Stopping the control was successful,  Non-Zero: Error stopping the control.\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      int MyControlProgram::stopControl()\line
+     \{\line
+       iobc->setDacValue(0, 0);\line
+       delete iobc;\line
+       return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v exitControl\:ControlProgram}
+{\xe \v ControlProgram\:exitControl}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int exitControl (){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b6}
+{\bkmkend class_ControlProgram_b6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is called when the control is unloaded. In standalone  mode, this happens after one control run has completed. When using the  GUI, it happens when the user loads a new control program or exits the  GUI. This function could be used to cleanup allocated memory. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Exit control was successful, Non-Zero: Error exiting the control.\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      int MyControlProgram::exitControl()\line
+     \{\line
+       // delete memory for filter\line
+       delete filter;\line
+       return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v handleMessage\:ControlProgram}
+{\xe \v ControlProgram\:handleMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int handleMessage (pid_t {\i pid}, char * {\i message}){\f2  [protected, virtual]}}
+}\par
+{\bkmkstart class_ControlProgram_b7}
+{\bkmkend class_ControlProgram_b7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This function is not required for normal control implementation. It is  usually used for special applications by advanced users. It allows to  receive messages that are sent with the QNX message passing  functions Send() (in QNX 4) and msgSend (in QNX 6), the sendMessage()  function of the class Client, and related functions. Messages are received (and this  function is called) while the control program waits for a "start" from  the GUI as well as while the control is running. By using the  {\b handleMessage}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b7 \\*MERGEFORMAT}{\fldrslt pagenum}}}), a client/server relationship can be established with  the control program working as a server and an external program working  as a client. For example, a control program could receive desired  setpoints from an external program using this mechanism. Note: The  message buffer has a size of 4096 bytes. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i pid}}   Process ID of the sender. \par
+{\b {\i message}}   Message sent. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0: Proceed with control (if control is running) \line
+ -1: Terminate control  (if control is running)\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid       int MyControlProgram::handleMessage()\line
+      \{\line
+        int intMsg = *((int *) message;\line
+        if (intMsg == STOP_CONTROL)\line
+        \{\line
+          d_status.setStatusError() << "Stop message received" << endl;\line
+          return  -1;\line
+        \}\line
+        if (intMsg == REVERSE_DIRECTION)\line
+          direction = - direction;\line
+        return 0;\line
+     \}\par
+}
+ \par
+}
+{\xe \v registerLogVariable\:ControlProgram}
+{\xe \v ControlProgram\:registerLogVariable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void registerLogVariable (double * {\i address}, const char * {\i name}, const char * {\i description} = "", int {\i numRows} = 1, int {\i numColums} = 1)}
+}\par
+{\bkmkstart class_ControlProgram_a10}
+{\bkmkend class_ControlProgram_a10}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Registers a C++ variable of type "double" as a log variable. The consequence is that the  variable will be logged according to its log mode and settings. It is  possible to log double and int variables. It is also possible to log  arrays as vectors (set numRows the number of array elements and do not specify the numColumms)  or matrices (specify numRows and numColums).{\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i address}}   Address of the C++ variable. Please note that when logging scalar variables, you need to use the "&" operator to determine the address of  the variables. This is not required for arrays (see examples). \par
+{\b {\i name}}   Name of the log variable. You should use the name under which the variable has been declared. This name appears in the QMotor GUI in the list of  log variables. It is also used for setting log parameters. \par
+{\b {\i description}}   A detailed description of the function of the variable. This string appears in the QMotor GUI when the user moves the mouse cursor over the log variable and allows it to remain there for a brief time interval. \par
+{\b {\i numRows}}   Number of rows (in case of a vector or matrix). \par
+{\b {\i numColumns}}   Number of columns (in case of a matrix).\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      registerLogVariable(&voltage, "voltage", "Control Voltage");\line
+    registerLogVariable(velocity, velocity, "Velocity Vector", 4);\par
+}
+ \par
+}
+{\xe \v registerLogVariable\:ControlProgram}
+{\xe \v ControlProgram\:registerLogVariable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void registerLogVariable (int * {\i address}, const char * {\i name}, const char * {\i description} = "", int {\i numRows} = 1, int {\i numColums} = 1)}
+}\par
+{\bkmkstart class_ControlProgram_a11}
+{\bkmkend class_ControlProgram_a11}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Registers a C++ variable of type "int" as a log variable. For a description see  {\i registerLogVariable(double} *address, ...). {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i address}}   Address of the C++ variable of type int. \par
+{\b {\i name}}   Name of the log variable. \par
+{\b {\i description}}   Description of the log variable. \par
+{\b {\i numRows}}   Number of rows (in case of a vector or matrix). \par
+{\b {\i numColumns}}   Number of columns (in case of a matrix). \par
+}
+\par
+}}
+{\xe \v registerControlParameter\:ControlProgram}
+{\xe \v ControlProgram\:registerControlParameter}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void registerControlParameter (double * {\i address}, const char * {\i name}, const char * {\i description} = "", int {\i numRows} = 1, int {\i numColums} = 1)}
+}\par
+{\bkmkstart class_ControlProgram_a12}
+{\bkmkend class_ControlProgram_a12}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Registers a C++ variable as a control parameter. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i address}}   Address of the C++ variable. Please note the "&" operator is  needed to specify the address of a simple/scalar control variable. This  is not required for arrays (see examples). \par
+{\b {\i name}}   Name of the control parameter. You should use the name under which the variable has been  declared. This name appears in the QMotor GUI in the list of control parameters.  \par
+{\b {\i description}}   A detailed description of the function of the control  variable. This string appears in the QMotor GUI when the user  moves the mouse cursor over the control parameter and allows  it to remain there for a brief time interval. \par
+{\b {\i numRows}}   Number of rows (in case of a vector or matrix). \par
+{\b {\i numColumns}}   Number of columns (in case of a matrix).\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      registerControlParameter(&voltage, "voltage", "Control Voltage");\line
+     registerControlParameter(velocity, velocity, "Velocity Vector", 4);\par
+}
+ \par
+}
+{\xe \v registerControlParameter\:ControlProgram}
+{\xe \v ControlProgram\:registerControlParameter}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void registerControlParameter (int * {\i address}, const char * {\i name}, const char * {\i description} = "", int {\i numRows} = 1, int {\i numColums} = 1)}
+}\par
+{\bkmkstart class_ControlProgram_a13}
+{\bkmkend class_ControlProgram_a13}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Registers a C++ variable as a control parameter. For a description, see {\i registerControlParameter(double} *address, ...) {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i address}}   Address of the C++ variable of type int. \par
+{\b {\i name}}   Name of the control parameter. \par
+{\b {\i description}}   Description of the control parameter. \par
+{\b {\i numRows}}   Number of rows (in case of a vector or matrix). \par
+{\b {\i numColumns}}   Number of columns (in case of a matrix). \par
+}
+\par
+}}
+{\xe \v clearAllLogVariables\:ControlProgram}
+{\xe \v ControlProgram\:clearAllLogVariables}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void clearAllLogVariables ()}
+}\par
+{\bkmkstart class_ControlProgram_a14}
+{\bkmkend class_ControlProgram_a14}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets all registered log variables to zero.\par
+{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      clearAllLogVariables();\par
+}
+ \par
+}
+{\xe \v clearAllControlParameters\:ControlProgram}
+{\xe \v ControlProgram\:clearAllControlParameters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void clearAllControlParameters ()}
+}\par
+{\bkmkstart class_ControlProgram_a15}
+{\bkmkend class_ControlProgram_a15}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets all control parameters control parameters to zero.\par
+{\b Example :} {
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      clearAllControlParameters();\par
+}
+ \par
+}
+{\xe \v setNoLogMode\:ControlProgram}
+{\xe \v ControlProgram\:setNoLogMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setNoLogMode (const char * {\i variableName})}
+}\par
+{\bkmkstart class_ControlProgram_a16}
+{\bkmkend class_ControlProgram_a16}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Disables logging for a certain variable. Use this function in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) to set logging mode.  Note: If there is a configuration file present, then logging modes are  automatically loaded and set from this configuration file. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i variableName}}   Variable name.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      setNoLogMode("voltage");\par
+}
+ \par
+}
+{\xe \v setTimedLogMode\:ControlProgram}
+{\xe \v ControlProgram\:setTimedLogMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setTimedLogMode (const char * {\i variableName})}
+}\par
+{\bkmkstart class_ControlProgram_a17}
+{\bkmkend class_ControlProgram_a17}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets timed mode for the specified variable. In this logging mode, the  logging starts at the time specified with {\b setLogStartTime}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a24 \\*MERGEFORMAT}{\fldrslt pagenum}}}) with a  duration that is specified with {\i {\b setLogDuration}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a22 \\*MERGEFORMAT}{\fldrslt pagenum}}})}. Use this function in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) to set logging mode.  Note: If there is a configuration file present, then logging modes are  automatically loaded and set from this configuration file.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i variableName}}   Variable name.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      void setTimedLogMode("voltage");\par
+}
+ \par
+}
+{\xe \v setEventTriggeredLogMode\:ControlProgram}
+{\xe \v ControlProgram\:setEventTriggeredLogMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setEventTriggeredLogMode (const char * {\i variableName})}
+}\par
+{\bkmkstart class_ControlProgram_a18}
+{\bkmkend class_ControlProgram_a18}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets event triggered logging mode for the specified variable. In this  logging mode, the logging can be enabled and disabled one time by using  the functions {\b startLogging}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a20 \\*MERGEFORMAT}{\fldrslt pagenum}}}) and {\b stopLogging}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a21 \\*MERGEFORMAT}{\fldrslt pagenum}}}). Use this function in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) to set logging mode.  Note: If there is a configuration file present, then logging modes are  automatically loaded and set from this configuration file. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i variableName}}   Variable name.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      setEventTriggeredLogMode("voltage");\par
+}
+ \par
+}
+{\xe \v getLogVariableHandle\:ControlProgram}
+{\xe \v ControlProgram\:getLogVariableHandle}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getLogVariableHandle (const char * {\i variableName})}
+}\par
+{\bkmkstart class_ControlProgram_a19}
+{\bkmkend class_ControlProgram_a19}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Use this function in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) or {\b startControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b2 \\*MERGEFORMAT}{\fldrslt pagenum}}}). Returns a handle  to a given log variable. This handle is required for the following two  functions, {\b startLogging}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a20 \\*MERGEFORMAT}{\fldrslt pagenum}}}) and {\b stopLogging}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a21 \\*MERGEFORMAT}{\fldrslt pagenum}}}). A handle instead of a  variable name is used to identify a log variable because {\b startLogging}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a20 \\*MERGEFORMAT}{\fldrslt pagenum}}}) and {\b stopLogging}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_a21 \\*MERGEFORMAT}{\fldrslt pagenum}}}) are used during the real-time control and it could be too  time consuming to search for the variable by its name. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  A handle to the log variable. \line
+ -1 if the variable cannot be found.\par
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      voltageHandle = getLogVariableHandle("voltage");\par
+}
+ \par
+}
+{\xe \v startLogging\:ControlProgram}
+{\xe \v ControlProgram\:startLogging}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void startLogging (int {\i logVariableHandle})}
+}\par
+{\bkmkstart class_ControlProgram_a20}
+{\bkmkend class_ControlProgram_a20}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Starts logging for the specified variable or all variables with event  triggered logging mode. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i logVariableHandle}}   A handle to the log variable for which logging should  be started.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      startLogging(voltageHandle);\par
+}
+ \par
+}
+{\xe \v stopLogging\:ControlProgram}
+{\xe \v ControlProgram\:stopLogging}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void stopLogging (int {\i logVariableHandle})}
+}\par
+{\bkmkstart class_ControlProgram_a21}
+{\bkmkend class_ControlProgram_a21}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Stops logging for the specified variable or all variables with event  triggered logging mode. Logging cannot be started again for this  variable. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i logVariableHandle}}   A handle to the log variable for which logging should  be stopped.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      stopLogging(voltageHandle);\par
+}
+ \par
+}
+{\xe \v setLogDuration\:ControlProgram}
+{\xe \v ControlProgram\:setLogDuration}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setLogDuration (const char * {\i variableName}, double {\i logDuration})}
+}\par
+{\bkmkstart class_ControlProgram_a22}
+{\bkmkend class_ControlProgram_a22}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the log duration for variables with continuous and timed logging mode. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i variableName}}   Variable name. \par
+{\b {\i logDuration}}   Log duration specified in seconds.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      setLogDuration("voltage", 5.0); // 5 seconds\par
+}
+ \par
+}
+{\xe \v setLogFrequency\:ControlProgram}
+{\xe \v ControlProgram\:setLogFrequency}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setLogFrequency (const char * {\i variableName}, double {\i logFrequency})}
+}\par
+{\bkmkstart class_ControlProgram_a23}
+{\bkmkend class_ControlProgram_a23}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the log frequency of a log variable. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i variableName}}   Variable name. \par
+{\b {\i logFrequencyLog}}   Frequency specified in Hz.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      setLogFrequency("voltage", 1000); // 1KHz\par
+}
+ \par
+}
+{\xe \v setLogStartTime\:ControlProgram}
+{\xe \v ControlProgram\:setLogStartTime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setLogStartTime (const char * {\i variableName}, double {\i logStartTime})}
+}\par
+{\bkmkstart class_ControlProgram_a24}
+{\bkmkend class_ControlProgram_a24}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the log start time for the specified variable with timed logging mode. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i variableName}}   Variable name. \par
+{\b {\i logStartTimeLog}}   Start time specified in seconds.\par
+\par
+}
+\par
+}{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      setLogStartTime("voltage", 60);\line
+     setLogDuration("voltage", 30);\line
+    // Start logging after a minute, then log for 30 seconds\par
+}
+ \par
+}
+{\xe \v setConfigurationFileName\:ControlProgram}
+{\xe \v ControlProgram\:setConfigurationFileName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setConfigurationFileName (const char * {\i configurationFileName})}
+}\par
+{\bkmkstart class_ControlProgram_a25}
+{\bkmkend class_ControlProgram_a25}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets a different configuration filename than the default one or the one specified in the command line. Call this  function right after calling the constructor, or call it from the constructor. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i configurationFileName}}   The new filename of the configuration. \par
+}
+\par
+}}
+{\xe \v isControlRunning\:ControlProgram}
+{\xe \v ControlProgram\:isControlRunning}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isControlRunning () const{\f2  [inline]}}
+}\par
+{\bkmkstart class_ControlProgram_a26}
+{\bkmkend class_ControlProgram_a26}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Determines if the control is running. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: Control is running. \line
+ 0: Control is not running. \par
+}}
+{\xe \v isControlShuttingDown\:ControlProgram}
+{\xe \v ControlProgram\:isControlShuttingDown}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isControlShuttingDown () const{\f2  [inline]}}
+}\par
+{\bkmkstart class_ControlProgram_a27}
+{\bkmkend class_ControlProgram_a27}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Determines if the control is in shutdown mode. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: Control is in shutdown mode. \line
+ 0: Control is not in shutdown mode. \par
+}}
+{\xe \v wasShutdownAborted\:ControlProgram}
+{\xe \v ControlProgram\:wasShutdownAborted}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int wasShutdownAborted () const{\f2  [inline]}}
+}\par
+{\bkmkstart class_ControlProgram_a28}
+{\bkmkend class_ControlProgram_a28}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Determines if the control shutdown was aborted by a repeated click on the STOP button. Use this function in {\b stopControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) to determine if the shutdown process was completed. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  1: Control shutdown was aborted. \line
+ 0: Control terminated normally. \par
+}}
+{\xe \v shutdownComplete\:ControlProgram}
+{\xe \v ControlProgram\:shutdownComplete}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void shutdownComplete (){\f2  [inline, protected]}}
+}\par
+{\bkmkstart class_ControlProgram_b8}
+{\bkmkend class_ControlProgram_b8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Call this function to indicate that Shutdown is complete. The control will stop after the current control cycle.  Calling this method has no effect if the control is not in shutdown mode. \par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v d_controlFrequency\:ControlProgram}
+{\xe \v ControlProgram\:d_controlFrequency}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double d_controlFrequency}
+}\par
+{\bkmkstart class_ControlProgram_m0}
+{\bkmkend class_ControlProgram_m0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Control frequency in Hz. Set this value in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}). Default is 1000 Hz. Note: If a configuration file is present, this value will be automatically  set from it, immediately before {\b startControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b2 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called.\par
+{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      d_runForever = 0;\line
+     d_controlDuration = 1;\line
+    d_controlFrequency = 1500    \par
+}
+ \par
+}
+{\xe \v d_controlPeriod\:ControlProgram}
+{\xe \v ControlProgram\:d_controlPeriod}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double d_controlPeriod}
+}\par
+{\bkmkstart class_ControlProgram_m1}
+{\bkmkend class_ControlProgram_m1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+The control period. This value is automatically set to  1/d_controlFrequency. {\b IMPORTANT: Do not alter this value.} Default is 0.001 Note: If a configuration file is present, this value will be automatically  set from it, immediately before {\b startControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b2 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called.\par
+{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      velocity = (currentPosition - previousPosition) / d_controlPeriod;\par
+}
+ \par
+}
+{\xe \v d_controlDuration\:ControlProgram}
+{\xe \v ControlProgram\:d_controlDuration}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double d_controlDuration}
+}\par
+{\bkmkstart class_ControlProgram_m2}
+{\bkmkend class_ControlProgram_m2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Control duration in seconds. This value will be ignored if d_runForever  is "1". Set this value in {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}). Default is "5". Note: If a configuration file is present, this value will be automatically  set from it, immediately before {\b startControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b2 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called.\par
+{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      d_runForever = 0;\line
+     d_controlDuration = 1;\par
+}
+ \par
+}
+{\xe \v d_runForever\:ControlProgram}
+{\xe \v ControlProgram\:d_runForever}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int d_runForever}
+}\par
+{\bkmkstart class_ControlProgram_m3}
+{\bkmkend class_ControlProgram_m3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Set this to "1" to continuously execute control, otherwise set it to "0"  (the value d_controlDuration will then be used). Set this value in  enterControl. Default is "0". Note: If a configuration file is present, this value will be automatically  set from it, immediately before {\b startControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b2 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called.\par
+{\b Example :}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      d_runForever = 1;\par
+}
+ \par
+}
+{\xe \v d_elapsedTime\:ControlProgram}
+{\xe \v ControlProgram\:d_elapsedTime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double d_elapsedTime}
+}\par
+{\bkmkstart class_ControlProgram_m4}
+{\bkmkend class_ControlProgram_m4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This is the elapsed time since the control has been started (in  seconds).\par
+{\b Example:} \line
+\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      void control()\line
+     \{\line
+       // Create a sine wave as desired trajectory\line
+       qd = sin(d_elaspedTime);\line
+    \}\par
+}
+ \par
+}
+{\xe \v d_elapsedTicks\:ControlProgram}
+{\xe \v ControlProgram\:d_elapsedTicks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int d_elapsedTicks}
+}\par
+{\bkmkstart class_ControlProgram_m5}
+{\bkmkend class_ControlProgram_m5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+This is the number of elapsed ticks (control cycles) since the control  has been started. \par
+}
+{\xe \v d_config\:ControlProgram}
+{\xe \v ControlProgram\:d_config}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Config d_config}
+}\par
+{\bkmkstart class_ControlProgram_m6}
+{\bkmkend class_ControlProgram_m6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+The object that contains the configuration. The configuration is loaded  from a configuration file right after {\b enterControl}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b0 \\*MERGEFORMAT}{\fldrslt pagenum}}}) has been called (if  a configuration file exists). In the configuration file, control  parameters, log settings, and other settings are specified. Use this  object in your derived class, in {\b readConfiguration}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_ControlProgram_b1 \\*MERGEFORMAT}{\fldrslt pagenum}}}), to get additional  settings you specified in the configuration file. Please refer to the  documentation on the Config class in the QRTS Utility Class Manual for  further information. \par
+}
+{\xe \v d_cmdLine\:ControlProgram}
+{\xe \v ControlProgram\:d_cmdLine}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+CmdLineArgs d_cmdLine}
+}\par
+{\bkmkstart class_ControlProgram_m7}
+{\bkmkend class_ControlProgram_m7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+The object that contains the command line. This data member only  contains the correct command line, if the correct argc and argv parameters from main() are passed to the ControlProgram constructor.  This data member can be used to determine custom command line parameters  for standalone control programs. Please refer to the documentation on  the CmdLineArgs class for further information. \par
+}
+{\xe \v d_standAloneMode\:ControlProgram}
+{\xe \v ControlProgram\:d_standAloneMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int d_standAloneMode}
+}\par
+{\bkmkstart class_ControlProgram_m8}
+{\bkmkend class_ControlProgram_m8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Is 1 if the control was started from the command line, not from the QMotor GUI. \par
+}
+{\xe \v d_messageStream\:ControlProgram}
+{\xe \v ControlProgram\:d_messageStream}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+ostream d_messageStream}
+}\par
+{\bkmkstart class_ControlProgram_m9}
+{\bkmkend class_ControlProgram_m9}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Use this stream to output messages to the user. By using this stream, messages will automatically be output to the  terminal (in standalone mode) or to the GUI (when using the GUI).\par
+{\b Example}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      d_messageStream << "Please set the control mode before starting the control." << endl\par
+}
+ \par
+}
+{\xe \v d_debugStream\:ControlProgram}
+{\xe \v ControlProgram\:d_debugStream}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+ostream d_debugStream}
+}\par
+{\bkmkstart class_ControlProgram_m10}
+{\bkmkend class_ControlProgram_m10}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Use this stream to output debug messages to the user. The messages are only printed to the terminal, if the control program was started with the {\f2  "-debugmessages" } command line switch. \par
+}
+{\xe \v d_applicationName\:ControlProgram}
+{\xe \v ControlProgram\:d_applicationName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char * d_applicationName}
+}\par
+{\bkmkstart class_ControlProgram_m11}
+{\bkmkend class_ControlProgram_m11}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Name of the control program. \par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+{\b ControlProgram.hpp}\par
+}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

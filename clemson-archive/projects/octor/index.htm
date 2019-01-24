@@ -1,0 +1,275 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <title>OCTOR - Documentation</title>
+ <link href="docs/htm/doxygen.css" rel="stylesheet" type="text/css">
+ <link href="docs/htm/tabs.css" rel="stylesheet" type="text/css">
+ <meta name="Description" content="OCTOR documentation">
+ <meta name="Author" content="vilas chitrakaran">
+ <script language="JavaScript" type="text/JavaScript">
+ </script>
+ <style type="text/css">
+ <!--
+ A {text-decoration: none}
+ A:hover {text-decoration: underline}
+ -->
+ </style>
+</head>
+
+<body bgcolor="#ffffff" link="#000000" text="#000000" vlink="#000000">
+
+<div align="left">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody><tr><td>
+  <hr align="left" color="#8687bf">
+  <!-- HEADING -->
+  <table align="center" bgcolor="#8687bf" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody><tr><td>
+   <center>
+   <font color="#ffffff" face="Arial, Helvetica, 'Sans Serif'" size="+2">
+   <strong>OCTOR - Soft Robotic Manipulators - Documentation</strong>
+   </font>
+   <br>
+   <font color="#ffffff" face="Arial, Helvetica, 'Sans Serif'" size="-1">
+   Vilas K. Chitrakaran, Updated: April 2006.
+   </font>
+   </center>
+   </td>
+   </tr>
+  </tbody></table>
+  <hr align="left" color="#8687bf">
+  <!-- /HEADING -->
+
+  <!-- *** BEGIN PAGE CONTENTS *** -->
+  <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" cols="1" width="100%">
+    <tbody><tr><td><font face="Arial, Helvetica, 'Sans Serif'" size="-1">
+	<table><tr>
+	<td>
+	<font face="Arial, Helvetica, 'Sans Serif'" size="-1"><p><b><i>Introduction : </i></b>
+	 This page documents my work on the OCTOR project, a research program aimed at 
+	 the design and development of a new class of biologically inspired soft robot manipulators 
+	 resembling biological trunks and tentacles. This research is sponsored by the Biodynatics 
+	 program of the Defense Advanced Research Projects Agency (DARPA). The official webpage for
+	 this project is here: <a href="http://www.ces.clemson.edu/ece/crb/octor"><u>http://www.ces.clemson.edu/ece/crb/octor</u></a>.
+	 My responsibilities included building the mobile computer, related electronics, and the 
+	 software that ran the Octor continuum arm. The computer and the continuum arm are mounted on a retrofitted 
+	 <a href="http://www.foster-miller.com/projectexamples/t_r_military/talon_robots.htm">Talon unmanned ground vehicle</a> from Foster-Miller. 
+	 <ul>
+	 <li>My collection of images from past demos: [<a href="../../photographs/psu.htm">Oct 2004</a>] 
+	 [<a href="../../photographs/swri05.htm">Mar 2005</a>][<a href="../../photographs/swri06.htm">Apr 2006</a>]
+	 <li>Press coverage: [<a href="http://www.newscientisttech.com/article/dn9124-robotic-tentacles-get-to-grips-with-tricky-objects.html">New Scientist Tech (May 8, 2006)</a>]
+	 [<a href="http://reports.discoverychannel.ca/servlet/an/discovery/1/20060516/discovery_octobot_060516/20060516?hub=DiscoveryReport">Discovery Channel (May 15, 2006)</a>]
+	 </ul>
+	</font></p>
+	</td>
+	<td>
+	<img src="images/logoSmall.png" width="207" height="128" border="0" align="right">
+	</td>
+	</tr></table>
+
+    <table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Computer box</b></font>
+	</td></tr></table>
+	<p>
+	The computer box houses an Ampro LittleBoard LB700 EBX form factor single board computer (SBC), two ServoToGo I/O boards, an I/O
+	breakout board, a brushed DC motor controller, a 900 MHz video transmitter, and a 802.11 access point. The computer board 
+	has a mobile Pentium III 900 MHz processor, 256 MB of RAM, boots off a 1 GB flash drive and runs the 
+	QNX 6.2.1 operating system. A single fan is provided for air circulation inside the box. The entire system is built from 
+	commercial off-the-shelf components. The SBC enables untethered remote teleoperation of the continuum robot from 
+	an Operator Control Unit (OCU) consisting of a laptop with joysticks. The communication link between the OCU and 
+	the on-board computer is a point-to-point wireless RF link (IEEE 802.11b). The current test platform provides a 
+	mission time of more than 4 hours when powered by the Talon auxiliary lead-acid battery pack. We followed a conservative 
+	approach in the construction of the on-board computer. Some of the critical components of the computer system such 
+	as the data acquisition boards were selected based on our prior experience in using those components and the 
+	availability of reliable software for their operation. Conceivably, the power consumption and the footprint 
+	of the on-board computer can be considerably reduced, improving mission time and reducing the mass and size of the whole unit.
+	The location of connectors and their pinouts are shown in figures 1 and 2, respectively. 
+	</p>
+	
+    <center>
+	<table border=1 bordercolor="#000000"><tr>
+	<td>
+	<a href="images/box_front_big.png">
+	<img src="images/box_front.png" width="254" height="293" border="0" alt="Computer box front" align="center">
+	</a>
+	</td>
+	<td>
+ 	<a href="images/box_sides_big.png">
+	<img src="images/box_sides.png" width="313" height="293" border="0" alt="Computer box sides" align="center">
+	</td>
+    </tr></table>
+	<br><b><font size=-1>Figure 1: Computer box front and side panel connectors.</font></b>
+	</center>
+	<br><br>
+
+    <center>
+	<a href="images/connectors_big.png">
+	<img src="images/connectors.png" width="600" height="205" border="1" alt="Computer box connectors" align="center">
+	</a>
+	<br><b><font size=-1>Figure 2: Connector pin descriptions.</font></b>
+	</center>
+
+	<table border=0 bordercolor="#000000"><tr>
+	<td>
+	<img src="images/battery.png" width="180" height="170" border="0" alt="Battery connection diagram" align="center">
+	<br><b><font size=-1>Figure 3: Talon battery pack connection diagram.</font></b>
+	</td>
+	<td>
+	<p><font face="Arial, Helvetica, 'Sans Serif'" size="-1">
+	The computer is powered by one of the Talon lead-acid battery packs. Each battery pack contains three 12 volt batteries, and 
+	are accessible through 6 terminals (individual +ve and -ve terminals for each 12 volt battery). The pack powering the computer 
+	is wired as shown in figure 3. The 24V line is utilized to power the pressure regulators, the base motor, and the sucker. The 
+	36V line is connected to DC-DC converter on the PC104 stack, which powers the computer board and the rest of the electronics
+	inside the box.
+	</font></p>
+	</td>
+    </tr></table>
+	
+	<p>
+	<b><i>I/O breakout card:</b></i> Ribbon cables from the two ServoToGo I/O boards terminate on the I/O breakout board. The breakout board
+	buffers signals between the I/O boards and the external connectors on the box. It also has a relay circuit to enable/disable power to the
+	various sensors and actuators on the continuum arm.  
+	</p>
+
+    <center>
+	<table border=1 bordercolor="#000000"><tr>
+	<td>
+	<a href="images/breakout_big.png">
+	<img src="images/breakout.png" width="300" height="132" border="0" alt="I/O breakout board" align="center">
+	</a>
+	</td>
+	<td>
+ 	<a href="images/box_inside_big.png">
+	<img src="images/box_inside.png" width="300" height="217" border="0" alt="Computer box inside" align="center">
+	</a>
+	</td>
+    </tr></table>
+	<br><b><font size=-1>Figure 4: The I/O breakout board and its location inside the box (ServoToGo 
+	boards and motor controller board not shown).</font></b>
+	</center>
+	
+	<p>
+	We used the free CAD software from <a href="http://www.expresspcb.com/ExpressPCBHtm/Download.htm"><u>ExpressPCB</u></a>
+	for all our schematic and PCB design work. The PCBs can be sent for manufacture directly from the software GUI. 
+	This is a good software tool for designing circuit boards of intermediate complexity, and I am pleased
+	with the quality of their boards and fast shipping. Here are the relevant files:
+	<ul>
+	 <li> I/O breakout schematic [<a href="docs/oa6_io.pdf">PDF</a>] [<a href="docs/oa6_io.sch">ExpressPCB sch file</a>]
+	 <li> I/O breakout PCB [<a href="docs/oa6_io_pcb_silk.pdf">silkscreen layer PDF</a>] [<a href="docs/oa6_io.pcb">ExpressPCB pcb file</a>]
+	</ul>
+	</p>
+
+    <table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Octarm internal electrical harness</b></font>
+	</td></tr></table>
+	
+	<p>
+	The Octarm version VI has an internal wiring harness running through the center of the arm, terminating at the various position sensors, IR distance sensors, 
+	touch sensors, and suction actuators mounted at the end plates, and a CMOS camera at the tip (See figure 5). The arm itself is mounted
+	on a pneumatic/electrical rotary union which provides 12 pneumatic lines and 36 electrical contacts, and allows rotation of the arm about its axis. A mux
+	chip mounted on the arm multiplexes analog signals from the IR distance sensors and touch sensors. The encoders, suction, and the CMOS camera signals are routed directly
+	to the mobile computer through the slip ring contacts. 
+	</p>
+
+    <center>
+	<a href="images/arm_internals_big.png">
+	<img src="images/arm_internals_big.png" width="600" height="200" border="1" alt="Arm mechanical design" align="center">
+	</a>
+	<br><b><font size=-1>Figure 5: Octarm VI mechanial design (Courtesy of Dustin Dienno, PennState University).</font></b>
+	</center>
+	<br><br>
+
+	<p>
+	Details of the electrical wiring in the arm are provided in the following files:
+	<ul>
+	 <li> Arm wiring schematic [<a href="docs/oa6_arm_wiring_enc.pdf">PDF</a>] [<a href="docs/oa6_arm_wiring_enc.sch">ExpressPCB sch file</a>]
+	 <li> Mux board PCB [<a href="docs/mux_pcb_silk.pdf">silkscreen layer PDF</a>] [<a href="docs/mux.pcb">ExpressPCB pcb file</a>]
+	</ul>
+	</p>  
+
+    <table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Construction notes</b></font>
+	</td></tr></table>
+
+	<p>
+	Most of the electronic components that went into building the computer are available from Digikey. The purchases that I made in the coarse of building the computer
+	boxes are in the following excel sheet.
+	<ul>
+	 <li>Bill of materials [<A href="docs/octor_bom_v6.xls">MS Excel</a>]
+	</ul>
+	The above worksheet lists ~most~ of the electrical/electronic components that went into the contruction of the arm. It may not 
+	list a few items that weren't purchased by me directly.
+	</p>
+	
+	<p>
+	<b><i>NOTE</i></b>: Due to a mishap with the rotary union while building the first 'slave' prototype of Octarm VI (used later in the April DARPA demo), 
+	encoder wiring on the slave arm does not match the schematics provided here. Specifically, wiring for contacts 13 and 19 were swapped. 
+	</p>
+
+    <center>
+	<table border=1 bordercolor="#000000"><tr>
+	<td>
+	<a href="videos/build_day3.mpg">
+	<img src="videos/build_day3.png" width="320" height="240" border="0" alt="Arm build video" align="center">
+	</a>
+	</td>
+	<td>
+	<a href="videos/base_motor0.mpg">
+	<img src="videos/base_motor0.png" width="320" height="240" border="1" alt="Base motor test" align="center">
+	</a>
+	</td>
+    </tr></table>
+	<br><b><font size=-1>Figure 6: A time-lapse video of arm construction at Penn State, and the first benchtop test of the base motor rotation. Click on the images for videos.</font></b>
+	</center>
+	<br><br>
+
+    <table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Octarm VI On-board Control Software</b></font>
+	</td></tr></table>
+    <p>
+    The mobile computer runs a fairly complex control software that manages multiple 
+	threads responsible for different tasks. The control system can be visualized 
+	as a set of physical components (manipulators, joysticks) and functional
+	components (trajectory generators, PID controller, kinematic models) interacting with each other. 
+	The control software design reflects this inherent modulararity; utilizing object oriented programming, 
+	each physical and functional component is designed as a C++ class. Hence, developing an operational system
+	(such as a master-slave remote teleoperation system) is just a matter of choosing the 
+	right blocks and establishing communication interconnects between them.
+	</p>
+    <center>
+	<img src="images/class_hierarchy.png" width="324" height="166" border="0" alt="Software class hierarchy" align="center">
+	</a>
+	<br><b><font size=-1>Figure 7: Class hierarchy.</font></b>
+	</center>
+	<br><br>
+	<p>
+	Here are the main classes and structs in the Octarm VI control system:
+	<br><br>
+	<table>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/struct__octarm__setpoint.htm">_octarm_setpoint</a></td><td class="indexvalue"></td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/struct__octarm__status.htm">_octarm_status</a></td><td class="indexvalue"></td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOA6.htm">OA6</a></td><td class="indexvalue">The hardware interface class for Octarm 6 (March 2006) manipulator </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOA6Model.htm">OA6Model</a></td><td class="indexvalue">Arm specific modelling functions and constants for Octarm 6 (Mar 2006) </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOA6NetTraGen.htm">OA6NetTraGen</a></td><td class="indexvalue">A UDP communication module for receiving trajectory information from OCU </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOA6PIDControl.htm">OA6PIDControl</a></td><td class="indexvalue">A simple PID servo control implementation for actuators on the arm </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOA6StatusBroadcast.htm">OA6StatusBroadcast</a></td><td class="indexvalue">A UDP server that replies with the global status of the octarm </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOA6TraGen.htm">OA6TraGen</a></td><td class="indexvalue">Pure virtual base class for Octarm 6 (Mar 2006) trajectory generators </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classOctor.htm">Octor</a></td><td class="indexvalue">Global level management of OCTOR control system </td></tr>
+     <tr><td class="indexkey"><a class="el" href="docs/htm/classSubSystem.htm">SubSystem</a></td><td class="indexvalue">A pure virtual base class for all subsystems in the Octarm VI control system </td></tr>
+    </table>
+	<br><br>
+	</p>
+	<hr>
+    Created for project <code><font color="red"><b>Octarm VI On-board Control System</b></font></code> on Fri Apr 14 21:18:14 EDT 2006 for Vilas Kumar Chitrakaran (cvilas(@)ces.clemson.edu). 
+    <br>
+    Documentation generated using <a href=http://www.doxygen.org>Doxygen</a>
+	
+	</td></tr></tbody>
+  </table>
+ <hr align="left" color="#8687bf">
+ </td></tr>
+</tbody></table>
+</div>
+
+</body>
+</html>

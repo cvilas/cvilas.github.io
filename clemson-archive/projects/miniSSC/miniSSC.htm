@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vilas kumar Chitrakaran - Mini SSC-II Controller Software</title>
+<meta name="Description" content="Mini SSC II controller software.">
+<meta name="Keywords" content="scott edwards SSC II controller,  servo motor, robot kits">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb">
+<table width="640">
+<tr><td>
+
+<hr align="left" width="640" color=#8687bf>
+<div align="center"><h2>Mini SSC-II Controller for GNU/Linux.</h2></div>
+<hr align="left" width="640" color=#8687bf>
+
+<img src="images/ssc2.jpg" border=0 width=120 height=170 alt="Mini SSC II from scott edwards" align="right">
+<ul>
+	<li><b>Posted:</b> May 17, 2002
+	<li><b>Summary:</b> C++ software class library - libMiniSSC - for Control of 
+	<a href="http://www.seetron.com/ssc.htm" style="text-decoration:none">MiniSSC II</a> in 
+	<a href="http://www.linux.org/" style="text-decoration:none">GNU/Linux</a>.
+</ul>
+
+<h3>Introduction</h3>
+<div style="text-align:justify;">
+<p>
+The Mini Serial Servo Controller (SSC) is a simple device that can be used to 
+control upto eight pulse-proportional servos. These servos are designed for 
+use in toys such as radio-controlled (R/C) cars. They are fast and surprisingly
+powerful, making them suitable also for applications such as pan-tilt cameras 
+and small robotic arms. The shaft position of the servos are controlled by 1ms 
+to 2ms wide pulses repeating at 60Hz frequency. The Mini SSC II has an on-board 
+<a href="http://www.microchip.com/1010/pline/picmicro/category/embctrl/8kbytes/devices/16c621a/index.htm" style="text-decoration:none">PIC controller</a> 
+that accepts control words received serially at 2400 or 9600 
+baud, and generates the necessary control signals for the 8 servos.
+</p>
+
+<ul>
+	<li>There is a nice overview of the working of servos <a href="http://www.seattlerobotics.org/guide/servohack.html" style="text-decoration:none">here</a>.
+	<li>You can get the data sheets and the user's manual for the MiniSSC II from <a href="http://www.seetron.com/ssc.htm" style="text-decoration:none">
+	Scott Edwards Electronics Incorporated</a>.
+	<li>Medonis Engineering makes a nice <a href="http://www.medonis.com/booster12.html" style="text-decoration:none">Battery booster</a> to eliminate 
+	the dual power supply requirement of the MiniSSC board.
+	<li>A good guide to serial port programming in POSIX systems is <a href="http://www.easysw.com/~mike/serial/" style="text-decoration:none" target="new">here</a>. 
+	With the MiniSSC II, all you need to know is how to set the output baud rate of the serial port.
+</ul>
+
+<p>
+In order to control servos connected to a Mini SSC, the controller software has 
+to send three bytes at the appropriate serial rate continuously. These three bytes are
+<ul>
+<li>Byte 1: sync marker (255)
+<li>Byte 2: servo number (0-254)
+<li>Byte 3: servo position(0-254) 
+</ul>
+</p>
+
+<p>
+The class library libMiniSSC provides the bare minimum functionality required to 
+control a Mini SSC II. This is all you need if you need a low level interface to 
+directly control the servos.
+</p>
+
+<p>
+<ul>
+	<li><a href="docs/htm/annotated.htm">Click here</a> for a detailed description 
+	of the class interface for <code>MiniSSC</code>.
+	<li>Download the source code <a href="MiniSSC.tgz">MiniSSC.tgz</a> (4kB).
+</ul>
+</p>
+
+<p>
+To compile and install, please use the makefile provided in the package. The installation steps are as follows:
+<ol>
+	<li>Unzip and untar the package into a temporary directory.
+	<br><br>
+	<code>
+	cd /tmp<br>
+	tar zxvf MiniSSC.tgz
+	</code>
+	<br><br>
+	
+	<li>Enter the top directory and inspect the Makefile. The installation
+      directories are set by variables in the makefile and the defaults
+      are as follows:
+      <br>
+      Header files: /usr/local/include/MiniSSC<br>
+      Library: /usr/local/lib<br>
+	  <br>
+      You may change these to another directory by editing the corresponding 
+      variables in the makefile. After that, install the library as follows,
+
+	<br><br>
+
+	<code>
+	make<br>
+	make install
+	</code>
+	<br><br>
+
+      
+   <li> Try the provided example program MiniSSC.t.cpp.
+  </ul>
+</p>
+</div>
+
+<h3>Applications</h3>
+<div style="text-align:justify;">
+<p>
+I wrote this software primarily to control my <a href="http://www.lynxmotion.com/5aa.htm" style="text-decoration:none">Lynxmotion 5 axis robot arm</a> 
+in Linux. The Mini SSC II is quite popular with hobbyists, and is used in a lot of other devices. Have a look 
+<a href="http://www.seetron.com/ssclinks.htm" style="text-decoration:none">here</a> for more Mini SSC II applications.
+</p>
+
+<p><i>Suggestions or comments? <a href="mailto:cvilas@ces.clemson.edu">Mail me</a>.</i></p>
+</div>
+<hr align="left" width="640" color=#8687bf>
+
+</td></tr>
+</table>
+</body>
+</html>

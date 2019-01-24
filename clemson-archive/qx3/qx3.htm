@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vilas Kumar Chitrakaran - Image from my Intel QX3 microsocope</title>
+<meta name="Description" content="The QX3 in my Office">
+<meta name="Keywords" content="vilas chitrakaran webcam">
+<meta name="Author" content="vilas chitrakaran">
+
+<SCRIPT language="JavaScript">
+
+function remote()
+{
+   RemoteWin=window.open("qx3Image.htm","","resizable=yes,toolbar=0,location=0,\
+   directories=0,status=0,menubar=0,scrollbars=auto,copyhistory=0,width=664,height=616")
+   RemoteWin.creator=self
+}
+
+var Interval = 30
+function startClock() {
+   Interval = Interval - 1
+   if (Interval == -1) {
+      window.location.reload()
+   }
+   else {
+	   document.clock.time.value = Interval
+	   timerID = setTimeout("startClock()", 1000)
+   }
+}
+
+</SCRIPT>
+
+</HEAD>
+
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb" onload="startClock()">
+
+<hr align="left" width="640" color="#8687bf">
+<table width="640">
+<tr bgcolor="#8687bf"><td>
+<CENTER>
+<font color="white"><b>I N T E L  &nbsp;&nbsp;Q X 3</b></font>
+</CENTER>
+</td></tr>
+</table>
+<hr align="left" width="640" color="#8687bf">
+
+<table width="640">
+<tr>
+
+<!-- qx3cam -->
+<td valign=top>
+<a href="JavaScript:remote()">
+<IMG SRC="qx3Capture.jpg" width=320 USEMAP="#MAP" BORDER=0 alt="Click to go to resizeable image view."></a>
+</td>
+
+<td valign=top>
+<p>	I now have a toy that every kid must own - a microsocope. What you see on the left is a live image from my 
+	<a href="http://www.intel.com/support/intelplay/qx3/index.htm" style="text-decoration:none">Intel QX3</a> microscope. Unfortunely
+	 Intel has stopped making these, and I managed to get one for myself just before it ran out in stores.
+</p>
+<p>	 
+	Click on the image or <a href="JavaScript:remote()" style="text-decoration:none" >here</a> for a resizable image view.
+
+	<FORM NAME="clock">
+		<font>This image will reload in <INPUT TYPE="text" NAME="time" SIZE="3" VALUE=""> seconds.</font>
+	</FORM>
+</p>
+
+</td>
+</tr>
+</table>
+
+<hr align="left" width="640" color="#8687bf">
+
+</body>
+</html>

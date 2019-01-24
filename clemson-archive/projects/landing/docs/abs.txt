@@ -1,0 +1,8 @@
+	In this work, we present a strategy for an autonomous landing maneuver for 
+	an underactuated, unmanned aerial vehicle (UAV) using position information 
+	obtained from a single monocular on-board camera. Although the UAV is 
+	underactuated in translational control inputs (i.e., a lift force can only 
+	be produced), the proposed controller is shown to achieve globally uniform 
+	ultimate boundedness (GUUB) in position regulation error during the landing 
+	approach. The proposed vision-based control algorithm is built upon 
+	homography-based techniques and Lyapunov design methods.

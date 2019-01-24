@@ -1,0 +1,197 @@
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>vision Assisted Landing</title>
+<meta name="Description" content="vision based UAV tracking">
+<meta name="Keywords" content="homography, flight control, UAV">
+<meta name="Author" content="vilas chitrakaran">
+<script language="JavaScript" type="text/JavaScript">
+</script>
+
+<style type="text/css">
+<!--
+A {text-decoration: none}
+A:hover {text-decoration: underline}
+-->
+</style>
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" link="#000000" vlink="#000000">
+<div align="left">
+<table width=100% align=center border=0 cellpadding=0 cellspacing=0>
+ <tr><td>
+  <hr align="left" color="#8687bf">
+  <!-- HEADING -->
+  <table width=100% bgcolor=#8687bf align=center border=0 cellpadding=0 cellspacing=0>
+   <tr><td>
+   <center>
+   <font color=#ffffff face="Arial, Helvetica, 'Sans Serif'" size=+2>
+   <strong>Vision-Based Tracking for Unmanned Aerial Vehicles<sup><a href="#ack"><u>*</u></a></sup></strong>
+   </font>
+   <br>
+   <font color=#ffffff face="Arial, Helvetica, 'Sans Serif'" size=-1>
+   Vilas K. Chitrakaran, Darren M. Dawson, Hariprasad Kannan and Matthew Feemster
+   </font>
+   </center>
+   </td>
+   </tr>
+  </table>
+  <hr align="left" color="#8687bf">
+  <!-- /HEADING -->
+  <!-- *** BEGIN PAGE CONTENTS *** -->
+  <table width=100% align=center bgcolor=#ffffff border=0 cols=1 cellpadding=0 cellspacing=0>
+    <tr><td>
+	<br>
+	<font face="Arial, Helvetica, 'Sans Serif'" size=-1>
+	<div style="text-align:justify;">
+	<p>
+	<i><b>Keywords</b></i>: Unmanned aerial vehicles, visual servo control, autonomous systems, Lyapunov analysis. <br>
+	<i><b>Publications</b></i>: <a href="docs/follower.pdf"><u>Full paper</u></a>
+	</p>
+	<p>
+	<b><i>Introduction : </b></i>
+	Underactuated autonomous vehicles such as underwater vehicles, aircrafts, 
+	and helicopters are typically equipped with a lower number of control inputs 
+	than degrees of freedom to reduce factors such as weight, complexity, and 
+	power consumption. As a result, these vehicles may not be fully equipped 
+	with sufficient translational actuators that allow for independent 
+	translation along any given direction. Hence, the control design for these 
+	underactuated vehicles are complicated due to the fact that the rotational 
+	torques must be coupled with the translational system in order to achieve 
+	the overall position objective.
+	</p>
+	
+	<p>
+	In addition to the challenges involved in the design of a control strategy 
+	for underactuated dynamic systems, there exists the problem of accurate 
+	position measurement in such machines. Flying machines are usually equipped 
+	with onboard inertial sensors which only measure the rate of motion. The 
+	position information is thus obtained from time integration of rate data, 
+	resulting in potential drift over time due to sensor noise. (This drift can 
+	possibly be corrected using updates from a GPS, but they usually have very 
+	slow update rates.) To overcome this problem, the use of a vision sensor and 
+	computer vision techniques within the feedback loop of such systems is 
+	becoming increasingly attractive, due to their ever decreasing size and cost 
+	of implementation relative to the computing power required for processing 
+	the visual data. 
+    </p>
+
+	<center>
+	<img src="images/landing.png" width="460" height="290" border="0" alt="landing configuration"><br>
+    <font face="Arial,Helvetica"><font size=-1><b>Figure 1:</b> A UAV landing approach. Geometric relationships.</font></font>
+	</center>
+
+	<p>
+	In this work, a single calibrated monocular camera is utilized
+	as a feedback sensor within a position regulation control
+	scheme for an unmanned aerial vehicle (UAV) during
+	a landing maneuver. The UAV is assumed to be equipped
+	with Inertial Navigation Sensors (INS) from which velocity
+	information can be calculated. A homography-based
+	approach, described in (<a href="#Ma03">Ma, 2003</a>) and reported in 
+	such visual servoing related works as (<a href="#Chen05">Chen, 2005</a>) 
+	and (<a href="#Malis00">Malis, 2000</a>) has been utilized for the
+	determination of the position and orientation of the UAV
+	with respect to the landing pad. The homography-based
+	approach is well suited for this application, since all visual
+	markers are embedded on a flat planar landing pad. Similar
+	to the approach followed in (<a href="#Baviskar05">Baviskar, 2005</a>), 
+	a constant design vector is integrated within the filtered regulation error 
+	signal, resulting in an input matrix that facilitates an advantageous 
+	coupling of translational dynamics of the UAV to the rotational
+	torque inputs. Through a proper choice of design parameters, 
+	it is shown that the controller achieves global uniform ultimate boundedness (GUUB) 
+	in position regulation error.
+	</p>
+	<p>
+	The novelty in this work is that the null space of the input matrix mentioned 
+	above is exploited to achieve a secondary control objective of damping the 
+	orientation error signal of the UAV.
+	</p>
+	
+	<p>
+	<b><i>Assumptions :</b></i> 
+	<ul>
+	<li> The desired landing configuration (position and orientation), and 
+	the normal vector to the landing plane is known.
+	<li> Velocity information is available from on-board sensors.
+	</ul>
+	</p>
+
+	<p>
+	<b><i>Simulation Results :</b></i> The readers are referred to our 
+	<a href="docs/landing05.pdf"><u>paper</u></a> for details of the controller 
+	development. We present the simulation results with system parameters set as 
+	follows:
+	<ul>
+	<li>UAV mass: 0.6 kg, inertia matrix: diag(0.4, 0.4, 0.6).
+	<li>Initial position (m): [0, 0, -5]<sup>T</sup>, initial orientation angles (rad): [0.5, 0.5, 1.5]<sup>T</sup> 
+	<li>Final position (m): [1, 1, -0.5]<sup>T</sup>, final orientation (rad): [0, 0, 0]<sup>T</sup> 
+	</ul>
+	The robust controller compensates for disturbances introduced into the dynamics of the UAV. (In simulations, 
+	these disturbances where set to be proportional to <i>tanh(v)</i>, hyperbolic tangent of the velocity signal.)
+	</p>
+
+    <p>
+	The null-space controller allows independant control of the yaw angle (spin about vertical axis) 
+	of the aircraft (The roll and pitch angles always go to zero). When the null-space controller 
+	is turned off, the yaw angle of the aircraft is not regulated. In this case, disturbances introduced 
+	into the dynamics of the aircraft can cause the UAV to spin about its vertical axis.
+	</p>
+
+	<center>
+	<img src="images/position.png" width="500" height="375" border="0" alt="UAV time evolution of position"><br>
+    <font face="Arial,Helvetica"><font size=-1><b>Figure 2:</b> Time evolution of UAV position and orientation.</font></font>
+	</center>
+    <br>
+	
+	<center>
+	<img src="images/errors.png" width="500" height="375" border="0" alt="reg. error"><br>
+    <font face="Arial,Helvetica"><font size=-1><b>Figure 3:</b> Regulation error vs. time.</font></font>
+	</center>
+    <br>
+
+	<center>
+	<img src="images/control.png" width="500" height="375" border="0" alt="control effort"><br>
+    <font face="Arial,Helvetica"><font size=-1><b>Figure 4:</b> Control effort vs. time.</font></font>
+	</center>
+    <br>
+
+	<p>
+	<b><i>Key References :</b></i> 
+	<ul>
+	<li><a name="Baviskar05">[Baviskar05] A. Baviskar, M. Feemster, D. Dawson, 
+	and B. Xian, "Tracking Control of an Underactuated Unmanned Underwater
+	Vehicle," <i>Proceedings of the American Controls Conference</i>, Portland, OR, 
+	June 2005.
+	<li><a name="Chen05">[Chen05] J. Chen, D. M. Dawson, W. E. Dixon, and A. Behal,
+	"Adaptive Homography-Based Visual Servo Tracking for Fixed and Camera-in-Hand 
+	Configurations," <i>IEEE Transactions on Control System Technology</i>, to appear.</a>
+	<li><a name="Ma03">[Ma2003] Y. Ma, S. Soatto, J. Košecká, and S. Sastry, 
+	An Invitation to 3D Vision, Springer-Verlag, ISBN: 0387008934, 2003.</a>
+	<li><a name="Malis00">[Malis00] E. Malis and F. Chaumette, "2 1/2 D Visual Servoing
+	with Respect to Unknown Objects Through a New Estimation Scheme of Camera 
+	Displacement," <i>International Journal of Computer Vision</i>, Vol. 37, No. 1, 2000, 
+	pp. 79—97.</a>
+	</ul>
+	</p>
+
+	<p>
+	<a name="ack">*</a> This work was supported in part by two DOC Grants, an ARO Automotive Center Grant, 
+	a DOE Contract, a Honda Corporation Grant, and a DARPA Contract.
+	</p>
+	<br>
+	</div>
+	</font>
+	</td></tr>
+  </table> 
+  <!-- *** \END OF PAGE CONTENTS *** -->
+
+ <hr align="left" color="#8687bf">
+ </td></tr>
+</table>
+
+</div>
+</body>
+</html>
+

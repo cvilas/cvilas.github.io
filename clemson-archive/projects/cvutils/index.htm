@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vilas kumar Chitrakaran - Vision utilities</title>
+<meta name="Description" content="Utilities for vision experiments">
+<meta name="Keywords" content="Computer vision, C++ classes, UNIX">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb">
+<table width="640">
+<tr><td>
+
+<hr align="left" width="640" color=#8687bf>
+<div align="center"><h2>Utilities for Vision Experiments</h2></div>
+<hr align="left" width="640" color=#8687bf>
+
+<img src="images/cvutils.jpg" border=0 width=300 height=171 alt="ft" align="right">
+<ul>
+	<li><b>Posted:</b> Aug 25, 2006, <b>Last updated:</b> Aug 25 2006
+	<li><b>Summary:</b> C++ class libraries for image capture, feature tracking,
+	homography computation and network communication for UNIX systems.
+</ul>
+
+<div style="text-align:justify;">
+
+<h3>Introduction</h3>
+<p>
+Here you will find the following libraries that I developed for vision-based control simulations and experiments,
+where a camera was utilized as the sensing element:
+</p>
+<p>
+<i><u>FeatureTracker</u></i>: Using this library, you can capture images using the Imagenation PXC-200AF framegrabber (QNX only),
+and track features in the image stream using a choice of either Stan Birchfield's implementation or the OpenCV implementation 
+of the Lucas-Kanade feature tracking alorithm. Real-time video capture and tracking can be computationally intensive 
+on a PC. For visual servoing experiments, we sometimes dedicate a PC for vision related tasks, and 
+a second 'control' PC to implement the real-time control algorithm and to interface with the hardware that is being controlled, such 
+as an industrial robot. The processed information from the 'vision' PC (such as a list of feature point locations) is 
+transmitted to the 'control' PC over the ethernet using the UDP protocol. The library provides methods  
+to accomplish this communication task, in the form of C++ classes for UDP clients and servers. 
+</p>
+<p>
+<i><u>Homography</u></i>: This library provides methods to compute projective homography between two images, given feature point correspondances
+in both images. Methods to decompose a homography matrix into its constituent motion parameters are also provided.
+</p>
+
+<h3>Acknowledgements</h3>
+<p>
+I did not come up with any of the algorithms provided in these libraries, and in many cases, even the implementation is not mine. The original 
+authors and developers of various algorithms used in these libraries are mentioned in the source code and documentation wherever appropriate.
+We use these algorithms a lot in our vision related work, and my intention was to collect them together into a single package so 
+that others in the lab can utilize them for their work without spending days of setup time re-inventing what has already been done.
+</p>
+
+<h3>Documentation</h3>
+<p>
+<ul>
+<li> HTML documentation: [<a href="docs/FeatureTracker/htm/index.htm">FeatureTracker</a>] [<a href="docs/Homography/htm/index.htm">Homography</a>]
+<li> PDF documentation: [<a href="docs/FeatureTracker/FeatureTracker.pdf">FeatureTracker</a>] [<a href="docs/Homography/Homography.pdf">Homography</a>]
+<li> Both packages come with many example programs. See in the examples directory of each package.
+</ul>
+</p>
+
+<h3>Dependencies</h3>
+<p>
+Dependencies must be installed first. The <u>Homography</u> library depends on the following software:
+ <ul>
+ <li>GNU Scientific library (GSL) [<a href="http://www.gnu.org/software/gsl/">webpage</a>]
+ <li>QMath matrix library [<a href="../qmath/index.htm">webpage</a>]
+ </ul>
+The <u>FeatureTracker</u> library depends on the following software:
+ <ul>
+ <li>POSIX Utilities package (putils) [<a href="../putils/index.htm">webpage</a>]
+ <li>KLT library [<a href="http://www.ces.clemson.edu/~stb/klt">webpage</a>]: Header files in this library have generic names, such as <code>error.h</code>. 
+ To avoid conflict with installed programs, you should use <a href="src/klt1.3.2.tgz">this version (klt1.3.2.tgz)</a> of the library with re-named header files.
+ <li>OpenCV library [<a href="http://www.intel.com/technology/computing/opencv/index.htm">webpage</a>]
+ <li>PXC200 library [<a href="http://www.imagenation.com/pxcfamily.html">webpage</a>] [<a href="http://www.imagenation.com/dnpages/pxc_files.html#software">QNX library</a>]
+ <li>FFMpeg library [<a href="http://ffmpeg.mplayerhq.hu/">webpage</a>] (Useful for working with video files)
+ <li>SDL library [<a href="http://www.libsdl.org/index.php">webpage</a>], SDL_gfx [<a href="http://www.ferzkopp.net/Software/SDL_gfx-2.0/">webpage</a>]
+ </ul>
+</p>
+
+
+<h3>Installation</h3>
+<p>
+<u>QRTS users on QNX 6.2.1</u>: <br>
+<br>
+<ul>
+<li>Ensure that the BaseQRTS package is installed.
+<li>Download the distribution binary package for QNX 6.2.1: <a href="src/cvutils.tar.gz">cvutils.tar.gz</a>.
+<li>Install the software as follows:<br>
+<br><code>
+installpkg cvutils.tar.gz<br>
+</code><br>
+<li>User documentation is available through the QNX Helpviewer.
+</ul>
+</p>
+
+<p>
+<u>Non QRTS users on QNX 6.2.1</u>:<br>
+<br>
+I have made available a package with precompiled versions of all libraries except QMath, GSL and putils in the above list. 
+You should consider using the precompiled version especially for OpenCV and FFMpeg, since compiling them from source can be a pain, 
+especially for a new user. Here are the instructions.
+<ul>
+<li>Download the precompiled libraries and headers package: <a href="src/packages.tgz">packages.tgz</a>.
+<li>Expand the tar-zipped package
+<br><code>
+tar zxvf packages.tgz
+</code><br>
+<li>Run the install script inside packages/qnx directory to install all files in the default location (<code>/usr/local</code>).
+<br><code>
+./install_packages
+</code><br>
+Make sure that you specify the path to the headers and libraries when you compile your
+user programs (using -I and -L switch for gcc).
+<li> Now download and install QMath, GSL and putils from the webpages mentioned above.
+</ul>
+</p>
+
+<p>
+<u>Installation from source</u>:<br>
+<br>
+<ul>
+<li>Download and install all dependencies first.
+<li>After installing all dependencies, download sources: [<a href="src/FeatureTracker.tgz">FeatureTracker.tgz</a>] [<a href="src/Homography.tgz">Homography.tgz</a>].
+<li>Each of the packages can be expanded and installed independantly. The following instructions are for <code>FeatureTracker</code>. Same applies to
+<code>Homography</code> library:
+<br><code>
+tar zxvf FeatureTracker.tgz<br>
+make<br>
+make install </code>(Note: Should be root to do this.)<code>
+</code><br>
+The default install location is <code>/usr/local</code>
+<li>Try the example programs in the examples directory. Just run <code>make</code> in the example directory
+to create the executables. If any example fails to run, please let me know.
+</ul>
+</p>
+</div>
+
+<p><i>Suggestions or comments? <a href="mailto:cvilas@ces.clemson.edu">Please email cvilas(@)ces.clemson.edu</a>.</i></p>
+
+</div>
+<hr align="left" width="640" color=#8687bf>
+
+</td></tr>
+</table>
+</body>
+</html>

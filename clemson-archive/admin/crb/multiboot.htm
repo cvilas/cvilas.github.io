@@ -1,0 +1,301 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (WinNT; I) [Netscape]">
+   <title>Multiple Boot Installation Guide</title>
+</head>
+<body>
+<img SRC="images/heading.gif" height=37 width=504>
+<br><b><u><font color="#000080"><font size=+1>WINDOWS 98 / QNX / RED-HAT
+LINUX MULTIPLE BOOT INSTALLATION GUIDE.</font></font></u></b><br>
+<b>Author</b>: Vilas Kumar Chitrakaran, Aug 2001<br>
+<p><img SRC="images/divider.gif" height=15 width=500>
+<p>This document supplements the Microsoft Windows 98 Installation Manual
+( available with Microsoft Windows), the QNX Installation Manual (available
+with QNX OS or <a href="http://qdn.qnx.com/support/docs/qnx4/user_guide/install.html">http://qdn.qnx.com/support/docs/qnx4/user_guide/install.html</a>),
+and the Red-Hat Linux Installation Manual (<a href="http://www.redhat.com/support/manuals/RHL-6.1-Manual/install-guide/index.html">http://www.redhat.com/support/manuals/RHL-6.1-Manual/install-guide/index.html</a>).
+This manual guides the user to get a PC up and running with all the three
+operating systems installed as per the requirements of the Mechatronics
+Laboratory here in Clemson University.
+<p><b><font size=+1>Preliminaries</font></b>
+<p><b>1. Selection of proper hardware.</b>
+<p>The following are some general hardware requirements:
+<p>a) Atleast a 13 GB Hard-disk, preferrably running at 7200 RPM.
+<br>b) AGP video card. (Avoid cards from 'Number Nine' - they are not well
+supported in Linux 6.1).
+<br>c) A PCI Ethernet Network Card (We have a lot of 'Netgear' ones that
+work just fine).
+<p>
+<hr WIDTH="100%">
+<b>Precaution</b>:
+<ul>
+<li>Whenever possible, leave static-sensitive devices in their original packaging. Transport circuit boards and peripherals in an anti-static metallized bag if you do not have the original packaging material. However, do not put this material inside your PC, or plug in a motherboard while it is sitting on top of one of these bags. They are anti-static because they are partially conductive; you don't want your motherboard shorted out by firing it up while several hundred pins from its components are touching a partially conductive material.
+
+
+<li>Not all PC hardware is supported by all Operating Systems, especially
+Red-Hat Linux 6.1 that we use extensively in labs here. Hardware supported
+by Red-Hat Linux 6.1 are at <a href="http://www.redhat.com/support/hardware/index.html">http://www.redhat.com/support/hardware/index.html</a>
+<br>
+</ul>
+<hr WIDTH="100%">
+<br>Note down the make and model number of the AGP card and the Network
+card. This will come handy during system configuration later.
+
+<p><b>2. Softwares you will need.</b>
+<p>You will need the following software packages for a complete triple
+boot installation.
+<p>a) Microsoft Windows 98 installation CD with license number.
+<br>b) QNX 4.0 installation CD.
+<br>c) Red Hat Linux 6.1 installation CD.
+<br>d) QNX OS license floppy.
+<br>e) QNX Watcom C/C++ compiler license floppy.
+<br>f) Video card drivers
+<br>e) Network card drivers.
+<br>f) An empty floppy that can later be used to create a boot-disk for
+linux. (This boot-disk is not the same as the boot-disk used for installation
+of the OS.)
+<br>g) Real-Time Linux Target 1.2 (RTLT 1.2) CD. (RTLT 1.2 includes automated
+installation for Real Time Linux as well.)
+<br>h) BaseQRTS packages ( find it in RTLT1.2 CD).
+<br>i) MATLAB for Linux
+<br>j) MATLAB License floppy for Linux.
+<br>j) MATLAB for Windows, with License number.
+<br>k) DOS boot floppy with 'Partition Magic'.
+<p><b>3. Partitioning the Hard-disk.</b>
+<p>Each Operating system resides in it's own partition in the hard-disk.
+The disk size allocated to each Operating System are as follows:
+<p>a) Windows 98 - 4 GB.
+<br>b) QNX 4.0 - 4 GB.
+<br>c) Red-Hat Linux 6.1 - 4 GB or more.
+<p>Boot up the computer using the DOS boot-disk and use 'Partition Magic'
+(<a href="http://www.powerquest.com/partitionmagic/">http://www.powerquest.com/partitionmagic/</a>)
+to first remove all previous partitions, if any. Create a primary DOS FAT
+32 partition of size 4 GB, and format this partition. MS Windows 98 will
+be installed in this partition. The partitions for the other two OSs can
+be made using their installation program itself.
+<p>If your version of Partition Magic does not allow you to make a partition
+of size greater than 2 GB, then just use Partition Magic to remove all
+partitions. Make the required primary partition during installation of
+Windows 98 (the automated installation program will prompt user for the
+size of the partition). This is the easiest thing to do.
+<p>Another option is to use Partition Magic to make the 2 GB partition
+for Windows. Add another 2 GB of extended FAT partition later after installing
+Linux.
+<p>A third option is to use Linux FDISK program to make the 4 GB partition.
+Do this if you are comfortable using the program.
+<p><b><font size=+1>Installation of Operating Systems.</font></b>
+<p>In order to boot into any operating system (Windows 98, QNX, and/or
+Linux), the bootable partition of the operating system (i.e., the ‘C:\’
+drive for Windows 98, everything except the /home directory for Linux/QNX
+partition) should be present within the first 1024 cylinders of the hard
+disk.
+<p>For a multiple boot installation the operating systems MUST be installed
+in the following order:
+<p>Windows 98 - 4GB
+<br>QNX -&nbsp; 4 GB is sufficient for QNX, QMotor, and related software
+<br>Linux (uses LILO) -&nbsp; at least 4 GB is required for Linux, RT-Linux,
+RTLT, and related software. An extended partition may be created to mount
+the /home directory. Note that proper Linux installation is a pre-requisite
+for RT-Linux and RTLT installation.
+<p>When installing a triple boot system of Windows 98, QNX, and Linux,
+it is necessary to install the operating systems in the order mentioned
+above because it is simpler to configure LILO Loader in Linux to boot into
+Windows 98, QNX, Linux, and RT-Linux. The procedure of configuring the
+QNX loader to allow for boot up options in Windows 98 and/or Linux is more
+involved and should be avoided. The user should also ensure that during
+Linux installation, the LILO is written to the Master Boot Record.
+<p>When installing a double boot system of QNX and Linux, the Windows 98
+Installation procedure is simply neglected. That is, the user starts with
+the QNX installation and proceeds as per the instructions given in this
+document. Upon completion of the QNX installation, the user installs Linux
+followed by RT-Linux.
+<p>When installing a single boot system of QNX or Linux, the user directly
+follows the instructions given in the QNX and Linux installation manuals,
+respectively.
+<p><b>1. Windows 98 installation.</b>
+<p>a) After switching the PC on, the user hits the &lt;del> or &lt;F5>
+key to enter into the CMOS setup.
+<p>b) The user then sets the boot-seek order to CDROM, Floppy, then Hard
+Disk (contact the system administrator for information specific to particular
+CMOS settings).
+<p>c) The user now inserts the Windows 98 Installation CD into the CDROM
+drive.
+<p>d) The user then selects the Save and Exit option to write the new settings
+to the CMOS and the system will reboot.
+<p>e) Windows 98 installation is automatically initiated upon reboot.
+<p>When prompted, the user provides the size of the Windows 98 installation
+(for example, 2 GB). Note that a partition per se is not created but only
+a part of the hard disk is used for Windows. The unused space in the hard
+disk is then partitioned in QNX and later in Linux installations. The Windows
+98 installation appears as a partition /dev/hd0 in QNX and /dev/hda1 in
+Linux installations.
+<p>Follow the Windows 98 installation guide to proceed and complete installation.
+<p>The user should note that the Windows 98 partition is of the FAT32 (LBA)
+type (as opposed to Windows NT that uses the NTFS).
+<p><b>2. QNX Installation</b>
+<p>a) After switching the PC on, the user hits the &lt;del> or &lt;F5>
+key to enter into the CMOS setup.
+<p>b) The user then sets the boot-seek order to CDROM, Floppy, then Hard
+Disk (contact the system administrator for information specific to particular
+CMOS settings).
+<p>c) The user now inserts the QNX Installation CD in the CDROM drive.
+<p>d) The user then selects the Save and Exit option to write the new settings
+to the CMOS.
+<p>e) The system now boots off the CD into QNX.
+<p>f) The user executes fdisk (to partition the hard disk) when prompted.
+The user should be able to see the Windows 98 partition (as /dev/hd0).
+Note that the Windows 98 reference name changes to /dev/hda1 during Linux
+installation.
+<p>g) The user now creates the QNX partition by typing in the required
+size in MB. For a 2 GB QNX partition, the user types 2048. This creates
+the QNX partition.
+<p>h) The user writes the partition table hitting "Save and Continue."
+<p>i) The QNX installation now continues. When prompted, use the license
+disks for the OS as well as the Watcom C/C++ compiler to update the licenses. (They are two separate disks. Use them one after the other.)
+<p>j) Make sure that Watcom C/C++ compiler option is selected during installation.
+<p>k) For more information, refer to the QNX installation guide. <a href="http://qdn.qnx.com/support/docs/qnx4/user_guide/install.html">http://qdn.qnx.com/support/docs/qnx4/user_guide/install.html</a>
+<p><b>3. Linux Installation</b>
+<p>If you installed only Windows without QNX, you will need to use Partition
+Magic or some other method to resize the Windows partition to 2 MB before
+attempting to install Linux. Linux can not resize an existing partition
+of Windows.
+<p>a) After switching the PC on, the user hits the &lt;del> or &lt;F5>
+key to enter into the CMOS setup.
+<p>b) The user sets the boot-seek order to Floppy, Hard Disk, then CDROM
+(contact the system administrator for information specific to particular
+CMOS settings of the machine).
+<p>c) The user inserts the Linux Installation Floppy into the Floppy drive
+and the Red Hat Linux 6.1 CD into the CDROM drive.
+<p>d) The user then selects the Save and Exit option to write the new settings
+to the CMOS.
+<p>e) The user now follows exactly the procedure listed in Appendix A of the Real-Time Linux
+Target Manual (http://support.qrts.com/support/manuals/rtlt_linux/index.html) until the hard disk partition data is displayed.
+<p>f) The user checks to see whether the Windows 98 partition and the QNX
+partition are seen. If the aforementioned order is specified, the Windows
+98 partition is assigned /dev/hda1, the QNX partition is assigned /dev/hda2,
+and the Linux partition is assigned /dev/hda3.
+<p>g) It is important to note that this bootable Linux partition must be
+within the first 1024 cylinders. The cylinder information is also provided
+in the partition table display.
+<p>h) As explained in the Linux installation guide, the user sets the Linux
+Swap partition.
+<p>i) If space beyond 1024 cylinders is available, the user sets the extended
+partition as a Linux partition and mounts the /home directory in this partition.
+The ‘/’ mount must be done in the /dev/hda3 partition. If this is not correctly
+implemented the system may not boot into Linux correctly.
+<p>j) Once the hard disk is partitioned, the user continues with the Linux
+installation as elaborated in the Linux installation guide.
+<p>A sample /etc/lilo.conf file for a triple-boot system with Windows 98,
+QNX and Linux is shown below.
+<p><font color="#000080">boot=/dev/hda</font>
+<br><font color="#000080">map=/boot/map</font>
+<br><font color="#000080">install=/boot/boot.b</font>
+<br><font color="#000080">prompt</font>
+<br><font color="#000080">timeout=50</font>
+<br><font color="#000080">default=linux</font>
+<p><font color="#000080">image=/boot/vmlinuz-2.2.12-20</font>
+<br><font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; label=linux</font>
+<br><font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initrd=/boot/initrd-2.2.12-20.img</font>
+<br><font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read-only</font>
+<br><font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; root=/dev/hda3</font>
+<p><font color="#000080">other=/dev/hda2</font>
+<br><font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; label=qnx</font>
+<p><font color="#000080">other=/dev/hda1</font>
+<br><font color="#000080">label=win98</font>
+<p>This allows Windows 98 to boot from partition /dev/hda1, QNX OS to boot
+from partition /dev/hda2, and Linux/RT-Linux to boot from /dev/hda3.
+<p>k) Checking Partitions - Another way to check the partitions is to boot
+into Linux, login as root, and type at the Linux prompt
+<p># fdisk /dev/hda
+<p>The partition table is displayed on the screen by typing ‘p’ at the
+command prompt. For example, shown below is the partition table of a hard
+disk with 1584 cylinders.
+<p><font color="#000080">Disk /dev/hda: 255 heads, 63 sectors, 1584 cylinders</font>
+<br><font color="#000080">Units = cylinders of 16065 * 512 bytes</font>
+<p><font color="#000080">&nbsp;&nbsp; Device Boot&nbsp;&nbsp;&nbsp; Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+End&nbsp;&nbsp;&nbsp; Blocks&nbsp;&nbsp; Id&nbsp; System</font>
+<br><font color="#000080">/dev/hda1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 128&nbsp;&nbsp; 1028128+&nbsp;&nbsp;
+c&nbsp; Win95 FAT32 (LBA)</font>
+<br><font color="#000080">/dev/hda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+129&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 651&nbsp;&nbsp; 4200997+&nbsp;
+4d&nbsp; QNX4.x</font>
+<br><font color="#000080">/dev/hda3&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+652&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1023&nbsp;&nbsp; 2988090&nbsp;&nbsp;
+83&nbsp; Linux</font>
+<br><font color="#000080">/dev/hda4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1313&nbsp;&nbsp; 2329425&nbsp;&nbsp;&nbsp;
+5&nbsp; Extended</font>
+<br><font color="#000080">/dev/hda5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1040&nbsp;&nbsp;&nbsp; 136521&nbsp;&nbsp;
+82&nbsp; Linux swap</font>
+<br><font color="#000080">/dev/hda6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1041&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1313&nbsp;&nbsp; 2192841&nbsp;&nbsp;
+83&nbsp; Linux</font>
+<p>Note that Linux, QNX and Windows are within the first 1024 cylinders.
+The Linux Swap partition another Linux partition (that mounts /home) is
+in the space between cylinders 1024 and 1313. The * indicates the active
+boot partition, which is easily changed by configuring LILO.
+<p><b><font size=+1>Configuring the PC into the Network.</font></b>
+<p><b>1. Windows 98</b>
+<p>a) Install the drivers for your network card. You can do this from <i>My
+Computer > Control Panel > Add New Hardware.</i>
+<p>b) Open
+<p><i>My computer > control panel > network</i>
+<p>c) In the 'configuration' tab, do the following
+<br>c.1) Add > protocol > Microsoft > TCP/IP
+<br>c.2) Add > client > Microsoft > Client for microsoft Networks
+<p>d) Double click on '<i>Client for microsoft Networks</i>' in 'configuration'
+tab and select '<i>logon to Windows NT domain</i>'. Enter '<i>WindowsNT
+domain</i>' as MICROSOFTSUCKS.
+<p>e) Double click on TCP/IP.
+<br>e.1) Enter DNS configuration.
+<br>e.2) Select '<i>Enable DNS</i>'.
+<br>e.3) In the '<i>Host</i>' field, enter the hostname. For example, if
+the hostname of your computer is <i>crb14.ces.clemson.edu</i>, enter <i>crb14
+</i>here,
+and enter <i>ces.clemson.edu</i> in the '<i>Domain'</i> field.
+<br>e.4) Add the following to the <i>DNS Server Search Order</i>
+<p><i>130.127.37.11</i>
+<br><i>130.127.200.15</i>
+<br><i>130.127.8.8</i>
+<p>e.5) Add the following to <i>Domain Suffix Search Order</i>.
+<p><i>ces.clemson.edu</i>
+<br><i>clemson.edu</i>
+<p>e.6) Click on the '<i>IP Address'</i> tab and enter the IP Address of
+the machine. The<b> </b><i>netmask</i><b> </b>is <i>255.255.255.0</i>
+<br>e.7) Click on the '<i>Gateway</i>' tab and enter the gateway as 130.127.172.2.
+Click OK.
+<p>f) Click on the 'Identification' tab and enter the <i>computer name</i>
+( for example <i>crb14.ces.clemson.edu</i>). The <i>workgroup</i> is MICROSOFTSUCKS.
+<p>g) Click on '<i>Access Control</i>' tab and select <i>User-level Access
+Control</i> and enter MICROSOFTSUCKS in the field for '<i>Obtain list of
+users and groups from</i>'.
+<p>This finishes your network configuration for Windows 98.
+<p><b>2. Red-Hat Linux 6.1</b>
+<p>The network configuration for linux is a part of the installation process.
+If you haven't confiured network yet, use&nbsp; 'linuxconf' or 'netconf'
+commands to do the same.
+<p><b>3. QNX 4.0</b>
+<p>Follow the manual <a href="qnx4Networking.htm">Setting up a QNX machine for
+networking</a> to configure QNX into the network.
+<p><b><font size=+1>Installation of other softwares.</font></b>
+<p>Refer the appropriate manuals for installation of the following softwares
+:
+<p>1. In Windows 98:
+<p>a) MATLAB : Just run the <i>setup</i> program in the CD and follow on-screen
+instructions.
+<br>b) QRTS Base Package :&nbsp; <a href="http://ece.clemson.edu/crb/procedures/qrts_mat_win.htm">http://ece.clemson.edu/crb/procedures/qrts_mat_win.htm</a>
+<p>2. In linux:
+<p>a) QRTS Base Packages :&nbsp; <a href="http://support.qrts.com/support/manuals/baseqrts_linux/">http://support.qrts.com/support/manuals/baseqrts_linux/</a>
+<br>b) MATLAB :&nbsp; <a href="http://ece.clemson.edu/crb/procedures/LinuxMATLABInstall.htm">http://ece.clemson.edu/crb/procedures/LinuxMATLABInstall.htm</a>
+<br>c) RT Linux Target 1.2 :&nbsp; <a href="http://support.qrts.com/support/manuals/rtlt_linux/index.html">http://support.qrts.com/support/manuals/rtlt_linux/index.html</a>
+<p><img SRC="images/divider.gif" height=15 width=500>
+
+<hr>
+<a href = "crbAdmin.htm">Back to Documentation index</a>
+<hr>
+
+</body>
+</html>

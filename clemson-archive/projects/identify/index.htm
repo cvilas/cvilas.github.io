@@ -1,0 +1,188 @@
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Identification of a Moving Object's Velocity with a Fixed Camera</title>
+<meta name="Description" content="vision based velocity identification">
+<meta name="Keywords" content="homography, motion and structure from motion, euclidean reconstruction">
+<meta name="Author" content="vilas chitrakaran">
+<script language="JavaScript" type="text/JavaScript">
+</script>
+
+<style type="text/css">
+<!--
+A {text-decoration: none}
+A:hover {text-decoration: underline}
+-->
+</style>
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" link="#000000" vlink="#000000">
+<div align="left">
+<table width=100% align=center border=0 cellpadding=0 cellspacing=0>
+ <tr><td>
+  <hr align="left" color="#8687bf">
+  <!-- HEADING -->
+  <table width=100% bgcolor=#8687bf align=center border=0 cellpadding=0 cellspacing=0>
+   <tr><td>
+   <center>
+   <font color=#ffffff face="Arial, Helvetica, 'Sans Serif'" size=+2>
+   <strong>Identification of a Moving Object's Velocity with a Fixed Camera</strong>
+   </font>
+   <br>
+   <font color=#ffffff face="Arial, Helvetica, 'Sans Serif'" size=-1>
+   J. Chen, W. E. Dixon, V. Chitrakaran, P. Chawda
+   </font>
+   </center>
+   </td>
+   </tr>
+  </table>
+  <hr align="left" color="#8687bf">
+  <!-- /HEADING -->
+  <!-- *** BEGIN PAGE CONTENTS *** -->
+  <table width=100% align=center bgcolor=#ffffff border=0 cols=1 cellpadding=0 cellspacing=0>
+    <tr><td>
+	<br>
+	<font face="Arial, Helvetica, 'Sans Serif'" size=-1>
+	  <table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	   <font color="#ffffff" size=+1><b>Introduction</b></font>
+	  </td></tr></table>
+	<div style="text-align:justify;">
+	<p>
+	<i><b>Keywords</b></i>: Homography, euclidean reconstruction, velocity observer, lyapunov based estimator.
+	<br>
+	<i><b>Publications</b></i>: <a href="docs/identify_cdc03.pdf"><u>CDC 2003</u></a>, <a href="docs/identify_automatica_4105.pdf"><u>Automatica March 2005</u></a>
+	<br>
+	<i><b>Media</b></i>: <a href="http://www.trnmag.com/Stories/2005/061505/Single_camera_measures_speed_Brief_061505.html"><u>Technology Research News, June 15, 2005</u></a>
+	</p>
+
+	<p>
+	This research brings together homography based computer vision techniques and 
+	Lyapunov design methods to estimate the 6-DOF velocity information of a moving object 
+	from it's 2D images. There are no constraints on the motion of the object except 
+	that its velocity, acceleration and jerk must be bounded. Atleast <a href="#footnote1">two<sup><u>(1)</u></sup>
+	feature lengths</a> on the object must be known in order to obtain it's six degree-of-freedom velocity.
+	</p>
+	<p>
+	This work was presented at the Conference on Decision and Control 2003, and has also appeared in Automatica (March 2005). Readers are referred 
+	to these publications for details. This webpage gives some information not covered in the paper.
+	</p>
+	<table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Simulations</b></font>
+	</td></tr></table>
+	
+	<p>
+	In theory the pixel co-ordinates of a minimum of four coplanar points on the 
+	object are required. We used six targets and the standard least-squares 
+	method for estimation of homography matrix in simulations. Figure 1 
+	shows the implementation block diagram.
+	</p>
+	
+	<br><br>
+	<center>
+	<img src="images/identifyBlocks.jpg" width="477" height="572" border="0" alt="Block diagram">
+	<br><b><font size=-1>Figure 1: Simulation block diagram.</font></b></center>
+
+	<p>
+	The simulation was developed on <a href="http://ece.clemson.edu/crb/research/realtimesoftware/qmotor/index.htm" target="_new"><u>QMotor 3.0</u></a>. The Robotic Platform  
+	<a href="http://ece.clemson.edu/crb/research/realtimesoftware/rp/documentation/develop/MathLibrary/html/annotated.html" target="_new"><u>Math Library</u></a> and 
+	<a href="http://www.gnu.org/software/gsl/" target="_new"><u>GNU Scientific Library</u></a> were used for mathematical computations. The sampling frequency was 1-2 kHz.
+	</p>
+
+	<center>
+	<a href="images/screenshot.jpg">
+	<img src="images/screenshotSmall.jpg" width="600" height="502" border="0" alt="screenshot of simulation in QMotor"></a>
+	<br><b><font size=-1>Figure 2: A screenshot of the simulation in QMotor. Click on image for a full-sized view.</font></b></center>
+
+	<center>
+	<img src="images/velocity.jpg" width="640" height="480" border="0" alt="simulated object velocity">
+	<br><b><font size=-1>Figure 3: Simulated velocity along each of the 6 DOF axis of the object.</font></b></center>
+
+	<center>
+	<img src="images/sim_curves.jpg" width="640" height="480" border="0" alt="error curves">
+	<br><b><font size=-1>Figure 4: Error curves for velocity estimation.</font></b></center>
+	<br>
+
+	<table border="0" cellpadding="3" cellspacing="0" bgcolor="#8687bf" width=100%><tr><td align=left>
+	<font color="#ffffff" size=+1><b>Experiments</b></font>
+	</td></tr></table>
+	<h4>Test Setup</h4>
+	<ul>
+	<li> Puma560 6 DOF robot manipulator.
+	<li> 1 PC dedicated to robot control - 1GHz AMD based PC with one ServoToGo I/O board, running QNX Momentics real-time OS, and the Robotic Platform software for robot control.
+	<li> 1 PC dedicated to Velocity Observer - 2GHz Intel based PC interfaced to a Dalsa DS-4x-300K262 262fps camera through RoadRunner 24M framegrabber board. Velocity Observer is implemented in C++ using the following software tools: QMotor real-time control software, GNU Scientific library, QMath and QWidgets.
+	<li> A plexiglass plate with six high intensity LEDs mounted on the robot end-effector. This will serve as the set of targets for the Velocity Observer.
+	</ul>
+
+	<center>
+	<img src="images/setup.jpg" width="500" height="380" border="0" alt="experimental setup">
+	<br><b><font size=-1>Figure 5: Experimental setup.</font></b></center>
+	<br>
+	
+	<h4>Test Plan</h4>
+	<ul>
+	<li> Mount the camera in a fixed location, facing the robot end-effector with target LEDs. 
+	<li> Develop software (using Robotic Platform tools) to move the robot end-effector along a 
+	     trajectory such that all target LEDs are visible to the fixed camera at all times 
+		 (to avoid occlusion related problems).
+	<li> Fix Euclidean co-ordinate frames on the camera and the target plane.
+	<li> Measure the Euclidean co-ordinates of two of the target points relative to 
+	     the target co-ordinate frame.
+	<li> Log the 6 DOF velocity of the targets (expressed relative to the target 
+	     coordinate frame) and the 6DOF observed velocity from the Velocity Observer system. 
+		 Compare results.
+	</ul>
+	
+	<h4>Target Results</h4>
+	<ul>
+	<li>Position error must be within two centimeters in translation and within two degrees in rotation.
+	<li> Observer system must be effective for a wide range of rotational and translational 
+	     motion of targets relative to the field-of-view of the camera.
+	</ul>
+
+	<p>
+	During experiments it was found that the homography algorithm from Dr <a href="#footnote2">Kenichi 
+	Kanatani<sup><u>(2)</u></sup></a> performed better in terms of stability 
+	to pixel noise compared to the least-squares method. We therefore use his algorithm to compute 
+	the homography. The downside is its computational complexity, enabling us to run the 
+	observer only at about 150Hz, instead of 1000Hz.
+	</p>
+	
+	<center>
+	<img src="images/exp_curves.jpg" width="547" height="445" border="0" alt="experimental results">
+	<br><b><font size=-1>Figure 6: Experimental results from the test-bed. The curves in black are the actual 
+	robot end-effector velocities, while the curves in red are velocities estimated by the observer.</font></b></center>
+	<br>
+	
+	<p>
+	Due to the lower resolution of the high-speed camera, effects of pixel noise on the observed velocity is severe. 
+	We obtained better results with a higher resolution (but lower speed) camera and low-pass filtering. 
+	</p>
+	
+	<p>
+	We obtained acceptable performance in estimation of translational velocity. However 
+	heavy filtering on pixel data was required for identification of rotational velocity.
+	</p>
+	
+ 	<hr align="left" color="#000000" width=400>
+	<p>
+	<a name="footnote1">(1)</a> It was found that one feature length is not sufficient to extract the euclidean information as mentioned in the paper. 
+	<br>
+	<a name="footnote2">(2)</a> K. Kanatani, N. Ohta, and Y. Kanazawa, "Optimal Homography Computation with a Reliability Measure", 
+	<i>IEICE Transactions on Information and Systems</i>, Vol. E83-D, No. 7, pp.1369--1374, 2000.
+	</p>
+	
+	</div>
+	</font>
+    <br>
+	</td></tr>
+  </table> 
+  <!-- *** \END OF PAGE CONTENTS *** -->
+
+ <hr align="left" color="#8687bf">
+ </td></tr>
+</table>
+
+</div>
+</body>
+</html>
+

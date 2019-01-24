@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Main page - Robotic Platform - Mechatronics - Clemson University</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+<body bgcolor="#ffffff">
+
+<u>
+<center><h3>Welcome to the Robotic Platform.</h3></center>
+</u>
+<div style="text-align:justify;">
+Robot control systems are very demanding with regard to software and hardware performance 
+because their building blocks cover a wide range of disciplines found in robotics and software 
+development (see figure 1). It is desirable to create a common generic platform that 
+can be reused by researchers for different applications. Considering the variety of robotic 
+applications and research areas, this is a challenging task.
+</div>
+<br>
+<center><img src="images/buildingBlocks.png" border=1 width=447 height=191 alt="Building blocks of a robot control system" align="bottom">
+<br><b><font size=-1>Figure 1: Building blocks of a modern robot control system.</font></b></center>
+<br>
+<br>
+<div style="text-align:justify;">
+The Robotic Platform is the first platform that has been designed to integrate servo control loops, trajectory generation, 
+task level programs, GUI programs, and 3D simulation in a homogeneous software architecture. That is, only one hardware 
+platform (the PC), only one operating system (the <a href="http://www.qnx.com/products/ps_neutrino/" target="new">QNX Real-Time Platform</a>), and only one programming language (C++) 
+are used. This type of architecture has the following advantages:
+<br><br>
+<b><i>Simplicity.</i></b> A homogeneous non-distributed architecture is much smaller and simpler than a distributed inhomogeneous architecture. 
+It is easier to configure, easier to understand, and easier to extend. Simplicity is critical with regard to motivating code reuse of the platform 
+for different applications.
+<br><br>
+<b><i>Flexibility at all Levels.</i></b> All components of the platform are open for extensions and modifications. Many past platforms have 
+utilized an open architecture at some levels, but other levels had been implemented on proprietary hardware such that they could not be modified.
+<br><br>
+<b><i>High Integration.</i></b> Since all components run on the same platform, a high integration is achieved, which allows for a 
+simpler and more efficient cooperation between components. That is, communication between the components has little 
+overhead and is often implemented by just a function call. Also, GUI components and 3D simulation are integrated with functional components.
+</div>
+<br><br>
+
+<u>
+<center><h3>Powerful tools and technologies - The basis for the Robotic Platform</h3></center>
+</u>
+<table>
+<tr>
+<td><img src="images/comp.png" border=0 width=200 height=184 alt="PC"></td>
+<td>
+<div style="text-align:justify;">
+<B>PC Technology.</b> Compared to UNIX workstations, a PC based system is cheaper and allows for a greater variety of hardware and software components.<br><br>
+</div>
+</td>
+</tr>
+
+<tr>
+<td><img src="images/qnxrtpLogo.png" border=0 width=112 height=111 alt="QNX Real Time Platform">
+</td>
+<td>
+<div style="text-align:justify;">
+<b>The QNX Real-Time Platform.</b> <a href="http://www.qnx.com/products/ps_neutrino/" target="new">The QNX Real-Time Platform (RTP)</a> by <a href="http://www.qnx.com" target="new">QSSL</a> 
+consists of the QNX 6/Neutrino operating system and additional components for development and multimedia. QNX 6 is an advanced real-time operating system that 
+provides a modern microkernel-based architecture, a POSIX compliant programming interface, self-hosted development, 3D graphics capabilities and an 
+easy device driver architecture. The RTP is also very cost-effective as it is free for non-commercial use and runs on low-cost standard PCs.<br><br>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/c++Logo.png" border=0 width=180 height=132 alt="C++">
+</td>
+<td>
+<div style="text-align:justify;">
+<b>Object-Oriented Programming in C++.</b> Object-Oriented Programming provides language constructs that allow for a much easier programming interface. 
+For example, a matrix multiplication can be expressed by a simple "*", similar to MATLAB programming. Second, object-oriented programming 
+allows for a system architecture that is very flexible but yet simple. That is, the components (classes) of the system can have a built-in 
+default behavior and default settings. The programmer can utilize this default behavior to reduce the code size or override it for specific 
+applications. Finally, object-oriented programming supports generic programming, which facilitates the development of components that are 
+independent from a specific implementation (e.g., a generic class "Manipulator" that works with different manipulator types). All of the 
+above benefits are based on the general concepts of object-oriented programming: i) abstraction, ii) encapsulation, iii) polymorphism, and iv) inheritance. 
+The language of choice is C++, as it provides the whole spectrum of object-oriented concepts while maintaining high performance.<br><br>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/openInventor.png" border=0 width=326 height=80 alt="Open Inventor">
+</td>
+<td>
+<div style="text-align:justify;">
+<b>Open Inventor.</b> <a href="http://www.sgi.com/software/inventor/" target="new">Open Inventor</a>, developed by Silicon Graphics, is an 
+object-oriented C++ library for creating and animating 3D graphics. Open Inventor minimizes development effort, as it is able 
+to load 3D models that are created in the Virtual Reality Modeling Language (VRML) format. A variety of software packages are 
+available that facilitate the construction of 3D VRML models that represent robotic components. The Robotic Platform also 
+utilizes the functionality of Open Inventor to animate these components.<br><br>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/qmotor.png" border=0 width=200 height=196 alt="QMotor Realtime Control System ">
+</td>
+<td>
+<div style="text-align:justify;">
+<b>The QMotor System.</b> Implementation of control strategies requires the capability to establish a 
+deterministic real-time control loop, to log data, to tune control parameters, and to plot signals. For this purpose, 
+the graphical control environment <a href="http://ece.clemson.edu/crb/research/RealTimeSoftware/qmotor/index.htm" target="new">QMotor</a> 
+(developed at <a href="http://ece.clemson.edu/crb/index.htm" target="new">CRB group</a> - Clemson University and marketed by <a href="http://qrts.com" target="new">QRTS</a>) is used for the Robotic Platform.
+</div></td>
+</tr>
+
+</table>
+<hr>
+<font size=-1>
+<b>Copyright Notice:</b> This material is presented to ensure timely dissemination of scholarly and technical work. 
+Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this 
+information are expected to adhere to the terms and constraints invoked by each author’s copyright. In most cases, 
+these works may not be reposted without the explicit permission of the copyright holder. 
+</font>
+</body>
+
+</html>

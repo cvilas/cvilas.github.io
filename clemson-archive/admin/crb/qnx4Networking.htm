@@ -1,0 +1,312 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<title>Getting a QNX machine into network</title>
+
+<body background bgcolor="#FFFFFF">
+
+<P><IMG SRC="images/heading.gif" WIDTH=504 HEIGHT=37></P>
+
+<FONT COLOR="#000080"><H2>Setting up a QNX4.x machine for networking.</H2>
+<br><b>Author:</b> Vilas Kumar Chitrakaran, Aug 2001
+
+</FONT><P><IMG SRC="images/divider.gif" WIDTH=500 HEIGHT=15></P>
+
+<p>
+Follow this page to configure a PC running QNX Operating System into the Mechatronics QNX Network. This page guides you with an example configuration of a machine with the IP address crb14.ces.clemson.edu.
+
+<p>
+<b>You need to be logged in as 'root' to make all the changes</b>. You will need to modify the following files. 
+<br><br>
+
+/etc/hosts <br>
+/etc/resolv.conf <br>
+/etc/config/network <br>
+/etc/config/sysinit <br>
+<br>
+
+The steps......
+<ol>
+<li>Modify your <i>/etc/hosts</i> file to add your IP address. An example <i>hosts</i> file configured for crb14 is given below.
+<br><br>
+<FONT COLOR="#000080">
+# <br>
+# Host Database<br>
+# This file should contain the addresses and aliases<br>
+# for local hosts that share this file.<br>
+# It is used only for "ifconfig" and other operations<br>
+# before the nameserver is started.<br>
+#<br>
+#<br>
+#127.1		localhost localhost.my.domain<br>
+#<br>
+# Imaginary network.<br>
+#10.2		myname.my.domain myname<br>
+#10.3		myfriend.my.domain myfriend<br>
+130.127.172.<b>24</b>	<b>crb14 crb14</b>.ces.clemson.edu<br>
+</font>
+<br>
+
+<p>
+Change the values in <b>bold</b> typeface to reflect the IP address of your machine. Remember that the IP address  for all machines here is of the form 130.127.172.<i>xxx</i> where <i>xxx</i> is a value that is 10 higher than the crb number. For example, the IP address for crb24.ces.clemson.edu would be 130.127.172.34 .<br><br>
+
+<li>Modify the <i>/etc/resolv.conf</i> file to add the 'domain name' and the 'nameservers'. An example file that will work with machines in our labs is shown below.
+<br><br>
+
+<FONT COLOR="#000080">
+#resolv.conf<br>
+domain ces.clemson.edu<br>
+nameserver 130.127.200.15<br>
+nameserver 130.127.8.8<br>
+</font>
+<br>
+
+<li>The <i>/etc/config/network</i> is a shell script that starts up the network. Here is the file. Modify the machine address where required. Remember that the 'gateway' is always <b>130.127.172.2</b> for all machines. <br><br>
+
+<FONT COLOR="#000080">
+Net & <br>
+Net.tulip -vvv -H 9 & <br>
+sleep 2<br>
+#netmap -f<br>
+#netmap -F //1/etc/config/netmap<br>
+#nameloc -k 1<br><br>
+
+/usr/ucb/Socket <b>crb14</b> &<br>
+/usr/ucb/ifconfig en1 <b>crb14</b> up broadcast 130.127.172.255 netmask 255.255.255.0<br>
+/usr/ucb/route add default 130.127.172.2 #this is the gateway<br>
+/usr/ucb/inetd&<br>
+/usr/ucb/portmap<br>
+</font>
+<br>
+
+<p>
+Notice that the third, fourth and the fifth line in the file are commented out. We shall uncomment it in step 7.<br><br>
+
+<li>Now make this file executable. Issue the following command.<br><br>
+
+<i> chmod +x /etc/config/network</i><br><br>
+
+<li> Check the network. Type<br><br>
+
+<i>slay Net</i><br>
+<i>/etc/config/network</i><br><br>
+
+Do
+
+<ul>
+<li><i>ping 130.127.172.2</i>
+
+<p> You should be able to see the results of pinging into another machine, as shown below...
+
+
+<P><IMG SRC="images/qnx4Networking/pingresults.gif"</P>
+<br>
+<i>Ctrl c</i> to quit pinging.<br><br>
+
+<li><i>ping crb01</i><br><br>
+
+
+<li> Try 'voyager' to browse some webpage. Type <i>voyager</i> in the terminal for opening the web browser.<br><br>
+</ul>
+
+<p>The network should now be up and running...hopefully.<br><br>
+
+<li>The <i>/etc/config/sysinit</i> may not need any changes to be made. This file can be copied or FTP'd from another machine and renamed to <i>sysinit.1</i>, after backing up any sysinit.1 files already present. Later on, while configuring the machine into the QNX network (this is different from TCP/IP network), a copy of this file shall be renamed into <b>sysinit.<i>node</i></b> where the <i>node</i> is the node number of the machine...for crb14, it would be sysinit.14. <br><br>
+
+<i>
+cd /etc/config<br>
+mv sysinit.1 sysinit.1.old<br>
+mv sysinit sysinit.1<br>
+</i>
+<br>
+Your <i>sysinit.1</i> file should look something like this....
+<br><br>
+
+<FONT COLOR="#000080">
+export TZ=utc00<br>
+rtc -l hw<br>
+Dev &<br>        
+Dev.ansi -Q -n 4 &<br>
+reopen<br>
+Dev.ser &<br>
+Dev.par &<br>
+emu87 &<br>
+tinit -t /dev/con1 -T /dev/con[2-4] &<br>
+
+</font>
+<br>
+<p> Now, append the lines <i>'/etc/config/network'</i> to this file if all checks of step 5 were successful. Adding that line enables the machine to get connected to the network during boot up. <br><br>
+
+
+<li> The machine is now configured for TCP/IP. Usually we want to make the machine part of the QNX network as well. Follow the steps given below..<br><br>
+
+a) Copy <i>sysinit.1</i> to <i>sysinit.node</i><br><br>
+<i>cp sysinit.1 sysinit.<b>node</b></i><br><br>
+<p>
+where the <i>node</i> is the node number of the machine...for crb14, it would be 14. <br><br>
+
+
+b) FTP the directory <i>/etc/licenses</i> from node 1(server) to your machine and put it in the same location(/etc/).<br><br>
+
+c) FTP the file <i>/etc/config/netmap</i> from node 1 to your machine and put it in the same location (/etc/config).<br><br>
+
+<p> Edit the 'netmap' file to make sure that the enrty for node 1 (that is the first entry) and the entry for your node exists.
+
+<P><HR></P>
+
+<p>
+The machine has a network card that has it's 'MAC address' hardwired in it. The QNX server uses this MAC address to communicate with your machine. You must make sure that the MAC address of your machine matches with the entry for your node in the <i>/etc/config /netmap</i> file. Do the following : <br><br>
+
+<ul>
+
+<li>Look for the MAC address of the network card in your machine. This can be found somewhere on the network card or during boot-up.<br><br>
+
+<li>Open the netmap file and confirm that the MAC address for your node is the same in the 'netmap' file.<br><br>
+
+<li>If the MAC addresses don't match, contact <a href=http://markus.eng.clemson.edu/>QNX Administrator</a> so that he can make neccesary changes in the server.<br><br>
+
+<p>TO QNX ADMINISTRATOR : Open the <i>/etc/config/netmap</i> file and enter the right MAC address for the machine. 
+Update the netmap with the command 
+<br><br>
+<i>netmap -f</i>
+<br><br>
+
+
+A sample <i>netmap</i> file is shown below:<br>
+
+<IMG SRC="images/qnx4Networking/netmap.gif"</P>
+
+</ul>
+
+<P><HR></P>
+
+
+
+c) Try the following commands from console.<br><br>
+
+<i>netmap -f<br>
+netmap -F //1/etc/config/netmap<br>
+nameloc -k 1
+</i><br><br>
+
+<p> After <code>netmap -f</code> command you should be able to see node 1 and our node with the command <code>alive</code>. After <code>netmap -F //1/...</code> command you should be able to see all nodes with the command <code>alive</code>. If everything works fine, uncomment the "netmap" and "nameloc" lines in the <i>/etc/config/network</i> script.<br><br>
+
+d) Update the licenses. Type the following command<br><br>
+
+<i>license //1/etc/licenses<br>
+license -r</i>
+<br><br>
+
+<p> This will update the network licenses for all the components in the installed system.<br><br>
+
+
+<li>Make a copy of the current system's image. If changes to the default system image (/.boot) prevents the PC from booting properly, the user can then chose to boot from the alternate system image (./altboot) by holding down the ESCAPE key during the boot phase. In addition, ensure that there exists the file <i>altsysinit</i> file in the directory <i>/etc/config</i> which is used instead of sysinit.<i>node</i> in case of an alternate boot (i.e., when the ESCAPE key is pressed during booting, <i>/.altboot</i> and <i>/etc/config/altsysinit</i> are used to initialize QNX). To copy the current system image to .altboot, utilize the following commands:<br><br>
+
+
+<i>cp /.boot /.altboot</i><br><br>
+ 
+
+
+<li>In order to ensure that Proc32 is executing at priority 26, a new QNX system image must be constructed. QNX build files are stored in /boot/build. The default QNX installation procedure will create a build file called install.<i>node</i> where <i>node</i> is the QNX node number of the PC. To build the proper system image, the following commands should be executed:<br><br>
+
+
+<i>cd /boot/build<br>
+ls</i><br><br>
+ 
+<p>
+The output of the list command should look something like:<br><br>
+
+
+<P ALIGN="JUSTIFY"></P>
+<PRE>./     hard.ata.1    ws.arcxir ws.ether503  ws.ether8003 ws.tr164a
+../    hard.macros.1 ws.arc20  ws.ether1000 ws.ether509  ws.ether9000
+floppy install.1     ws.arcnet ws.ether2100 ws.ether7231 ws.fddidfe</PRE>
+
+
+
+<li>Now perform the following:<br><br>
+ 
+
+<i>cp install.1 <b>crb14</b></i>. <br><br>
+
+Type the right node name in lieu of 'crb14'. (note: other QNX build files are present in /boot/build).<br><br>
+
+<li>Edit the file <b>crb<i>xx</i></b> (note: any text editor will suffice. For example. type "ped crb14"). The text file 'crb<i>xx</i>' should appear as follows 
+
+<FONT COLOR="#000080">
+<P ALIGN="JUSTIFY"></P>
+<PRE>/boot/sys/boot
+$ /boot/sys/boot -v
+
+/boot/sys/Proc32
+$ /boot/sys/Proc32 -l 1
+
+/boot/sys/Slib32
+$ /boot/sys/Slib32
+
+/boot/sys/Slib16
+$ /boot/sys/Slib16
+
+/bin/Fsys
+$ /bin/Fsys 
+
+/bin/Fsys.eide
+$ /bin/Fsys.eide fsys -Ndsk0 -n0=hd0. -n5=cd0. eide -a1f0 -i14
+
+/bin/mount
+$ /bin/mount -p /dev/hd0.0 /dev/hd0.0t77 /
+
+/bin/sinit
+$ /bin/sinit TERM=qnxm</PRE>
+</P>
+</font>
+
+<I><P ALIGN="JUSTIFY">Note</I>: the user's build file may appear different than above depending on which base build file (<I>e.g.</I>, <CODE>install.1</CODE>, <CODE>hard.1</CODE>, <CODE>hard.ata.1</CODE>, <I>etc.</I>) was selected. To reduce potential errors, the user should select the build file that most resembles the above script.</P>
+
+<li>The following line of <CODE>crbxx</CODE> should be amended to appear as:</P>
+
+<FONT FACE="Courier,Courier New" SIZE=2><P ALIGN="JUSTIFY">$ /boot/sys/Proc32 -l <b>14</b> -i 5 -P 26</FONT><CODE> </CODE>(<I>note</I>: the file system is case sensitive. Also note that the number in bold is the node number. Type the correct node number for your machine.The <code>- p </code> will set <CODE>Proc32</CODE> to execute at priority 26. The option <FONT FACE="Courier,Courier New" SIZE=2>-i 5</FONT> sets IRQ 5 as the most important IRQ in the system (this will be the IRQ triggered by the hardware timer on the MultiQ or STG board).</P>
+
+<li>Save and exit <CODE>crbxx</CODE>. The operating system image corresponding to the build file for example <CODE>crb14</CODE> now needs to be built with the following commands:</P>
+
+<PRE>cd /boot
+buildqnx build/crb14 images/crb14
+cp images/crb14 /.boot</PRE>
+
+</CODE><P ALIGN="JUSTIFY">The 2nd line builds the system image, and the 3rd copies it to the directory <FONT FACE="Courier,Courier New" SIZE=2>/.boot</FONT>, making it the image that will be loaded by default when the system boots. <br><br>
+
+<li>Now reboot the machine for the changes to take effect. If an error occurs with the new system image (recently saved to <CODE>/.boot</CODE>), then press <CODE>ESCAPE</CODE> key during the boot phase to utilize the original system image <CODE>/.altboot</CODE>). <br><br>
+
+<li>After the PC has rebooted, check to see if <CODE>Proc32</CODE> is actually running at priority 26 with the following command:</P>
+
+<PRE>sin -P Proc32</PRE>
+
+<P ALIGN="JUSTIFY">which should return the following:</P>
+<P ALIGN="JUSTIFY"></P>
+<PRE>SID   PID PROGRAM                 PRI  STATE   BLK   CODE   DATA
+ 0    1   /boot/sys/Proc32        26f  READY   ---   122k  3264k</PRE>
+
+
+<li>Check the network to make sure it is working fine. Ping a machine in the network, or use voyager to browse some webpage.<br><br>
+
+
+<li>See <a href=http://www.ces.clemson.edu/~cvilas>QNX Administrator</a> to update all links to this machine.<br><br>
+
+<p>TO QNX ADMINISTRATOR : Run the following commands as <i>root</i> to update all nodes from the QNX server CRB01.<br>
+
+<i>cd /usr/net/admin<br>
+update_all_nodes</i>
+
+<br><br>
+<li> You are all set. 
+
+</ol>
+
+</FONT><P><IMG SRC="images/divider.gif" WIDTH=500 HEIGHT=15></P>
+
+<hr>
+<a href = "crbAdmin.htm">Back to Documentation index</a>
+<hr>
+
+</BODY>
+</HTML>

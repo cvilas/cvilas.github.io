@@ -1,0 +1,1 @@
+2|StaticObject Class|./Diverse/html/annotated.html

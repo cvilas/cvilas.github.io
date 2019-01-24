@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Meachatronics - Clemson University - Upgrading your Linux Kernel</title>
+<meta name="Keywords" content="linux kernel upgrade install">
+<meta name="Description" content="Upgrading the Linux Kernel">
+<meta name="Author" content="vilas chitrakaran">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body background bgcolor="#FFFFFF">
+
+<img SRC="images/heading.gif" height=37 width=504>
+<br><b><u><font color="#000080" size=+2>Upgrading the Linux Kernel</font></u></b>
+<p><img SRC="images/divider.gif" height=15 width=500>
+
+<table width="640">
+<tr>
+<td>
+
+<p>This is a quick guide for users who have some experiance working in Linux. Please read the <a href="http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html">Official Kernel 
+HOWTO</a> for more information. Another excellent resource is <a href="http://www.linux.it/kerneldocs/kconf/">this</a> article by Alessandro Rubini. 
+<ol>
+<li>Download the Linux kernel tarball from <a href = "http://www.kernel.org">http://www.kernel.org</a>
+<li>Untar it to the directory <i>/usr/src/</i>
+<li><code>cd /usr/src/linux</code>
+<li><code>make mrproper</code>. 
+
+<p>This will clean up your present configuration file (usually the <code>.config</code> file). If you only want to make minor changes to your present configuration, ignore this step and go to the next one.
+<br><br>
+
+<li><code>make xconfig</code>
+
+<p>If the last step was ignored, this will result in the configuration currently running on your machine to be loaded. Select your installation componenets. Once the configuration is over, save the configuration as a file in some safe place for future reference.
+<br><br>
+
+<li><code>make dep</code>
+<li><code>make bzImage</code>
+<p>It will take some time. Walk down to the cafe at the corner of the street and get yourself a cup of coffee. Better still, take a long lunch break...<br><br>
+<li><code>make modules</code>
+<li><code>make modules_install</code>
+<li><code>cp arch/i386/boot/bzImage /boot/LinuxImagexxx</code>
+<li>Modify the file <code> /etc/lilo.conf</code> to point to the newly created Linux kernel image.
+<li>Run <code>/sbin/lilo</code>
+<li>Reboot to run the newly installed kernel.
+</ol>
+<p><i>-Primary contributions from <a href = "http://ece.clemson.edu/crb/students/xhai">Hai Xu</a></i>
+
+</td>
+</tr>
+</table>
+
+<hr>
+<a href = "crbAdmin.htm">Back to Documentation index</a>
+<hr>
+
+</body>
+</html>

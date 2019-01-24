@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vilas kumar Chitrakaran - QMath</title>
+<meta name="Description" content="QMath matrix library">
+<meta name="Keywords" content="matrix library, C++ classes, UNIX">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb">
+<table width="640">
+<tr><td>
+
+<hr align="left" width="640" color=#8687bf>
+<div align="center"><h2>QMath - A Matrix Library</h2></div>
+<hr align="left" width="640" color=#8687bf>
+
+<img src="images/qmath.png" border=0 width=250 height=136 alt="qmath" align="right">
+<ul>
+	<li><b>Posted:</b> May 2000, <b>Updated:</b> May 2005.
+	<li><b>Summary:</b> A matrix library (C++ template classes) for robotic applications. 
+	This library is primarily for UNIX systems. 
+</ul>
+
+<h3>Introduction</h3>
+<div style="text-align:justify;">
+<p>
+QMath provides a set of C++ template classes for matrices, vectors, homogeneous 
+transformations, numerical filtering, integration and differentiation. It is 
+a real-time capable library with an intuitive programming interface resembling 
+MATLAB. Although it is a completely independant package by itself, it was originally 
+developed as the math library for the <a href="../rp/index.htm">Robotic Platform</a>, and 
+significantly simplifies programming for robotic applications. QMath cannot be compared 
+to general purpose scientific computation and numerical libraries such as 
+the <a href="http://www.gnu.org/software/gsl/">GNU Scientific Library</a> and LAPACK, which provide much more extensive functionality. This is 
+a simple, light-weight and extensible library of math functions commonly used in robotics.
+</p>
+
+<p>
+The library uses templates of the data type and dimensions (e.g. number of rows 
+and columns in a matrix). The use of templates and inline functions produce 
+highly optimized code that is almost as fast in execution as direct programming. 
+The size of QMath data types used in a program are known at compile time, providing
+two very important advantages:
+<ul>
+<li> There is no run time dynamic memory allocation which can risk the loss of 
+     deterministic real-time response.
+<li> Writing correct code is easier and debugging is faster. This is because the user
+     will get a compile time error if she attempts numerical operations between 
+	 incompatible data types (such as dot product between vectors of different 
+	 dimensions). A compile time error is any day better than an unexpected run time error 
+	 that may subsequently damage equipment or grad students nearby. 
+</ul>
+</p>
+
+<p>
+The following classes/data types are provided by the library:
+<ul>
+ <li><code>MatrixBase</code>: Pure virtual base class for matrices.
+ <li><code>VectorBase</code>: Pure virtual base class for vectors.
+ <li><code>Matrix</code>: The class for matrices.
+ <li><code>RowVector</code>: A class for row vectors (1 x n matrices).
+ <li><code>ColumnVector</code>: A class for column vectors (n x 1 matrices).
+ <li><code>Vector</code>: Same as <code>ColumnVector</code>.
+ <li><code>Transform</code>: Homogeneous transformations.
+ <li><code>LowpassFilter</code>: 2<sup>nd</sup> order low pass butterworth filter.
+ <li><code>HighpassFilter</code>: 2<sup>nd</sup> order high pass filter.
+ <li><code>Integrator</code>: Base class for integrators. Provides trapezoidal integration method.
+ <li><code>Adams3Integrator</code>: Integrator using Adams 3<sup>rd</sup> order method.
+ <li><code>ODESolverRK4</code>: Solver for ordinary differential equations using 4<sup>th</sup> order Runge-Kutta method.
+ <li><code>Differentiator</code>: Base class for differentiators. Computes derivative using backward difference.
+ <li><code>Differentiator4O</code>: 4<sup>th</sup> order differentiator.
+</ul>
+</p>
+
+<h4>Inter-operability with <a href="http://www.gnu.org/software/gsl/">GNU Scientific Library</a> (Added Sept. 2005)</h4>
+<p>
+A new header file <code><a href="docs/html/GSLCompat_8hpp.htm">GSLCompat.hpp</a></code> has 
+been added to the library. This allows conversion of QMath <code>Matrix</code> and <code>Vector</code> types to 
+GSL types <code>gsl_matrix</code> and <code>gsl_vector</code>, respectively, without any performance
+penalty (again, no dynamic memory allocations are used). Functions declared in this file can be used to map a QMath
+type to GSL type object, and subsequently use GSL library functions to perform computations. This is useful, for example,
+when you want to compute the SVD of a matrix, or solve linear equations. To use this functionality, you must install 
+GSL. (For QNX 6.2.1, here is a version of GSL that I know compiles without problems: <a href="src/gsl-1.8.tar.gz">gsl-1.8.tar.gz</a>).
+</p>
+
+<h3>Documentation</h3>
+<div style="text-align:justify;">
+<p>
+<ul>
+	<li><a href="docs/html/annotated.htm">HTML Documentation</a>.
+	<li><a href="docs/QMath.pdf">PDF Documentation</a>.
+</ul>
+</p>
+
+<h3>Installation</h3>
+<div style="text-align:justify;">
+<p>
+<u>QRTS users on QNX 6.2.1</u>: 
+<br>
+<ul>
+<li>Ensure that the BaseQRTS package is installed.
+<li>Download the distribution binary package for QNX 6.2.1: <a href="src/QMath-qnx6.2.1.tar.gz">QMath-qnx6.2.1.tar.gz</a>.
+<li>Install the software as follows:<br>
+<br><code>
+installpkg QMath-qnx6.2.1.tar.gz<br>
+</code><br>
+<li>Note that QMath now comes with the QMotor installation package. QMath (with GSL) will be installed when you install QMotor.
+<li>User documentation is available through the QNX Helpviewer.
+</ul>
+</p>
+
+<p>
+<u>Non-QRTS users</u>
+ <ul>
+ <li>Download the source code <a href="src/QMath.tgz">QMath.tgz</a>.
+ <li>Expand the tar-zipped archive and install the library as follows:
+ <br><code>
+ tar zxvf QMath.tgz<br>
+ cd QMath<br>
+ ./install_qmath<br>
+ </code>
+ <li>You can also use the Makefile provided with the package. In which case you 
+ can proceed as follows
+ <br><code>
+ make usegsl=yes<br>
+ make usegsl=yes install </code> (Must be root to do this)<code>
+ </code><br>
+ If you don't have GSL installed, set <code>usegsl=no</code> above. 
+ <li>Try the example programs in the examples directory. Just run <code>make</code> in the example directory
+	to create the executables. If any example fails to run, please let me know.
+ </ul>
+</p>
+<p>
+The library was developed for UNIX using GCC compiler. However with the script provided in the 
+<code>win</code> directory, the library can be compiled for Windows using Visual C++ version 7.0 
+and up. Compile will fail for earlier versions of VC++ due to lack of proper support 
+for C++ templates. 
+</p>
+</div>
+
+<h3>Applications</h3>
+<div style="text-align:justify;">
+<p>
+ <ul>
+ <li>Robot kinematics and control.
+ <li>Realtime applications.
+ </ul>
+</p>
+
+<h3>References</h3>
+<div style="text-align:justify;">
+<ul>
+<li>Jack W. Crenshaw, "MATH Toolkit for REAL-TIME Programming," CMP Books, ISBN: 1929629095, 2000.
+<li>Lonnie C. Ludeman, "Fundamentals of Digital Signal Processing," Harper & Row, ISBN: 0060440937, 1986. 
+</ul>
+<p><i>Suggestions or comments? <a href="mailto:cvilas@ces.clemson.edu">Please email cvilas(@)ces.clemson.edu</a>.</i></p>
+</div>
+<hr align="left" width="640" color=#8687bf>
+
+</td></tr>
+</table>
+</body>
+</html>

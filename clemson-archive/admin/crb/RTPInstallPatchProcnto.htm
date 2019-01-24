@@ -1,0 +1,123 @@
+<html>
+<head>
+
+<P>
+<title>QNX RTP : Installing the patched Process Manager</title>
+<IMG SRC="images/heading.gif" WIDTH=504 HEIGHT=37></P>
+<FONT COLOR="#000080"><H2>QNX RTP : Installing the patched Process Manager</H2></FONT>
+<br><b>Author:</b> Vilas Kumar Chitrakaran, Dec 2001<br>
+<P><IMG SRC="images/divider.gif" WIDTH=500 HEIGHT=15></P>
+</head>
+
+
+<body>
+
+<p>
+<hr>
+This document applies to QNX RTP 6.0 only. The patch is not required for QNX RTP 6.1 and above.
+<hr>
+<br><br>
+
+This document explains the procedure involved in installing the patched Process Manager for the QNX RTP Operating System. RTP can be installed either in a separate partition or inside an existing Microsoft Windows partition.
+
+
+<p>
+Follow <b>Section A</b> if RTP is installed in an independent partition.
+
+<br>
+Follow <b>Section B</b> if RTP is installed inside an existing MS Windows partition.
+
+
+<p><b>Section A : RTP installed in an independent partition.</b>
+
+<ol>
+
+<li>Move the existing <code>.boot</code> file to the file named <code>.altboot</code>
+
+<p><code>cp /.boot /.altboot</code>
+<br><br>
+
+
+<li>Copy the patched Process manager <code>procnto.shmem_fixed</code> to the correct location in the RTP. (The patched Process Manager is at <code>/rp/etc/zip/patches</code>).
+
+<p><code>cp /rp/etc/zip/patches/procnto.shmem_fixed /boot/sys</code>
+<br><br>
+
+
+<li>Create a new build file and make changes to it. The build files are in <code>/boot/build</code>. The way to do this is to first copy an existing build file(like <code>qnxbasedma.build</code>) and rename it into a new build file that you will use (say <code>qnxbasedma.shmem_fixed.build</code>).
+
+<p><code>cd /boot/build</code>
+<br>
+<code>cp qnxbasedma.build qnxbasedma.shmem_fixed.build</code>
+<br><br>
+
+<p>The build file will look something like the following. Change the name of the Process Manager in this file to the new patch; i.e. change the word <code>procnto</code> to <code>procnto.shmem_fixed</code>.
+
+<p><img SRC="images/RTPInstallPatchProcnto/buildfile.jpg" height=536 width=902>
+
+
+<li>Create the new boot file. The boot file contains all the files that are listed in the build file during startup. You can look up the docs of <code>mkifs</code> command for further info.
+
+<p><code>mkifs -vvv qnxdma.shmem_fixed.build qnxbasedma.shmem_fixed.boot</code>
+<br><br>
+
+
+<li>Copy the newly made boot file to the appropriate location.
+
+<p><code>cp qnxbasedma.shmem_fixed.boot /.boot</code>
+<br><br>
+
+
+<li>Reboot. On restart the new boot file will be used.
+</ol>
+<br><br><br>
+
+<p><b>Section B : RTP installed inside an existing MS Windows partition.</b>
+
+<ol>
+
+<li> Boot into RTP.
+<br><br>
+
+<li>Copy the patched Process manager <code>procnto.shmem_fixed</code> to the correct location in the RTP. (The patched Process Manager is at <code>/rp/etc/zip/patches</code>).
+
+<p><code>cp /rp/etc/zip/patches/procnto.shmem_fixed /boot/sys</code>
+<br><br>
+
+
+<li>Create a new build file and make changes to it. The build files are in <code>/boot/build</code>. The way to do this is to first copy an existing build file(like <code>qnxbasedma.build</code>) and rename it into a new build file that you will use (say <code>qnxbasedma.shmem_fixed.build</code>).
+
+<p><code>cd /boot/build</code>
+<br>
+<code>cp qnxbasedma.build qnxbasedma.shmem_fixed.build</code>
+<br><br>
+
+<p>The build file will look something like the following. Change the name of the Process Manager in this file to the new patch; i.e. change the word <code>procnto</code> to <code>procnto.shmem_fixed</code>.
+
+<p><img SRC="images/RTPInstallPatchProcnto/buildfile.jpg" height=536 width=902>
+
+
+<li>Create the new boot file. The boot file contains all the files that are listed in the build file during startup. You can look up the docs of <code>mkifs</code> command for further info.
+
+<p><code>mkifs -vvv qnxdma.shmem_fixed.build qnxbasedma.shmem_fixed.boot</code>
+<br><br>
+
+
+<li>Copy the newly made boot file to the appropriate location.
+
+<p><code>cp qnxbasedma.shmem_fixed.boot "/fs/hd0-dos/Program Files/qnx/boot/fs/qnxbasedma.ifs".</code>
+<br><br>
+
+<p>Note that <code>"/fs/hd0-dos/Program Files/qnx"</code> is the base directory of the QNX RTP inside MS Windows as seen from inside RTP. The user must confirm that the base directory indeed exists at this location.
+<br><br>
+
+<li>Reboot. On restart the new boot file will be used.
+</ol>
+</body>
+<P><IMG SRC="images/divider.gif" WIDTH=500 HEIGHT=15></P>
+
+<hr>
+<a href = "crbAdmin.htm">Back to Documentation index</a>
+<hr>
+
+</html>

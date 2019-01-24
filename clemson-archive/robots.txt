@@ -1,0 +1,7 @@
+# robots.txt for http://crb69.ces.clemson.edu/
+# This file defines exclusions for webcrawlers, who tend to
+# mess up the system through misuse of the cgi scripts
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /admin/

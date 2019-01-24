@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vilas kumar Chitrakaran - Wingman Extreme 3D Digital Client for QNX</title>
+<meta name="Description" content="Wingman 3D Joystick Client for QNX">
+<meta name="Keywords" content="logitech, QNX, HID, Wingman, joystick">
+<meta name="Author" content="vilas chitrakaran">
+</head>
+<body bgcolor="#3b383d" text="#dae7ef" link="#90b2cb" vlink="#90b2cb">
+<table width="640">
+<tr><td>
+
+<hr align="left" width="640" color=#8687bf>
+<div align="center"><h2>Logitech Wingman USB Joystick Client for QNX RTP</h2></div>
+<hr align="left" width="640" color=#8687bf>
+
+<img src="images/wingman.jpg" border=0 width=256 height=256 alt="Logitech Wingman" align="right">
+<ul>
+	<li><b>Posted:</b> July 16, 2004, <b>Last updated:</b> Aug 25 2006
+	<li><b>Summary:</b> C++ software class library for Logitech 
+	<a href="http://www.logitech.com/index.cfm/products/details/US/EN,CRID=12,CONTENTID=5017" style="text-decoration:none">Wingman Extreme 3D</a>, 
+	<a href="http://www.logitech.com/index.cfm/products/details/US/EN,CRID=2221,CONTENTID=6954" style="text-decoration:none">Extreme 3D Pro</a> and 
+	<a href="http://www.logitech.com/index.cfm/products/details/US/EN,CRID=2221,CONTENTID=5016" style="text-decoration:none">Force 3D</a> USB Joysticks in 
+	<a href="http://www.qnx.com/products/rtos/" style="text-decoration:none">QNX Real Time Platform</a>.
+</ul>
+
+<h3>Introduction</h3>
+<div style="text-align:justify;">
+<p>
+This is a C++ class library for the following three <a href="http://www.usb.org/developers/hidpage" style="text-decoration:none">HID compliant</a> 
+USB joysticks:
+<ul>
+<li>Logitech Wingman Extreme Digital 3D (Prod. ID: 0xC212)
+<li>Logitech Extreme 3D Pro (Prod. ID: 0xC215)
+<li>Logitech Wingman Force 3D (Prod. ID: 0xC283)<br>
+  (The force feedback feature does not work yet.)
+</ul>
+</p>
+<p>
+The HID interface is available but not documented in QNX 6.2.1. This driver was made possible thanks to the helpful engineers at QNX
+and people who hang out in QNX newsgroups. This is not a full fledged driver, but works as a client to the QNX HID manager <code>io-hid</code>. 
+</p>
+
+<h3>About this version</h3>
+<p>
+It will work great if you are using only upto two devices at a time. The source code is provided without any 
+restrictions. If you were able to extend it or improve it in any way, I would be 
+grateful if you would let me know about it (email: cvilas at ces dot clemson dot edu). </p>
+</div>
+
+
+<h3>Documentation</h3>
+<p>
+The main driver interface is Wingman3D.hpp. Here is the user interface documentation:
+<ul>
+<li><a href="docs/html/annotated.htm">HTML documentation</a>.
+<li><a href="docs/Wingman3D.pdf">PDF documentation</a>.
+</ul>
+</p>
+
+<h3>Installation</h3>
+<p>
+<u>QRTS users</u>:
+<ul>
+<li>The BaseQRTS and the qrtsutility packages must be installed first.
+<li>Download the distribution binary package for QNX 6.2.1: <a href="src/Wingman-qnx6.2.1.tar.gz">Wingman-qnx6.2.1.tar.gz</a>.
+<li>Install the software as follows:<br>
+<br><code>
+installpkg Wingman-qnx6.2.1.tar.gz<br>
+</code><br>
+<li>The above steps will install <code>WingmanServer</code> in <code>$(QRTS)/bin</code>, the header files
+<code>Wingman3D.hpp</code> and <code>WingmanClient.hpp</code> in <code>$(QRTS)/include</code>, and the corresponding 
+static and dynamic libraries in <code>$(QRTS)/lib</code>. Examples are installed in <code>$(QRTS)/examples/Wingman3D</code> 
+and <code>$(QRTS)/examples/WingmanClient</code>. Documentation will be available in the QNX Helpviewer.
+<li>To use the driver the USB manager (devu-uhci or devu-ohci) and manager for HID devices (io-hid) must be running. 
+In order to do this automatically during bootup, add the following lines to <code>/etc/rc.d/rc.local</code>:
+<br><code>
+/sbin/devu-uhci & </code>(or /sbin/devu-ohci &, whichever works) <code> <br>
+/sbin/io-hid & <br>
+mount -Tio-hid devh-usb.so & <br>
+</code>
+<li>The Wingman server and client are used in QMotor programs just like any other IO Board client and server. The <code>WingmanServer</code> 
+can be started from your <code>startservers</code> script by adding the following lines to the script
+<br><code>
+WingmanServer -n qrts/usbjs &
+</code>
+<li>You can also type <code>use WingmanServer</code> on the command line to get a brief usage message.
+</ul>
+</p>
+
+<p>
+<u>Non-QRTS users</u>:
+<ul>
+<li>Download the source package: <a href="src/Wingman3D.tgz">Wingman3D.tgz</a>
+<li>Expand the package and install as follows:
+<br><code>
+tar zxvf Wingman3D.tgz<br>
+cd Wingman3D<br>
+make<br>
+make install </code>(Note: Should be root to do this.)<code>
+</code><br>
+The default install location is <code>/usr/local</code>
+<li>Try the example programs in the examples directory. Just run <code>make</code> in the example directory
+to create the executables. If any example fails to run, please let me know.
+</ul>
+</p>
+
+<p>
+NOTE: The user programs must be linked with the QNX HID library libhiddi.so, in addition to the libraries from this package.
+</p>
+
+<h3>Applications</h3>
+<p>
+I wrote this software for a teleoperation system for industrial robots in my 
+<a href="http://www.ces.clemson.edu/ece/crb/" style="text-decoration:none">lab</a>. 
+This software is being made public with the hope that if the reader is looking to get any HID 
+device working under the QNX Real Time OS, this could be used as a reference.  
+</p>
+
+<p><i>Suggestions or comments? <a href="mailto:cvilas@ces.clemson.edu">Mail me</a>.</i></p>
+</div>
+<hr align="left" width="640" color=#8687bf>
+
+</td></tr>
+</table>
+</body>
+</html>

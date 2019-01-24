@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Meachatronics - Clemson University - Preparing QNX installation for lab</title>
+<meta name="Keywords" content="qnx qrts install">
+<meta name="Description" content="Preparing QNX installation for lab">
+<meta name="Author" content="vilas chitrakaran">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body background bgcolor="#FFFFFF">
+
+<img SRC="images/heading.gif" height=37 width=504>
+<br><b><u><font color="#000080"><font size=+1>Preparing a QNX Momentics Workstation for the Lab.</font></font></u></b><br>
+<b>Author</b>: Vilas Kumar Chitrakaran, Sept 2003<br>
+<p><img SRC="images/divider.gif" height=15 width=500>
+
+<hr>
+
+<h3>Before we begin</h3>
+<ul>
+<li>This is not an installation guide for QNX Momentics. Use this document to prepare a stock QNX installation for experiments in the lab, 
+such as installation of QRTS software libraries, environment variables, etc.
+<li>You can use the graphical text editor <code>ped</code> in QNX to edit some of the text files mentioned in this document.
+</ul>
+
+<h3>Procedure</h3>
+<ol>
+<li>Get the latest software packages CD from Vilas.<br><br>
+<li>Login as root.<br><br>
+<li>Copy <code>.profile</code>, <code>.kshrc</code> and the directory <code>.ph</code> from the CD to your home directory. This will set up a few nice environmental settings for you such as command line completion and fonts.<br>
+	<br>
+	<code>
+	cp /fs/cd0/config/.kshrc ~<br>
+	cp /fs/cd0/config/.profile ~<br>
+	cp -R /fs/cd0/config/.ph ~<br>
+	</code>
+	<br> 
+<li>Logout and login again for the settings to take effect.<br><br>
+<li>Edit <code>/etc/inetd.conf</code> to enable <b>phrelay</b> by uncommenting (remove #) the following line<br>
+	<br>
+	<code>#phrelay    stream tcp nowait root  /usr/bin/phrelay         phrelay -x <br>
+	</code>
+    <br>
+	<code>phrelay</code> enables you to remotely access photon desktop using <code>phindows</code>.<br><br>
+	
+<li>We won't use telnet or FTP on QNX PCs. Will will use SSH instead (described later). In the same file <code>/etc/inetd.conf</code> disable <b>telnet</b> and <b>ftp</b> by commenting out (place # as the first character in the line) the following lines as shown<br>
+	<br>
+	<code>
+	#ftp        stream tcp nowait root  /usr/sbin/ftpd           in.ftpd -l <br>
+    #telnet     stream tcp nowait root  /usr/sbin/telnetd        in.telnetd </br>
+	</code>
+	<br>
+<li>Edit (create if not present) <code>/etc/rc.d/rc.local</code>. Add the following lines<br>
+	<br>
+	<code>
+	inetd&<br>
+	mount -Tio-net npm-qnet.so<br>
+	sshd&<br>
+	</code>
+	<br>
+<li>Make <code>rc.local</code> executable. <br>
+	<br>
+	<code>
+	chmod +x rc.local<br>
+	</code>
+	<br>
+<li>Also add <code>QRTS</code> to path in the same file<br>
+	<br>
+	<code>
+	# Add the system utilities to the path...<br>
+	export PATH=/sbin:/usr/sbin:/bin:/usr/bin <br>
+	export QRTS=/usr/qrts<br>
+	export PATH=.:~/bin:$QRTS/bin:$QRTS/bindebug:$QRTS/binrmalloc:$PATH<br>
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QRTS/lib <br>
+	</code>
+	<br>
+<li>Although you added <code>QRTS</code> to <code>PATH</code> in the above step, to avoid rebooting, do the following on the terminal<br>
+   <br>
+   <code>
+   export QRTS=/usr/qrts/<br>
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QRTS/lib <br>
+   export PATH=$PATH:$QRTS/bin<br>
+   </code>
+   <br>
+<li>Copy QRTS install files (tar.gz files) from CD to a temporary directory.<br>
+	<br>
+	<code>
+	cd /tmp <br>
+	mkdir install <br>
+	cd install <br>
+	cp -R /fs/cd0/packages/* /tmp/install/ <br>
+	</code>
+	<br>
+<li>Install '<b>baseqrts</b>' package first. From <code>/tmp/install</code>, run the following commands.<br>
+	<br>
+	<code>
+	tar zxvf baseqrts-x.x-qnxy.y.y.tar.gz<br>
+	cd baseqrts-x.x-qnxy.y.y<br>
+	./qinstall<br>
+	</code>
+    <hr>
+    In the above commands, note that <code>x.x</code> must be replaced with package version number and <code>y.y</code> with OS version number. Check the name of the package.
+    <hr>
+	<br>
+<li>Install other QRTS packages using '<code>installpkg</code>' utility. For example, if the package is named <code>package.tar.gz</code>,<br> 
+	<br>
+	<code>
+	installpkg package <br>
+	</code>
+	<br>
+	The following packages are available for QNX 6.2.1:
+	 <ul>
+	 <li><code>atiftsdk-1.15-qnx6.2.1.tar.gz</code>: Driver and SDK for ATI Force/Torque sensor.
+	 <li><code>bhand-1.02-qnx6.2.1.tar.gz</code>: Barrett Hand control software.
+	 <li><code>cvutils-qnx6.2.1.tar.gz</code>: Computer Vision utilities (Feature tracking and homography library).
+	 <li><code>inventor-2.1.5.6-qnx6.2.1.tar.gz</code>: Open Inventor 3D graphics library.
+	 <li><code>QMath-qnx6.2.1.tar.gz</code>: The matrix library. Used by Robotic Platform, QMotor, etc.
+	 <li><code>qmotor-3.22-qnx6.2.1.tar.gz</code>: QMotor realtime control system development environment.
+	 <li><code>UndongledQMotor.tar.gz</code>: QMotor package without hardware license dongle (preferred over the above package).
+	 <li><code>qmrtk-1.218-qnx6.2.1.tar.gz</code>: QMotor Robotic Tool Kit.
+	 <li><code>qrtsutility-1.1-qnx6.2.1.tar.gz</code>: Utility packages (IOBoardClient/Server, TimerClient/Server, etc).
+	 <li><code>qwidgets-1.13-qnx6.2.1.tar.gz</code>: A class library for photon microGUI. 
+	 <li><code>roadrunnersdk-1.1-qnx6.2.1.tar.gz</code>: Driver and SDK for Bitflow RoadRunner 24M high-speed digital framegrabber.
+	 <li><code>stgsdk-1.3-qnx6.2.1.tar.gz</code>: Driver and SDK for ServoToGo ISA IO board.
+	 <li><code>Wingman-qnx6.2.1.tar.gz</code>: Driver and SDK for Logitech Wingman series of joysticks (requires qrtsutility package).
+	 <li><code>RP-qnx6.2.1.tar.gz</code>: The Robotic Platform software development system (requires ATI sdk, Inventor sdk, QMath, QMotor and QWidgets).
+	 </ul>
+	<br><br>
+<li>Some additional software is required from the QNX public CD/online repository. Open the QNX Installer. Install atleast the following.<br>
+	<br>
+	Doxygen <br>
+	OpenSSH <br>
+	Photon 3D Runtime and Development <br>
+	Photon 3D Runtime and Development (x86) <br>
+	vim <br>
+	who <br>
+	<br>
+<li>Setup SSH. Create SSH keys for the machine as follows:<br>
+	<br>
+	<code>		
+	ssh-keygen -t rsa<br>
+	</code>
+	<br>
+	(On being prompted save the key in <code>/etc/openssh/ssh_host_rsa_key</code>.)
+	<br>
+	<br>
+	<code>	
+	ssh-keygen -t dsa <br>
+	</code>
+	<br>
+	(On being prompted save the key in <code>/etc/openssh/ssh_host_dsa_key</code>.)
+	<br>
+	<br>
+<li>Copy <code>wlib</code> from CD to <code>/usr/qrts/bin</code><br>
+	<br>
+	<code>
+	cp /fs/cd0/bin/wlib /usr/qrts/bin<br>
+	</code>
+	<br>
+<li>Update QRTS licenses. Copy licenses from CD to <code>/usr/qrts/licenses</code><br>
+	<br>
+	<code>
+	cp /fs/cd0/licenses/* /usr/qrts/licenses<br>
+	</code>
+	<br>
+<li>Remove the temporary directory created for installation.<br>
+	<br>
+	<code>
+	rm -rf /tmp/install<br>
+	</code>
+	<br>
+<li>If you are using a ServoToGo board for I/O, please make sure you <a href="stgProblems.htm">read this</a>.<br><br>
+<li>Network configuration:
+ <ul>
+ <li>QNX machines in the CRB are assigned static IP addresses available between 130.127.172.11 (crb01.ces.clemson.edu) 
+ to 130.127.172.30 (crb20.ces.clemson.edu). Find an unassigned IP address/name in this range for your use. 
+ <li>Gateway is 130.127.172.2
+ <li>DNS servers are 130.127.8.8 and 130.127.200.15
+ </ul>
+<li>You should be able to compile and run examples programs in /usr/qrts/examples.<br><br>
+</ol>
+<br><br>
+
+</body>
+</html> 	  	 

@@ -1,0 +1,913 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\comment begin body}
+{\info 
+{\title IOBoardClient Class Reference Manual}
+{\author Generated by Doxygen}
+{\creatim \yr2001\mo7\dy19\hr12\min54\sec30}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt TITLE}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt CREATEDATE}}\par
+\pard\plain 
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+IOBoardClient Class Hierarchical Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+IOBoardClient Class Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+IOBoardClient\tab {\field\fldedit {\*\fldinst PAGEREF class_IOBoardClient \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+IOBoardClient Class Compound Index\par \pard\plain 
+{\tc \v Compound Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+IOBoardClient Class Compound List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b IOBoardClient}  (Hardware independent functions to interact with the IOBoardServer to allow access to components located on the I/O board)\tab {\field\fldedit {\*\fldinst PAGEREF class_IOBoardClient \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par
+}\sect \sbkpage \pgnrestart
+\sect \sectd \sbknone \pgndec
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+IOBoardClient Class Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+IOBoardClient  Class Reference\par \pard\plain 
+{\tc\tcl2 \v IOBoardClient}
+{\xe \v IOBoardClient}
+{\bkmkstart class_IOBoardClient}
+{\bkmkend }
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid The IOBoardClient class provides hardware independent functions to interact with the IOBoardServer to allow access to components located on the I/O board. 
+\par
+{\f2 #include <IOBoardClient.hpp>}\par
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Methods\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IOBoardClient} (const char *serverName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b ~IOBoardClient} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isStatusOk} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isStatusError} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setStatusOk} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setStatusError} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getNumEncoders} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getEncoderValue} (int channel)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getEncoderIndexValue} (int channel)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setEncoderValue} (int channel, int value)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setEncoderIndexValue} (int channel, int value)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getNumAdc} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getNumDac} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b getMinDacVoltage} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b getMaxDacVoltage} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b getMinAdcVoltage} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b getMaxAdcVoltage} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b getAdcValue} (int channel)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setDacValue} (int channel, double voltage)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getNumDiginBits} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getNumDigoutBits} (void)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned char {\b getDiginByteValue} (int byte)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getDiginBitValue} (int bitPosition)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setDigoutByteValue} (int byte, unsigned char value)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setDigoutBitValue} (int bitposition, int value)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid The IOBoardClient class provides hardware independent functions to interact with the IOBoardServer to allow access to components located on the I/O board.\par
+\par
+These generic IOBoardClient class functions are supported  regardless of the I/O board used (i.e., these functions can be used with  different I/O boards provided that the correct hardware server is  executing). This independence with respect to the hardware allows the  user to construct a singular control program that can execute with  different I/O boards without the need to alter code to compensate for  the change in hardware. Specifically, the IOBoardClient functions allow  the user to perform the following: i) read/write to D/A and digital I/O  channels, ii) read encoder channels, and iii) retrieve I/O board server  specific information (e.g., the maximum/minimum D/A voltage, the number  of D/A channels being used, the number if digital I/O lines available,  etc.).\par
+{\b Example Program:}\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid //========================================================================\line
+// Project: QRTS Utility Classes\line
+// ----------------------------------------------------------------------\line
+// Package: I/O Board Client\line
+// Authors: Nick Costescu, Markus Loffler\line
+// ----------------------------------------------------------------------\line
+// File: mirror\line
+// This program mirrors all of the analog inputs to the analog\line
+// outputs. Hook up a signal generator to input 0, and a scope to output\line
+// 0 and see what happens.\line
+// You must have an IOBoardServer running to use this program.\line
+//========================================================================\line
+\line
+#include <unistd.h>\line
+#include <iostream.h>\line
+#include <sys/sched.h>\line
+#include <stdlib.h>\line
+\line
+#include "IOBoardClient.hpp"\line
+\line
+\line
+//========================================================================\line
+// main\line
+//========================================================================\line
+\line
+int main (int argc, char *argv[]) \line
+\{\line
+  int channel;\line
+  int numAdc;\line
+  int numDac;\line
+\line
+  IOBoardClient *iobc;\line
+  char *ioBoardServerName;\line
+\line
+  // If the user supplied a command line argument, it is the name of the\line
+  // IOBoardServer to use, else assume "iobs0"\line
+  \line
+  if (argc < 2)\line
+    ioBoardServerName = "qrts/iobs0";\line
+  else\line
+    ioBoardServerName = argv[1];\line
+\line
+  // Connect to the IOBoardServer \line
+  iobc = new IOBoardClient (ioBoardServerName);\line
+\line
+  // Check if able to connect.\line
+  if (iobc->isStatusError())\line
+  \{\line
+    cerr << "Can't find IOBoard server " << ioBoardServerName;\line
+    cerr << ", so exiting." << endl;\line
+    return -1;\line
+  \}\line
+\line
+  cout << "This program mirrors all of the analog inputs to the analog" << endl\line
+       << "outputs. Hook up a signal generator to input 0, and a scope to output" << endl\line
+       << "0 and see what happens." << endl;\line
+\line
+  numAdc = iobc->getNumAdc ();\line
+  numDac = iobc->getNumDac ();\line
+\line
+  // Set up a SIGALRM signal in 10 seconds.  This will kill us since we don't\line
+  // have a signal handler.  This may leave voltages on DAC channels.\line
+  alarm(10);\line
+  \line
+  while (1) \line
+  \{\line
+    // Mirror the inputs to the outputs\line
+    for (channel=0; channel<numAdc && channel<numDac; channel++)\line
+      iobc->setDacValue(channel, iobc->getAdcValue(channel));\line
+  \}\line
+\}\line
+\par
+}
+ \par
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v IOBoardClient\:IOBoardClient}
+{\xe \v IOBoardClient\:IOBoardClient}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+IOBoardClient (const char * {\i serverName})}
+}\par
+{\bkmkstart class_IOBoardClient_a0}
+{\bkmkend class_IOBoardClient_a0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Constructor. Connects to an I/O board server. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i serverName}}   Name under which the I/O board server is registered (e.g., "iobs0").\par
+\par
+}
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      IOBoardClient *iobc;\line
+    iobc = new IOBoardClient ("qrts/");\par
+}
+ \par
+}
+{\xe \v ~IOBoardClient\:IOBoardClient}
+{\xe \v IOBoardClient\:~IOBoardClient}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+~IOBoardClient (){\f2  [virtual]}}
+}\par
+{\bkmkstart class_IOBoardClient_a1}
+{\bkmkend class_IOBoardClient_a1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Destructor.\par
+{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      delete iobc;\par
+}
+ \par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v isStatusOk\:IOBoardClient}
+{\xe \v IOBoardClient\:isStatusOk}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isStatusOk (){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a2}
+{\bkmkend class_IOBoardClient_a2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Checks to see if the status is OK. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Non-zero: Status is OK \line
+ zero: Status is not OK.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      if (iobc->isStatusOk ())\line
+       cout << "The status is OK.";\line
+     else\line
+        cout << "The status is not OK." << endl;\par
+}
+ \par
+}
+{\xe \v isStatusError\:IOBoardClient}
+{\xe \v IOBoardClient\:isStatusError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isStatusError (){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a3}
+{\bkmkend class_IOBoardClient_a3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Checks to see if any errors have occurred. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Non-zero if errors have occurred, zero if no errors have occurred.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      if (iobc->isStatusError())\line
+       cout << "An Error has occurred."<< endl;\line
+     else\line
+      cout << "No errors have occurred." << endl;\par
+}
+ \par
+}
+{\xe \v setStatusOk\:IOBoardClient}
+{\xe \v IOBoardClient\:setStatusOk}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setStatusOk (){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a4}
+{\bkmkend class_IOBoardClient_a4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Set the status to OK. Clears all error entries from the stack. Clears  the overflow and error count variables. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      iobc->setStatusOk();\par
+}
+ \par
+}
+{\xe \v setStatusError\:IOBoardClient}
+{\xe \v IOBoardClient\:setStatusError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setStatusError (){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a5}
+{\bkmkend class_IOBoardClient_a5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the status error flag. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      iboc->setStatusError();\par
+}
+ \par
+}
+{\xe \v getNumEncoders\:IOBoardClient}
+{\xe \v IOBoardClient\:getNumEncoders}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getNumEncoders (){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a6}
+{\bkmkend class_IOBoardClient_a6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the number of encoder channels available. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of encoder channels being polled by the hardware server.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      numberEncoderChannels = iobc->getNumEncoders();\par
+}
+ \par
+}
+{\xe \v getEncoderValue\:IOBoardClient}
+{\xe \v IOBoardClient\:getEncoderValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getEncoderValue (int {\i channel}){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a7}
+{\bkmkend class_IOBoardClient_a7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Reads the current encoder pulse count of the specified channel. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i channel}}   The encoder channel to be read. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The current encoder pulse count.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      encoderCount=iobc->getEncoderValue(0);\par
+}
+ \par
+}
+{\xe \v getEncoderIndexValue\:IOBoardClient}
+{\xe \v IOBoardClient\:getEncoderIndexValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getEncoderIndexValue (int {\i channel}){\f2  [inline]}}
+}\par
+{\bkmkstart class_IOBoardClient_a8}
+{\bkmkend class_IOBoardClient_a8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the encoder position (count) when an index pulse is crossed.  IMPORTANT: This function might not be implemented for all I/O board servers. Pleaase check the documenation of I/O board server  that you are using. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i channel}}   Encoder channel to be read. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The encoder count when an index pulse is crossed.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      indexPosition=iobc->getEncoderIndexValue(0);\par
+}
+ \par
+}
+{\xe \v setEncoderValue\:IOBoardClient}
+{\xe \v IOBoardClient\:setEncoderValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setEncoderValue (int {\i channel}, int {\i value})}
+}\par
+{\bkmkstart class_IOBoardClient_a9}
+{\bkmkend class_IOBoardClient_a9}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the specified encoder counter to the specified value. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i channel}}   Encoder channel whose value is to be set. \par
+{\b {\i value}}   Integer value to which the encoder counter is set to. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      setEncoderValue(1,0);\line
+        // Resets encoder counter for channel 1 to zero.\par
+}
+ \par
+}
+{\xe \v setEncoderIndexValue\:IOBoardClient}
+{\xe \v IOBoardClient\:setEncoderIndexValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setEncoderIndexValue (int {\i channel}, int {\i value})}
+}\par
+{\bkmkstart class_IOBoardClient_a10}
+{\bkmkend class_IOBoardClient_a10}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the encoder index counter to the specified value.  IMPORTANT: This function might not be implemented for all I/O board servers. Pleaase check the documenation of I/O board server  that you are using. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None. \par
+}{{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i channel}}   Encoder channel whose index is to be set. \par
+{\b {\i value}}   Integer value to set the encoder index counter to.\par
+\par
+}
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      iobc->setEncoderIndexValue(1,10);\line
+     Sets the encoder index counter for channel 1 to 10.\par
+}
+ \par
+}
+{\xe \v getNumAdc\:IOBoardClient}
+{\xe \v IOBoardClient\:getNumAdc}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getNumAdc (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a11}
+{\bkmkend class_IOBoardClient_a11}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the number of A/D channels available. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of A/D channels.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      numberADchannels=iobc->getNumAdc();\par
+}
+ \par
+}
+{\xe \v getNumDac\:IOBoardClient}
+{\xe \v IOBoardClient\:getNumDac}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getNumDac (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a12}
+{\bkmkend class_IOBoardClient_a12}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the number of D/A channels available. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of D/A channels.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      numberDAchannels=iobc->getNumDac();\par
+}
+ \par
+}
+{\xe \v getMinDacVoltage\:IOBoardClient}
+{\xe \v IOBoardClient\:getMinDacVoltage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double getMinDacVoltage (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a13}
+{\bkmkend class_IOBoardClient_a13}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the minimum voltage that can be output to any D/A channel on the  I/O board (e.g., -5 V for the MultiQ-2 and MultiQ-3 boards).\par
+{\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Minimum D/A voltage.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid         minDAvoltage=getMinDacVoltage(void);\par
+}
+ \par
+}
+{\xe \v getMaxDacVoltage\:IOBoardClient}
+{\xe \v IOBoardClient\:getMaxDacVoltage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double getMaxDacVoltage (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a14}
+{\bkmkend class_IOBoardClient_a14}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the maximum voltage that can be output to any D/A channel on the  I/O board (e.g., +5 V for the MultiQ-2 and MultiQ-3 boards).\par
+{\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Maximum D/A voltage.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      maxDAvoltage=getMaxDacVoltage(void);\par
+}
+ \par
+}
+{\xe \v getMinAdcVoltage\:IOBoardClient}
+{\xe \v IOBoardClient\:getMinAdcVoltage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double getMinAdcVoltage (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a15}
+{\bkmkend class_IOBoardClient_a15}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the minimum voltage that can be read by any A/D channel on the  I/O board (e.g., -5 V for the MultiQ-2 and MultiQ-3 I/O boards). {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Minimum A/D channel voltage.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      minADvoltage=iobc->getMinAdcVoltage();\par
+}
+ \par
+}
+{\xe \v getMaxAdcVoltage\:IOBoardClient}
+{\xe \v IOBoardClient\:getMaxAdcVoltage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double getMaxAdcVoltage (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a16}
+{\bkmkend class_IOBoardClient_a16}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the maximum voltage that can be read by any A/D channel on the  I/O board (e.g., +5 V for the MultiQ-2 and MultiQ-3 boards). {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Maximum A/D channel voltage.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid       maxADvoltage=iobc->getMaxAdcVoltage();\par
+}
+ \par
+}
+{\xe \v getAdcValue\:IOBoardClient}
+{\xe \v IOBoardClient\:getAdcValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double getAdcValue (int {\i channel})}
+}\par
+{\bkmkstart class_IOBoardClient_a17}
+{\bkmkend class_IOBoardClient_a17}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Reads the voltage level at the specified A/D channel. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i channel}}   A/D channel to be read. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  A/D channel voltage.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid       maxADvoltage=iobc->getMaxAdcVoltage();\par
+}
+ \par
+}
+{\xe \v setDacValue\:IOBoardClient}
+{\xe \v IOBoardClient\:setDacValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setDacValue (int {\i channel}, double {\i voltage})}
+}\par
+{\bkmkstart class_IOBoardClient_a18}
+{\bkmkend class_IOBoardClient_a18}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Outputs a voltage to the specified A/D channel. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i channel}}   D/A channel where the voltage is sent. \par
+{\b {\i voltage}}   Voltage level to be output. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid       iobc->setAdcValue(1,3.2);\line
+    // Sets A/D channel 1 to 3.2 volts \par
+}
+ \par
+}
+{\xe \v getNumDiginBits\:IOBoardClient}
+{\xe \v IOBoardClient\:getNumDiginBits}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getNumDiginBits (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a19}
+{\bkmkend class_IOBoardClient_a19}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the number of digital input bits available. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of digital input bits.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      numDiginBits=iobc->getNumDiginBits();\par
+}
+ \par
+}
+{\xe \v getNumDigoutBits\:IOBoardClient}
+{\xe \v IOBoardClient\:getNumDigoutBits}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getNumDigoutBits (void)}
+}\par
+{\bkmkstart class_IOBoardClient_a20}
+{\bkmkend class_IOBoardClient_a20}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Obtains the number of digital output bits available. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  Number of digital output bits.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      numDigoutBits=iobc->getNumDigoutBits();\par
+}
+ \par
+}
+{\xe \v getDiginByteValue\:IOBoardClient}
+{\xe \v IOBoardClient\:getDiginByteValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned char getDiginByteValue (int {\i byte})}
+}\par
+{\bkmkstart class_IOBoardClient_a21}
+{\bkmkend class_IOBoardClient_a21}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Reads the data (1 byte long) from the specified byte position of the  digital input. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i byte}}   The byte position that is to be read. For the MultiQ I/O board,  byte=0 with the least significant bit corresponding to digital input  channel 0 and the most significant bit corresponding to digital input  channel 7. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The value of the specified byte.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      byte=iobc->getDiginByteValue(0);\par
+}
+ \par
+}
+{\xe \v getDiginBitValue\:IOBoardClient}
+{\xe \v IOBoardClient\:getDiginBitValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int getDiginBitValue (int {\i bitPosition})}
+}\par
+{\bkmkstart class_IOBoardClient_a22}
+{\bkmkend class_IOBoardClient_a22}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Reads the specified bit of the digital input.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i bitPosition}}   The individual bit to be read. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  0 for low, 1 for high.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      bit=iobc->getDiginBitValue(4);\line
+    // Reads value (high or low) of digital input line 4.\par
+}
+ \par
+}
+{\xe \v setDigoutByteValue\:IOBoardClient}
+{\xe \v IOBoardClient\:setDigoutByteValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setDigoutByteValue (int {\i byte}, unsigned char {\i value})}
+}\par
+{\bkmkstart class_IOBoardClient_a23}
+{\bkmkend class_IOBoardClient_a23}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Outputs the data (1 byte long) to the specified byte position of the  digital output {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i byte}}   The byte on which the output will appear. For the MultiQ I/O board,  byte=0 with the least significant bit corresponding to digital output  channel 0 and the most significant bit corresponding to digital output  channel 7. \par
+{\b {\i value}}   The data to be output. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      iobc->setDigoutByteValue(3,0xff);\line
+     Sets all digital output lines high.\par
+}
+ \par
+}
+{\xe \v setDigoutBitValue\:IOBoardClient}
+{\xe \v IOBoardClient\:setDigoutBitValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void setDigoutBitValue (int {\i bitposition}, int {\i value})}
+}\par
+{\bkmkstart class_IOBoardClient_a24}
+{\bkmkend class_IOBoardClient_a24}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sets the specified bit of the digital output high or low.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i bitPosition}}   The bit position to which the output is written to.  \par
+{\b {\i value}}   0 for low, 1 for high. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  None.\par
+\par
+}{\b Example:}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid      iobc->setDigoutBitValue(5,0);\line
+     // Sets digital output line 5 low.\par
+}
+ \par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+{\b IOBoardClient.hpp}\par
+}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

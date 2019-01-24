@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Refresh" CONTENT=20>
+<title>Webcam - Resizable image.</title>
+<meta name="Author" content="vilas chitrakaran">
+
+<script language="JavaScript">
+<!--
+function remote2(url)
+{
+   window.open(url, "LogiCamUrl")
+}
+var x = 31
+var y = 1
+
+function startClock()
+{
+   x = x-y
+	   if (x == -1) {
+	   window.location.reload()
+	   }
+   else {
+     	   document.form1.clock.value = x
+     	   timerID = setTimeout("startClock()", 1000)
+   }
+}
+//-->
+</script></head>
+
+<body bgcolor=#ffffff text=#000000 link=#0000ff vlink=#800080 alink=#ff0000 onload="startClock()">
+<form NAME="form1" align="left">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+  <td>
+  <font>Image will reload in <input TYPE="text"NAME="clock" SIZE="3" VALUE> Seconds.</font>
+  </td>
+  <td>
+  <a href="javascript:remote2('http://www.logitech.com/us/cameras/index.html')">
+  </td>
+  </tr>
+  </table>
+  </form>
+<a href="javascript:window.close()">
+<p align="center"><img SRC="qx3Capture.jpg" width="100%" BORDER="0" alt="Click to close this window."></a>
+<br>
+</p>
+</body>
+</html>

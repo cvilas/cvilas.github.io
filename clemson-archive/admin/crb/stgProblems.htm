@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>Meachatronics - Clemson University - STG board problems</title>
+<meta name="Keywords" content="linux kernel upgrade install">
+<meta name="Description" content="Upgrading the Linux Kernel">
+<meta name="Author" content="vilas chitrakaran">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body background bgcolor="#FFFFFF">
+
+<img SRC="images/heading.gif" height=37 width=504>
+<br><b><u><font color="#000080" size=+2>HELP! My ServoToGo board does not work.</font></u></b>
+<br>Author: Vilas Kumar Chitrakaran, May 2006.
+<p><img SRC="images/divider.gif" height=15 width=500>
+
+<table width="640">
+<tr>
+<td>
+
+<p>So you have setup a new QNX PC for your experiments in the lab according to 
+the <a href="qnxNtoSetup.htm">guidelines</a> provided by <a href="../../index.htm">that guy</a>. 
+You have installed the <a href="http://www.servotogo.com">ServoToGo</a> data acquisition board and
+the QRTS STG-SDK. Upon running the <code>STGServer</code> program, you notice that the timer chip 
+on the board doesn't seem to be counting, i.e., the timer ticks don't increment in the <code>ServerManager</code>
+window (on pterm prompt, type <code>sm</code>). *DON'T PANIC*. The following may fix your problem:
+
+<ol>
+<li>Reboot, and enter bios settings.
+		<ul>
+		<li>Set the option for 'PnP OS' to 'disabled'. (QNX does not support PnP).
+		<li>Manually assign IRQ 5 and 7 to 'Legacy ISA'. The STG board uses these interrupts.
+		</ul>
+<li>STG board has a noise related problem. Do as they suggest in their <a href="http://www.servotogo.com/errata.shtml ">errata page</a> for the fix.
+<li>Make sure that the PC power supply is proper ATX compliant. We had a few power 
+supplies with the -5 volts conductor missing (pin 18) from the ATX connector that plugs 
+into the motherboard. If this is not the case, check the signals in all the 20 pins anyway. The ATX connector pinout is given below.
+</ol>
+<hr>
+<b>ATX connector pinout</b><br>
+<table cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Pin</th>
+      <th>Signal</th>
+      <th>Wire Color</th>
+    </tr>
+    <tr>
+
+      <td>1</td>
+      <td>+3.3Vdc</td>
+      <td>Orange</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>+3.3Vdc</td>
+
+      <td>Orange</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>+5Vdc</td>
+      <td>Red</td>
+    </tr>
+    <tr>
+      <td>5</td>
+
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>+5Vdc</td>
+      <td>Red</td>
+
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+
+      <td>8</td>
+      <td>PWR-OK</td>
+      <td>Gray</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>+5Vdc<br>
+
+VSB<br>
+standby Voltage</td>
+      <td>Purple</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>+12Vdc</td>
+
+      <td>Yellow</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>+3.3Vdc</td>
+      <td>Orange<br>
+{brown is 3.3Vdc<br>
+
+sense]</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>-12Vdc</td>
+      <td>Blue</td>
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>14</td>
+
+      <td>PS-ON</td>
+      <td>Green</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>GND</td>
+      <td>Black</td>
+
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+
+      <td>17</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>-5Vdc</td>
+
+      <td>White</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>+5Vdc</td>
+      <td>Red</td>
+    </tr>
+
+    <tr>
+      <td>20</td>
+      <td>+5Vdc</td>
+      <td>Red</td>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+</tr>
+</table>
+
+<hr>
+<a href = "crbAdmin.htm">Back to Documentation index</a>
+<hr>
+
+</body>
+</html>

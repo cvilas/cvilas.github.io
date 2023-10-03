@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3547e0e111cde24b84e7d26c391735fb7f42a57b1a11432cfb0540356b89055c
-size 67
+2|Robotic Platform - SceneViewer|./SceneViewer/html/annotated.html

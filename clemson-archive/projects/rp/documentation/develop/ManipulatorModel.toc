@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2bfe3e6d525e93538d2da10c10f7fb45ed4f573e5e70fd1028394d3a7a2d455c
-size 79
+2|Robotic Platform - Manipulator Model |./ManipulatorModel/html/annotated.html

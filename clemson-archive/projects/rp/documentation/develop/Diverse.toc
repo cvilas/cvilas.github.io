@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:47b7072e8f4b60e2f8622974fb9392b4987101507a9f0c83bf659b5e6a2640d0
-size 51
+2|StaticObject Class|./Diverse/html/annotated.html

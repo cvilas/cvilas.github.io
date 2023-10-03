@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5c6e4e4fec1939ba4e36a5fafc91771a137acd134505be1ff3363d7c45981bdb
-size 37
+2||./Manipulator/html/annotated.html

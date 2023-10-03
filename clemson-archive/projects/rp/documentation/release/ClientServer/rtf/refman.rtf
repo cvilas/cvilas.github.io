@@ -1,3 +1,932 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:61491615492c784e70e9be5da4012f160cdac5065798f8d91b572d0aa04f1a3f
-size 46183
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\comment begin body}
+{\info 
+{\title ClientServer Classes Reference Manual}
+{\author Generated by Doxygen}
+{\creatim \yr2001\mo4\dy30\hr11\min57\sec54}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt TITLE}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt CREATEDATE}}\par
+\pard\plain 
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ClientServer Classes Hierarchical Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ClientServer Classes Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Client\tab {\field\fldedit {\*\fldinst PAGEREF class_Client \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Server\tab {\field\fldedit {\*\fldinst PAGEREF class_Server \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ClientServer Classes Compound Index\par \pard\plain 
+{\tc \v Compound Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ClientServer Classes Compound List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:\par
+}
+{
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b Client}  (Message passing client)\tab {\field\fldedit {\*\fldinst PAGEREF class_Client \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b Server}  (Message passing server)\tab {\field\fldedit {\*\fldinst PAGEREF class_Server \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par
+}\sect \sbkpage \pgnrestart
+\sect \sectd \sbknone \pgndec
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ClientServer Classes Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Client  Class Reference\par \pard\plain 
+{\tc\tcl2 \v Client}
+{\xe \v Client}
+{\bkmkstart class_Client}
+{\bkmkend }
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Message passing client. 
+\par
+{\f2 #include <Client.hpp>}\par
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Methods\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Client} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Client} (const char *serverName, const char *serverFileName = 0, double startServerTimeout = 3)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Client} ({\b Server} &server)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b ~Client} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b connectToServer} (const char *serverName, const char *serverFilename = 0, double startServerTimeout = 3)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMessage} (const void *msg, void *reply, int msgSize, int replySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sendMessage} (const void *msg, int msgSize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMessage} (int msg, void *reply, int replySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sendMessage} (int msg)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMessage} (const void *msg, int msgSize, Status &status)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMessage} (int msg, Status &status)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMessage} (int msgId, const void *msg, void *reply, int msgSize, int replySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMultiMessage} (const void *header, int headerSize, const void *body, int bodySize, void *reply, int replySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b sendMultiMessage} (int header, const void *body, int bodySize, void *reply, int replySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sendMultiMessage} (int header, const void *body, int bodySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char* {\b getServerName} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Message passing client.\par
+\par
+The class Client is responsible for the client side of a client/server relationship. In a client server relationship, a program is designated the server. The server registers itself under a unique server name and waits for messages. The client finds the server by its name, connects to it, and sends messages to the server. The server receives messages, processes them and sends a reply back to the client.\par
+The class Client provides a platform-independent wrapper for client functionality. It provides functionality to find the server by its name, and send messages in various formats to the server.\par
+{\b Example Programs:}\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid //========================================================================\line
+// Project: QRTS Utility Libraries\line
+// ----------------------------------------------------------------------\line
+// Package: Client/Server\line
+// Authors: Markus Loffler\line
+// ----------------------------------------------------------------------\line
+// File: Client.t.cpp\line
+// Example for the Client class.\line
+//========================================================================\line
+\line
+#include <iostream.h>\line
+#include "Client.hpp"\line
+\line
+\line
+int main()\line
+\{\line
+  cout << "Client..." << endl;\line
+  \line
+  Client client("qrts/testserver", "Server.t");\line
+  if (client.d_status.isStatusError())\line
+  \{\line
+    cout << client.d_status.getMessageText() << endl;\line
+    return -1;\line
+  \}\line
+  \line
+  client.sendMessage(10);\line
+  char *text = "This is text as a message";\line
+  cout << client.sendMessage(text, strlen(text)) << endl;\line
+  \line
+  Status status;\line
+  client.sendMessage(1, status);\line
+  cout << "MESSAGE 1" << endl;\line
+  cout << "Message Text: " << status.getMessageText() << endl;\line
+  cout << "Error Code:   " << status.getStatusErrorCode() << endl << endl;\line
+    \line
+  status.setStatusOk();\line
+  client.sendMessage(2, status);\line
+  cout << "MESSAGE 2" << endl;\line
+  cout << "Message Text: " << status.getMessageText() << endl;\line
+  cout << "Error Code:   " << status.getStatusErrorCode() << endl << endl;\line
+\line
+  client.sendMessage(0);\line
+  \line
+  return 0;\line
+\}\line
+\par
+}
+ \par
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Client\:Client}
+{\xe \v Client\:Client}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Client ()}
+}\par
+{\bkmkstart class_Client_a0}
+{\bkmkend class_Client_a0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Creates the Client object, but does not connect to the server. You must use the {\b connectToServer}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Client_a4 \\*MERGEFORMAT}{\fldrslt pagenum}}}) function before using any of the {\b sendMessage}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Client_a5 \\*MERGEFORMAT}{\fldrslt pagenum}}}) functions. \par
+}
+{\xe \v Client\:Client}
+{\xe \v Client\:Client}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Client (const char * {\i serverName}, const char * {\i serverFileName} = 0, double {\i startServerTimeout} = 3)}
+}\par
+{\bkmkstart class_Client_a1}
+{\bkmkend class_Client_a1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Creates the Client object and connects to a server. See {\b connectToServer}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Client_a4 \\*MERGEFORMAT}{\fldrslt pagenum}}}) for a detailed description of the connection process. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i serverName}}   The name under which the server is registered \par
+{\b {\i serverFileName}}   The filename of the server program \par
+{\b {\i startServerTimeout}}   If the server couldn't be located after this timeout (in seconds), the status is set to error and the function returns \par
+}
+\par
+}}
+{\xe \v Client\:Client}
+{\xe \v Client\:Client}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Client ({\b Server} & {\i server})}
+}\par
+{\bkmkstart class_Client_a2}
+{\bkmkend class_Client_a2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Connects to a server that was instantiated within the same process but a different thread. Use this constructor in multithreaded scenarios where the server is in one thread and the client in another. \par
+}
+{\xe \v ~Client\:Client}
+{\xe \v Client\:~Client}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+~Client (){\f2  [virtual]}}
+}\par
+{\bkmkstart class_Client_a3}
+{\bkmkend class_Client_a3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Disconnects from the server. \par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v connectToServer\:Client}
+{\xe \v Client\:connectToServer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void connectToServer (const char * {\i serverName}, const char * {\i serverFilename} = 0, double {\i startServerTimeout} = 3)}
+}\par
+{\bkmkstart class_Client_a4}
+{\bkmkend class_Client_a4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Tries to connect to the server. If the server can't be found, and a {\i serverFilename} is specified,  this function tries to start the specified program and tries to connect again. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i serverName}}   The name under which the server is registered \par
+{\b {\i serverFileName}}   The filename of the server program \par
+{\b {\i startServerTimeout}}   If the server couldn't be located after this timeout (in seconds), the status is set to error and the function returns \par
+}
+\par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMessage (const void * {\i msg}, void * {\i reply}, int {\i msgSize}, int {\i replySize})}
+}\par
+{\bkmkstart class_Client_a5}
+{\bkmkend class_Client_a5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a message to the server and receives a reply. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   Start address of the message. \par
+{\b {\i reply}}   Start address of the reply buffer. \par
+{\b {\i msgSize}}   Size of the message (in bytes). \par
+{\b {\i replySize}}   Size of the reply buffer (in bytes). \par
+}
+\par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int sendMessage (const void * {\i msg}, int {\i msgSize})}
+}\par
+{\bkmkstart class_Client_a6}
+{\bkmkend class_Client_a6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a message to the server and receives an integer reply. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   Start address of the message. \par
+{\b {\i msgSize}}   Size of the message (in bytes). \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The integer reply received from the server. \par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMessage (int {\i msg}, void * {\i reply}, int {\i replySize})}
+}\par
+{\bkmkstart class_Client_a7}
+{\bkmkend class_Client_a7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a message to the server that only consists of an integer value and receives a reply. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   The integer value to send to the server. \par
+{\b {\i reply}}   Start address of the reply buffer. \par
+{\b {\i replySize}}   Size of the reply buffer (in bytes). \par
+}
+\par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int sendMessage (int {\i msg})}
+}\par
+{\bkmkstart class_Client_a8}
+{\bkmkend class_Client_a8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a message to the server that only consists of an integer value and receives an integer reply. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   The integer value to send to the server. \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The integer reply received from the server. \par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMessage (const void * {\i msg}, int {\i msgSize}, Status & {\i status})}
+}\par
+{\bkmkstart class_Client_a9}
+{\bkmkend class_Client_a9}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a message to the server and receives a status reply. If the received status is "Error", then the status message is added to {\i status}. Note that all stacked status messages are combined by the server and send as one status message, and the error code of the last status message is used. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   Start address of the message. \par
+{\b {\i msgSize}}   Size of the message (in bytes). \par
+{\b {\i status}}   A status object. The received error message will be  added to this status object (only in case of error). \par
+}
+\par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMessage (int {\i msg}, Status & {\i status})}
+}\par
+{\bkmkstart class_Client_a10}
+{\bkmkend class_Client_a10}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a integer message to the server and receives a status reply. If the received status is "Error", then the status message is added to {\i status}.  Note that all stacked status messages are combined by the server and send as one status message, and the error code This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   The integer value to send to the server. \par
+{\b {\i status}}   A status object. The received error message will be  added to this status object (only in case of error). \par
+}
+\par
+}}
+{\xe \v sendMessage\:Client}
+{\xe \v Client\:sendMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMessage (int {\i msgId}, const void * {\i msg}, void * {\i reply}, int {\i msgSize}, int {\i replySize})}
+}\par
+{\bkmkstart class_Client_a11}
+{\bkmkend class_Client_a11}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a multipart message to the server and receives a reply. The message consists of an integer {\i msgId} and a message body starting at \\msg. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msgId}}   The message id. \par
+{\b {\i msg}}   Start address of the message body. \par
+{\b {\i reply}}   Start address of the reply buffer. \par
+{\b {\i msgSize}}   Size of the message body (in bytes). \par
+{\b {\i replySize}}   Size of the reply buffer (in bytes). \par
+}
+\par
+}}
+{\xe \v sendMultiMessage\:Client}
+{\xe \v Client\:sendMultiMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMultiMessage (const void * {\i header}, int {\i headerSize}, const void * {\i body}, int {\i bodySize}, void * {\i reply}, int {\i replySize})}
+}\par
+{\bkmkstart class_Client_a12}
+{\bkmkend class_Client_a12}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a two-part message to the server and receives a reply. The message consists of message header and a message body. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i header}}   The message header. \par
+{\b {\i headerSize}}   Size of the message header (in bytes). \par
+{\b {\i body}}   The message body. \par
+{\b {\i bodySize}}   Size of the message body (in bytes). \par
+{\b {\i reply}}   Start address of the reply buffer. \par
+{\b {\i replySize}}   Size of the reply buffer (in bytes). \par
+}
+\par
+}}
+{\xe \v sendMultiMessage\:Client}
+{\xe \v Client\:sendMultiMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sendMultiMessage (int {\i header}, const void * {\i body}, int {\i bodySize}, void * {\i reply}, int {\i replySize})}
+}\par
+{\bkmkstart class_Client_a13}
+{\bkmkend class_Client_a13}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a multipart message to the server and receives a reply. The message consists of an integer header and a message body starting at \\msg. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i header}}   The message header. \par
+{\b {\i body}}   The message body. \par
+{\b {\i bodySize}}   Size of the message body (in bytes). \par
+{\b {\i reply}}   Start address of the reply buffer. \par
+{\b {\i replySize}}   Size of the reply buffer (in bytes). \par
+}
+\par
+}}
+{\xe \v sendMultiMessage\:Client}
+{\xe \v Client\:sendMultiMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int sendMultiMessage (int {\i header}, const void * {\i body}, int {\i bodySize})}
+}\par
+{\bkmkstart class_Client_a14}
+{\bkmkend class_Client_a14}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Sends a multipart message to the server and receives an integer reply. The message consists of an integer header and a message body starting at \\msg. This function will block until the server sends the reply.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i header}}   The message header. \par
+{\b {\i body}}   The message body. \par
+{\b {\i bodySize}}   Size of the message body (in bytes). \par
+}
+\par
+}{{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The integer reply received from the server. \par
+}}
+{\xe \v getServerName\:Client}
+{\xe \v Client\:getServerName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char * getServerName (){\f2  [inline]}}
+}\par
+{\bkmkstart class_Client_a15}
+{\bkmkend class_Client_a15}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Returns the name of the server. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The server name. \par
+}}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+{\b Client.hpp}\par
+}}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Server  Class Reference\par \pard\plain 
+{\tc\tcl2 \v Server}
+{\xe \v Server}
+{\bkmkstart class_Server}
+{\bkmkend }
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Message passing server. 
+\par
+{\f2 #include <Server.hpp>}\par
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Methods\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Server} (const char *serverName = 0, int maxMessageSize = 1024)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b ~Server} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b attachServerName} (const char *serverName)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b detachServerName} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char* {\b getServerName} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b doMessageLoop} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b serveMessage} (pid_t pid, void *messageBuffer)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b replyMessage} (const void *reply, int replySize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b replyMessage} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b replyMessage} (int iReply)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b replyMessage} (Status &status)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b receiveMessage} (void *msg, int msgSize)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b receiveMessage} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+pid_t {\b receiveMessageFromAnybody} (void *message, int messageSize)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Message passing server.\par
+\par
+The class Server is responsible for the server side of a client/server relationship. In a client server relationship, a program is designated the server. The server registers itself under a unique server name and waits for messages. The client finds the server by its name, connects to it, and sends messages to the server. The server receives messages, processes them and sends a reply back to the client.\par
+The class Server provides a platform-independent wrapper for server functionality. It provides functionality to register itself in global namespace, to receive messages, and reply to messages.\par
+{\b Example Programs:}\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid //========================================================================\line
+// Project: QRTS Utility Libraries\line
+// ----------------------------------------------------------------------\line
+// Package: Client/Server\line
+// Authors: Markus Loffler\line
+// ----------------------------------------------------------------------\line
+// File: Server.t.cpp\line
+// Example for the server class.\line
+//========================================================================\line
+\line
+#include <iostream.h>\line
+#include "Server.hpp"\line
+\line
+\line
+class MyServer : public Server\line
+\{\line
+ public:\line
+  MyServer();\line
+  \line
+ protected:\line
+  virtual int serveMessage(pid_t clientPid, void *message);\line
+\};\line
+\line
+MyServer::MyServer() : Server("qrts/testserver")\line
+\{\line
+\}\line
+\line
+int MyServer::serveMessage(pid_t clientPid, void *message)\line
+\{\line
+  clientPid = clientPid;\line
+  \line
+  int msg = * (int *) message;\line
+  Status status;\line
+  cout << "Message " << msg << " received" << endl;\line
+  \line
+  switch (msg)\line
+  \{\line
+    case 0:\line
+      replyMessage();\line
+      return -1;\line
+      \line
+    case 1: \line
+      status.setStatusError(-33)\line
+        << "An error occurred" << endl;\line
+      replyMessage(status);\line
+      return 0;\line
+      \line
+    case 2: \line
+      replyMessage(status);\line
+      return 0;\line
+      \line
+    case 10: \line
+      replyMessage(status);\line
+      char text[100];\line
+      receiveMessage(text, sizeof(text));\line
+      replyMessage(status);\line
+      cout << "String message: " << (char *) text << endl;\line
+      return 0;\line
+      \line
+    default:\line
+      cout << "Unknown message" << endl;\line
+      return 0;\line
+  \}\line
+\}\line
+\line
+int main()\line
+\{\line
+  cout << "Server..." << endl;\line
+  MyServer server;\line
+  server.doMessageLoop();\line
+  \line
+  return 0;\line
+\}\line
+\par
+}
+ \par
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Server\:Server}
+{\xe \v Server\:Server}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Server (const char * {\i serverName} = 0, int {\i maxMessageSize} = 1024)}
+}\par
+{\bkmkstart class_Server_a0}
+{\bkmkend class_Server_a0}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Constructor. The server is registered under the given name. If no server name is given, no name is attached. The name can be attached later by calling attachServerName.\par
+In QNX6, if no server name is specified, the server can be used for message passing within the same process, but different threads. Create the server in one thread first using this constructor with no server name specified, and then create the client and pass the server object to the {\b Client} ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Client \\*MERGEFORMAT}{\fldrslt pagenum}}}) constructor. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i serverName}}   Name under which the server should be registered \par
+{\b {\i maxMessageSize}}   Maximum size of a message that is being received (i.e., the receive buffer size) \par
+}
+\par
+}}
+{\xe \v ~Server\:Server}
+{\xe \v Server\:~Server}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+~Server (){\f2  [virtual]}}
+}\par
+{\bkmkstart class_Server_a1}
+{\bkmkend class_Server_a1}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Destructor \par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v attachServerName\:Server}
+{\xe \v Server\:attachServerName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void attachServerName (const char * {\i serverName})}
+}\par
+{\bkmkstart class_Server_a2}
+{\bkmkend class_Server_a2}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Registers the server under a certain name, so it can be found by a client.  {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i serverName}}   Name under which the server should be registered \par
+}
+\par
+}}
+{\xe \v detachServerName\:Server}
+{\xe \v Server\:detachServerName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void detachServerName ()}
+}\par
+{\bkmkstart class_Server_a3}
+{\bkmkend class_Server_a3}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Detaches the server name \par
+}
+{\xe \v getServerName\:Server}
+{\xe \v Server\:getServerName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char * getServerName () const{\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a4}
+{\bkmkend class_Server_a4}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Returns the current server name \par
+}
+{\xe \v doMessageLoop\:Server}
+{\xe \v Server\:doMessageLoop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void doMessageLoop (){\f2  [virtual]}}
+}\par
+{\bkmkstart class_Server_a5}
+{\bkmkend class_Server_a5}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Continuously loops and waits for messages. For every message that arrives, {\b serveMessage}() ({\i p.{\field\fldedit {\*\fldinst PAGEREF class_Server_a6 \\*MERGEFORMAT}{\fldrslt pagenum}}}) is called. Terminates if serverMessage() returns -1. \par
+}
+{\xe \v serveMessage\:Server}
+{\xe \v Server\:serveMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int serveMessage (pid_t {\i pid}, void * {\i messageBuffer}){\f2  [virtual]}}
+}\par
+{\bkmkstart class_Server_a6}
+{\bkmkend class_Server_a6}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Serves a message. Terminates the message loop if -1 is returned or if the status is set to error. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i pid}}   The pid of the client. \par
+{\b {\i messageBuffer}}   The buffer where the message is stored. \par
+}
+\par
+}}
+{\xe \v replyMessage\:Server}
+{\xe \v Server\:replyMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void replyMessage (const void * {\i message}, int {\i messageSize}){\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a7}
+{\bkmkend class_Server_a7}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Replies to a message. The reply is sent to the client from which the last message was received. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i reply}}   Pointer to the reply. \par
+{\b {\i replySize}}   Number of bytes of the reply. \par
+}
+\par
+}}
+{\xe \v replyMessage\:Server}
+{\xe \v Server\:replyMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void replyMessage (){\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a8}
+{\bkmkend class_Server_a8}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Replies with an empty message. The reply is sent to the client from which the last message was received. \par
+}
+{\xe \v replyMessage\:Server}
+{\xe \v Server\:replyMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void replyMessage (int {\i iReply}){\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a9}
+{\bkmkend class_Server_a9}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Replies with an integer. The reply is sent to the client from which the last message was received. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i iReply}}   The integer reply. \par
+}
+\par
+}}
+{\xe \v replyMessage\:Server}
+{\xe \v Server\:replyMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void replyMessage (Status & {\i status})}
+}\par
+{\bkmkstart class_Server_a10}
+{\bkmkend class_Server_a10}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Replies with a status. The only the error code of the top status message is returned and all status messages combined together, as returned by Status::getMessageText(). The reply is sent to the client from which the last message was received. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i status}}   The status reply. \par
+}
+\par
+}}
+{\xe \v receiveMessage\:Server}
+{\xe \v Server\:receiveMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void receiveMessage (void * {\i message}, int {\i messageSize}){\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a11}
+{\bkmkend class_Server_a11}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Receives a message. The message is received from the client from which the last message was received. {\par
+{\b Parameters: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid {
+{\b {\i msg}}   Pointer to the message buffer. \par
+}
+\par
+}}
+{\xe \v receiveMessage\:Server}
+{\xe \v Server\:receiveMessage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int receiveMessage (){\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a12}
+{\bkmkend class_Server_a12}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Receives an integer message. The message is received from the client from which the last message was received. \par
+}
+{\xe \v receiveMessageFromAnybody\:Server}
+{\xe \v Server\:receiveMessageFromAnybody}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pid_t receiveMessageFromAnybody (void * {\i message}, int {\i messageSize}){\f2  [inline]}}
+}\par
+{\bkmkstart class_Server_a13}
+{\bkmkend class_Server_a13}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Receives a message from any process. {\par
+{\b Returns: }\par
+\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid  The pid of the process that sent the message \par
+}}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+{\b Server.hpp}\par
+}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

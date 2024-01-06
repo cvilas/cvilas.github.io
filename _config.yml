@@ -1,3 +1,4 @@
-theme: jekyll-theme-minimal
 title: Vilas Kumar Chitrakaran
-description: Vilas' personal website 
+description: Personal website 
+logo: /media/vilas.png
+theme: jekyll-theme-minimal

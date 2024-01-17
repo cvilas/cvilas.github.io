@@ -1,6 +1,6 @@
 # Hi!
 
-I engineer industrial robots and autonomous systems. I am available for technical consultancy and mentoring.
+I engineer industrial robots and autonomous systems. I am available for consultancy and mentoring.
 
 - [Principles](https://github.com/cvilas/guidance)
 - [Demo repo](https://github.com/cvilas/grape)

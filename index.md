@@ -1,8 +1,10 @@
 # Hi!
 
-I lead teams working on the edge of chaos, ambiguity and possibility, delivering state-of-the-art robotic and autonomous systems for manufacturing, nuclear, aerospace, defense and consumer electronics sectors.
+I lead teams working on the edge of chaos, ambiguity and possibility.
 
-I am eager to share my expertise gained over decades in the industry. Please get in touch, whether you are a frugal two-person tech startup or an established business exploring new frontiers.
+In over two decades of working in industrial robotics, I have delivered high-value state-of-the-art autonomous systems across manufacturing, nuclear, aerospace, defense and consumer electronics sectors.
+
+Whether you're a frugal two-person tech startup or an established business exploring new frontiers, I may have something to offer. Please get in touch.
 
 ## Services offered
 

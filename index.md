@@ -6,7 +6,7 @@ In over two decades of working in industrial robotics, I have delivered high-val
 
 Whether you're a frugal two-person tech startup or an established business exploring new frontiers, I may have something to offer. Please get in touch.
 
-## Services offered
+## Expertise
 
 * Bespoke system architecture design that scales from proof-of-concept to production
 * Contract engineering that balances speed of delivery, performance and maintainability
